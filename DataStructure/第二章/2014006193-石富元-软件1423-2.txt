@@ -1,0 +1,124 @@
+2.6
+a. (4) (1)
+b. (7) (11) (8) (4) (1)
+c. (5) (12)
+d. (9) (1) (6)
+
+2.7
+a. (11) (3) (14)
+b. (10) (12) (8) (3) (14)
+c. (10) (12) (7) (3) (14)
+d. (12) (11) (3) (14)
+e. (9) (11) (3) (14)
+
+2.9
+(1).将链表头结点转移到尾部最后一个
+(2).将单项循环链表从pa,pb两个结点拆分成两个单循环链表
+
+2.11
+Status SqListInsert( SqList & Sq, ElemType Elem )
+{
+	//若长度不够则自增
+	if(Sq.length == Sq.listsize)
+	{
+		ElemType *newbase = (ElemType*) realloc( Sq.elem, sizeof( ElemType )*Sq.listsize + LISTINCREMENT );
+		if(!newbase)
+		{
+			return LIST_OVERFLOW;
+		}
+		Sq.listsize += LISTINCREMENT;
+	}
+	int i;
+	for(i = Sq.length; i > 0 && Elem < Sq.elem[ i - 1 ]; --i)
+	{
+		Sq.elem[ i ] = Sq.elem[ i - 1 ];
+	}
+	Sq.elem[ i ] = Elem;
+	Sq.length++;
+	return OK;
+}
+
+2.14
+int LENGTH(LinkList & list)
+{
+	int Length = 0;
+	for(LNode *i = list; i->next; i = i->next)
+	{
+		Length++;
+	}
+
+	return Length;
+}
+
+2.21
+void ListInverse( SqList & Sq )
+{
+	ElemType tmp = 0;
+	for(int i = 0; i < Sq.length / 2; i++)
+	{
+		tmp = Sq.elem[ i ];
+		Sq.elem[ i ] = Sq.elem[ Sq.length - i - 1 ];
+		Sq.elem[ Sq.length - i - 1 ] = tmp;
+	}
+}
+
+2.22
+LinkList NodeInvers( LinkList & L )
+{
+	LinkList result = NULL, p = L, q = NULL;
+	while(p)
+	{
+		q = p->next;
+		p->next = result;
+		result = p;
+		p = q;
+	}
+	return result;
+}
+
+2.24
+LinkList NodeMergeInvers( LinkList &A, LinkList &B )
+{
+	LinkList result = NULL, pa = A, pb = B;
+	LinkList qa = NULL, qb = NULL;
+	//对比阶段
+	while(pa && pb)
+	{
+		if(pa->data < pb->data)
+		{
+			qa = pa->next;
+			pa->next = result;
+			result = pa;
+			pa = qa;
+		}
+		else
+		{
+			qb = pb->next;
+			pb->next = result;
+			result = pb;
+			pb = qb;
+		}
+	}
+	//收尾阶段
+	if(pa)
+	{
+		while(qa)
+		{
+			qa = pa->next;
+			pa->next = result;
+			result = pa;
+			pa = qa;
+		}
+	}
+	else
+	{
+		while(qb)
+		{
+			qb = pb->next;
+			pb->next = result;
+			result = pb;
+			pb = qb;
+		}
+	}
+	return result;
+}
