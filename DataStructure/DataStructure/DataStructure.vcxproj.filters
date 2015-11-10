@@ -14,12 +14,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="第二章\2.h">
+    <ClInclude Include="Experiment\Experiment.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="第二章\2.22+2.24.cpp">
+    <ClCompile Include="Experiment\Experiment.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Experiment\Experiment-main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

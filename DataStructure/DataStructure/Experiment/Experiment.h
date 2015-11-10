@@ -17,17 +17,17 @@ typedef struct LNode {	//单链表节点结构
 class Node
 {
 public:
-	Node(Elemtype *);
+	Node( Elemtype *, bool );
 	~Node();
-	statue Insert(Elemtype, int);
+	statue Insert( Elemtype, int );
 	statue Print();
 	int Length();
 	statue Revrse();
-	statue NewNode(char*);
-	statue DelNode();
+	statue NewLinkList( char* );
+	statue DelLinkList();
 protected:
 	LinkList L = NULL;
-	
+
 };
 
 #endif
