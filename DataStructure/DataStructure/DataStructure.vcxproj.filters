@@ -14,15 +14,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Experiment\Experiment.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Experiment\Experiment.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Experiment\Experiment-main.cpp">
+    <ClCompile Include="Chapter-3\3.31.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
