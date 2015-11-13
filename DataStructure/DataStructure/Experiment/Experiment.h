@@ -1,4 +1,4 @@
-#ifndef __EXPERIMENT_
+#ifndef __EXPERIMENT__
 #define __EXPERIMENT__
 #include<iostream>
 #include<cstdlib>
@@ -9,7 +9,7 @@ const int ERROR = 0;
 typedef int statue;
 typedef char Elemtype;
 
-typedef struct LNode {	//µ¥Á´±í½Úµã½á¹¹
+typedef struct LNode {	//å•é“¾è¡¨èŠ‚ç‚¹ç»“æ„
 	Elemtype		data;
 	struct LNode	*next;
 }LNode, *LinkList;

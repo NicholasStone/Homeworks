@@ -1,6 +1,7 @@
 3.1
 (1) 123,231,321,213,132
 (2) 4356已经出栈说明12已经入栈，1不能排在2前
+
 3.9
 void ditui(int n){
 	if(n > 1){
@@ -9,6 +10,7 @@ void ditui(int n){
 	}
 	return;
 }
+
 3.10
 void test( int &sum ){
 	typedef struct node{
@@ -35,6 +37,7 @@ void test( int &sum ){
 		delete p;
 	} while(L);
 }
+
 3.24
 double g( double m, double n )
 {
@@ -48,6 +51,7 @@ m	n
 2	16
 1	32
 0	64
+
 3.28
 typedef int Elemtype;
 typedef int Status;
@@ -78,4 +82,28 @@ Status DeQueue( LinkList &L, Elemtype &n )
 	n = q->value;
 	delete q;
 	return OK;
+}
+
+3.31
+Status SymmetryString(char const *data)
+{
+	Queue Q;
+	if(!QueueInit(Q)){
+		return ERROR;
+	}
+	Stack S;
+	StackInit(S);
+	Elemtype q,s;
+	for (char *i = data; *i != '\0'; ++i)
+	{
+		StackPush(S, *i);
+		EnQueue(Q, *i);
+	}
+	while(!StackEmpty(S)){
+		Pop(S ,s);
+		DeQueue(Q ,q);
+		if(s != q){
+			return NOT;
+		} 
+	}
 }

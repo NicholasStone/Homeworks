@@ -1,4 +1,4 @@
-//1£®	ÉèË³Ðò±íAÖÐµÄÊý¾ÝÔªËØµÝÔöÓÐÐò£¬ÊÔÐ´Ò»³ÌÐò£¬½«x²åÈëµ½Ë³Ðò±íµÄÊÊµ±Î»ÖÃÉÏ£¬Ê¹¸Ã±íÈÔÈ»ÓÐÐò¡£
+//1ï¼Ž	è®¾é¡ºåºè¡¨Aä¸­çš„æ•°æ®å…ƒç´ é€’å¢žæœ‰åºï¼Œè¯•å†™ä¸€ç¨‹åºï¼Œå°†xæ’å…¥åˆ°é¡ºåºè¡¨çš„é€‚å½“ä½ç½®ä¸Šï¼Œä½¿è¯¥è¡¨ä»ç„¶æœ‰åºã€‚
 //
 
 #include "Experiment.h"
@@ -29,8 +29,8 @@ statue Node::DelLinkList()
 
 statue Node::Insert( Elemtype ins, int n )
 {
-	LinkList front = L;	// Ç°ÇýÖ¸Õë
-	LinkList item = L;	// ±¾Î»Ö¸Õë
+	LinkList front = L;	// å‰é©±æŒ‡é’ˆ
+	LinkList item = L;	// æœ¬ä½æŒ‡é’ˆ
 	n--;
 	for(int i = 0;item->next && i < n; i++)
 	{
@@ -43,10 +43,10 @@ statue Node::Insert( Elemtype ins, int n )
 	return OK;
 }//Insert
 
-statue Node::Print() {//Êä³öµ¥Á´±í
+statue Node::Print() {//è¾“å‡ºå•é“¾è¡¨
 	int i = 0;
 	LinkList p = L;
-	cout << "ÐòºÅ\tµØÖ·\tdata\tnext\n" << endl;
+	cout << "åºå·\tåœ°å€\tdata\tnext\n" << endl;
 	while(p) {
 		cout << i << "\t" << p << "\t" << p->data << "\t" << p->next << endl;
 		p = p->next;
@@ -55,7 +55,7 @@ statue Node::Print() {//Êä³öµ¥Á´±í
 	return OK;
 }//Print
 
-statue Node::NewLinkList( char *data ) {	//´´½¨´øÍ·µ¥Á´±í,P30
+statue Node::NewLinkList( char *data ) {	//åˆ›å»ºå¸¦å¤´å•é“¾è¡¨,P30
 	if(L){
 		DelLinkList();
 	}
@@ -72,7 +72,7 @@ statue Node::NewLinkList( char *data ) {	//´´½¨´øÍ·µ¥Á´±í,P30
 	return OK;
 }//NewLinkList
 
-int Node::Length() {	//Çóµ¥Á´±í³¤¶È
+int Node::Length() {	//æ±‚å•é“¾è¡¨é•¿åº¦
 	int len;
 	LinkList p = L;
 	for(len = 0, p = L; p->next; p = p->next, len++);
@@ -80,15 +80,15 @@ int Node::Length() {	//Çóµ¥Á´±í³¤¶È
 
 }//Length
 
-statue Node::Revrse() {//µ¥Á´±íµÄ¾ÍµØ×ªÖÃ
-								 //ÒÀ´Î°ÑÃ¿Ò»¸ö½Úµã²åÈëµ½ÐÂ±íµÄÇ°Ãæ
+statue Node::Revrse() {//å•é“¾è¡¨çš„å°±åœ°è½¬ç½®
+								 //ä¾æ¬¡æŠŠæ¯ä¸€ä¸ªèŠ‚ç‚¹æ’å…¥åˆ°æ–°è¡¨çš„å‰é¢
 	LinkList p = L->next;
 	LinkList q = p->next;
 	LinkList s = q->next;
 	p->next = NULL;
 	while(s->next) {
 		q->next = p; p = q;
-		q = s; s = s->next; //°ÑLµÄÔªËØÖð¸ö²åÈëÐÂ±í±íÍ·
+		q = s; s = s->next; //æŠŠLçš„å…ƒç´ é€ä¸ªæ’å…¥æ–°è¡¨è¡¨å¤´
 	}
 	q->next = p;
 	s->next = q;
