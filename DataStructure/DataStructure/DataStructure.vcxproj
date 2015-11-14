@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Chapter-3\3.31.cpp" />
+    <ClCompile Include="Chapter-3\3.24.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{CB126B88-C84B-45B8-9D6C-D8A75A5A6A6C}</ProjectGuid>
