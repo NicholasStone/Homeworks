@@ -1,24 +1,189 @@
 3.
 二叉树:
-a.   A 	    b.      A   c.    A     d.  A       e.  A
-   /   \          /         /             \           \
- B       C      B         B                 B           B
-              /             \             /               \
-            C                 C         C                   C
+a.
+  A 	   
+ / \   
+B   C 
+
+b.
+    A
+   /  
+  B    
+ /      
+C   
+
+b.
+    A
+   /  
+  B    
+ /      
+C        
+c.
+  A
+ /   
+B     
+ \   
+  C
+d.
+A
+ \
+  B
+ /
+C
+e.
+A
+ \
+  B
+   \
+    C
 树:
-a.  *   b.    *
-    |       /   \
-    *     *       *
+a.  *   b.  *
+    |      / \
+    *     *   *
     |
     *
 
 5.设n为总结点个数，n0为叶子结点
 
-    n = n0 + n1 +  n2 +  n3 + ... +  nk      (1)
-    n =      n1 + 2n2 + 3n3 + ... + knk + 1  (2)
-
+    n = n0 + n1 +  n2 +  n3 + ... +  nk         (1)
+    n =      n1 + 2n2 + 3n3 + ... + knk + 1     (2)
+    
     由(1)(2)式可得
 
     n0 = (k-1)nk + (k-2)n(k-1) + ... + 2n3 + n2 + 1
 
-11.
+11.三叉链表需要n(k+12)字节，顺序结构需要mk字节。所以当mk<n(k+12)，即k<12n/(m-n)时，顺序结构比三叉链表更省空间
+
+13.
+    1   1   1
+    0   0   0
+    1   Φ  0
+    0   Φ  1
+
+14.
+(a)无左子树
+(b)无右子树
+(c)无左，右子树
+
+19.
+(a) A
+
+(b)
+    A  
+   /    
+  B      
+ /        
+C          
+
+(c).
+  A
+ /  
+B    
+ \  
+  C
+
+(d).
+      A
+     /
+    B
+     \
+      C
+     / \
+    E   D
+   / \
+  H   F
+   \   \
+    J   G
+       / \
+      K   H
+
+20.
+     1
+    / \
+   2   9
+  /   / \
+ 3   10  11
+  \       \
+   4      12
+    \     /
+     5   13
+    /   /  \
+   6   15  14
+  / \ 
+ 8   7
+
+(1)先序 1 2 3 4 5 6 8 7 9 10 11 12 13 15 14
+(2)中序 3 4 8 6 7 5 2 1 10 9 11 15 14 13 12
+(3)后序 8 7 6 5 4 3 2 10 15 14 13 12 11 9 1
+
+21.
+a.
+    A
+
+b.
+    A
+   /
+  B
+ /
+C
+
+c.
+A  B  C
+
+d.
+  A   C
+ /
+C
+
+e.
+    A   C   F   I
+   / \          |
+  B   E         M
+ /|\
+D H K
+| |
+G J
+
+27.
+    E
+   / \
+  B   F
+ / \   \
+A   D   H
+    /  / \
+   C  G   I
+           \
+            K
+           /
+          J
+
+28.
+       A
+      / \
+     /   \
+    B     I
+   / \   / \
+  /   \ /   \
+ C    G H    J
+ /     \ \  /
+D       E FK
+
+41.
+Statue preOrderAtIndex(BiTree *tree, int &index,const int num,State (*visit)(TElemType e)){
+    if(tree){
+        if(num == index){
+            return visit(tree->data);
+        }
+    }else{
+        return;
+    }
+    preOrderAtIndex( tree->lchild, ++index, num, visit);
+    preOrderAtIndex( tree->rchild, ++index, num, visit);
+}
+
+42.
+int leaf(BiTree *tree){
+    if(!tree) return 0;
+    if(!(tree->lchild && tree->rchild)) return 1;
+    return leaf(tree->lchild) + leaf(tree->rchild);
+}
