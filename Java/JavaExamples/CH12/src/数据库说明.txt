@@ -1,0 +1,15 @@
+如果要使用MySQL,需要事先安装,如安装MySQL5.0，
+此外，要注意如下几点：
+1.数据库用户名、密码分别为root、1243456，如不一样，请修改mysql.ini文件或源代码对应处；
+2.驱动程序mysql-connector-java-3.1.10-bin.jar要导入到项目CH12中；
+3.要建立数据库Select_test，即
+(1).cmd进入控制台，键入
+ C:\> mysql -uroot -p123456
+ sql> create database select_test;
+(2). 查看建成与否：
+ sql>show database;
+ sql>use select_test;
+
+4.执行Ex12_3_ExecuteDML可建立所需表；
+
+5.如果使用Mysql不方便，可修改为Access。
