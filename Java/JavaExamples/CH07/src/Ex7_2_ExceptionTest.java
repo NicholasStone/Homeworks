@@ -8,10 +8,10 @@ public class Ex7_2_ExceptionTest {
 				i++;
 			}
 		}catch(java.lang.ArrayIndexOutOfBoundsException e){
-			System.out.println("Êı×éÏÂ±êÔ½½çÒì³££¡");
+			System.out.println("æ•°ç»„ä¸‹æ ‡è¶Šç•Œå¼‚å¸¸ï¼");
 		}finally{
 			System.out.println("finally i="+i);
 		}
-		System.out.println("³ÌĞòÕı³£½áÊø");
+		System.out.println("ç¨‹åºæ­£å¸¸ç»“æŸ");
 	}
 }

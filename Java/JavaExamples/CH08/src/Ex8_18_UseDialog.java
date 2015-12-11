@@ -3,35 +3,35 @@ import java.awt.event.*;
 
 public class Ex8_18_UseDialog {
 	public static void main(String[] args) {
-		final JFrame frm = new JFrame("Ê¹ÓÃÆÕÍ¨¶Ô»°¿ò");
+		final JFrame frm = new JFrame("ä½¿ç”¨æ™®é€šå¯¹è¯æ¡†");
 		frm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frm.setLayout(null);// ÉèÖÃÎª²»Ê¹ÓÃ²¼¾Ö¹ÜÀíÆ÷
+		frm.setLayout(null);// è®¾ç½®ä¸ºä¸ä½¿ç”¨å¸ƒå±€ç®¡ç†å™¨
 
-		// ´´½¨ÆÕÍ¨¶Ô»°¿ò,²¢ÉèÖÃÎ»ÖÃ¼°´óĞ¡¡¢Ä£Ì¬µÈ
-		final JDialog dlg = new JDialog(frm, "ÆÕÍ¨¶Ô»°¿ò");
+		// åˆ›å»ºæ™®é€šå¯¹è¯æ¡†,å¹¶è®¾ç½®ä½ç½®åŠå¤§å°ã€æ¨¡æ€ç­‰
+		final JDialog dlg = new JDialog(frm, "æ™®é€šå¯¹è¯æ¡†");
 		dlg.setBounds(470, 220, 200, 150);
 		dlg.setLayout(null);
 		dlg.setModal(true);
 
-		// ´´½¨ ´°ÌåÖĞ´ò¿ª¶Ô»°¿òµÄ°´Å¥£¬ ²¢Ìí¼Ó¶¯×÷¼àÌıÆ÷
-		JButton obtn = new JButton("´ò¿ª¶Ô»°¿ò");
+		// åˆ›å»º çª—ä½“ä¸­æ‰“å¼€å¯¹è¯æ¡†çš„æŒ‰é’®ï¼Œ å¹¶æ·»åŠ åŠ¨ä½œç›‘å¬å™¨
+		JButton obtn = new JButton("æ‰“å¼€å¯¹è¯æ¡†");
 		obtn.setBounds(60, 60, 100, 30);
 		obtn.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				dlg.setVisible(true);// ÏÔÊ¾´°Ìå
-				// dlg.show(true);//show()²»ÒÑÍÆ¼öÊ¹ÓÃ
+				dlg.setVisible(true);// æ˜¾ç¤ºçª—ä½“
+				// dlg.show(true);//show()ä¸å·²æ¨èä½¿ç”¨
 			}
 		});
 		frm.add(obtn);
 
-		// ´´½¨¶Ô»°¿òÖĞµÄÍË³ö°´Å¥£¬²¢Ìí¼Ó¶¯×÷¼àÌıÆ÷
-		JButton btn = new JButton("ÍË³ö");
+		// åˆ›å»ºå¯¹è¯æ¡†ä¸­çš„é€€å‡ºæŒ‰é’®ï¼Œå¹¶æ·»åŠ åŠ¨ä½œç›‘å¬å™¨
+		JButton btn = new JButton("é€€å‡º");
 		btn.setBounds(50, 50, 80, 30);
 		btn.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				dlg.setVisible(false);// Òş²Ø´°Ìå
+				dlg.setVisible(false);// éšè—çª—ä½“
 			}
 		});
 		dlg.add(btn);

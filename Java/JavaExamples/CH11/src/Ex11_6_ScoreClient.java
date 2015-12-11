@@ -24,10 +24,10 @@ class Ex11_6_ScoreClient extends Frame implements ActionListener {
 		f.add(p1);
 		f.add(p3);
 		p1.setLayout(new FlowLayout());
-		l2 = new Label("Ñ§ºÅ");
+		l2 = new Label("å­¦å·");
 		t2 = new TextField("", 10);
-		b = new Button("²éÑ¯");
-		b2 = new Button("¹ÜÀíĞÅÏ¢");
+		b = new Button("æŸ¥è¯¢");
+		b2 = new Button("ç®¡ç†ä¿¡æ¯");
 		p1.add(l2);
 		p1.add(t2);
 		p1.add(b);
@@ -42,11 +42,11 @@ class Ex11_6_ScoreClient extends Frame implements ActionListener {
 		f1 = new Frame();
 		f1.setBounds(100, 300, 200, 100);
 		f1.setLayout(new GridLayout(4, 1));
-		l3 = new Label("ÃÜÂë");
+		l3 = new Label("å¯†ç ");
 		t3 = new TextField("", 10);
 		t3.setEchoChar('*');
-		b3 = new Button("µÇÂ¼");
-		b4 = new Button("·µ»Ø²éÑ¯Ò³Ãæ");
+		b3 = new Button("ç™»å½•");
+		b4 = new Button("è¿”å›æŸ¥è¯¢é¡µé¢");
 		b3.addActionListener(this);
 		b4.addActionListener(this);
 		f1.add(l3);
@@ -58,10 +58,10 @@ class Ex11_6_ScoreClient extends Frame implements ActionListener {
 		cz = new Frame();
 		cz.setBounds(100, 300, 200, 100);
 		cz.setLayout(new GridLayout(3, 1));
-		add1 = new Button("Ôö¼ÓĞÅÏ¢");
-		del1 = new Button("É¾³ıĞÅÏ¢");
-		xg1 = new Button("ĞŞ¸ÄĞÅÏ¢");
-		b4 = new Button("·µ»Ø²éÑ¯Ò³Ãæ");
+		add1 = new Button("å¢åŠ ä¿¡æ¯");
+		del1 = new Button("åˆ é™¤ä¿¡æ¯");
+		xg1 = new Button("ä¿®æ”¹ä¿¡æ¯");
+		b4 = new Button("è¿”å›æŸ¥è¯¢é¡µé¢");
 		cz.add(add1);
 		cz.add(del1);
 		cz.add(xg1);
@@ -76,8 +76,8 @@ class Ex11_6_ScoreClient extends Frame implements ActionListener {
 		f2.setBounds(100, 300, 200, 500);
 		f2.setLayout(new GridLayout());
 		jg = new Label("");
-		b4 = new Button("·µ»Ø¹ÜÀíÒ³Ãæ");
-		b5 = new Button("·µ»Ø¹ÜÀíÒ³Ãæ");
+		b4 = new Button("è¿”å›ç®¡ç†é¡µé¢");
+		b5 = new Button("è¿”å›ç®¡ç†é¡µé¢");
 		p1 = new Panel();
 		p2 = new Panel();
 		p1.setLayout(new FlowLayout());
@@ -86,22 +86,22 @@ class Ex11_6_ScoreClient extends Frame implements ActionListener {
 		f2.add(p2);
 		f2.add(jg);
 		f2.add(b4);
-		id = new Label("Ñ§ºÅ");
+		id = new Label("å­¦å·");
 		id1 = new TextField("", 10);
-		mz = new Label("Ãû×Ö");
+		mz = new Label("åå­—");
 		mz1 = new TextField("", 10);
-		bj = new Label("°à¼¶");
+		bj = new Label("ç­çº§");
 		bj1 = new TextField("", 10);
-		yw = new Label("ÓïÎÄ");
+		yw = new Label("è¯­æ–‡");
 		yw1 = new TextField("", 10);
-		sx = new Label("ÊıÑ§");
+		sx = new Label("æ•°å­¦");
 		sx1 = new TextField("", 10);
-		yy = new Label("Ó¢Óï");
+		yy = new Label("è‹±è¯­");
 		yy1 = new TextField("", 10);
-		lz = new Label("¿ÆÑ§");
+		lz = new Label("ç§‘å­¦");
 		lz1 = new TextField("", 10);
-		add = new Button("Ìí¼Ó");
-		xg = new Button("È·ÈÏĞŞ¸Ä");
+		add = new Button("æ·»åŠ ");
+		xg = new Button("ç¡®è®¤ä¿®æ”¹");
 		xg.setVisible(false);
 		p1.add(mz);
 		p1.add(mz1);
@@ -122,9 +122,9 @@ class Ex11_6_ScoreClient extends Frame implements ActionListener {
 		p1.add(add);
 		p1.add(b4);
 		p1.add(xg);
-		did = new Label("Ñ§ºÅ");
+		did = new Label("å­¦å·");
 		did1 = new TextField("", 10);
-		del = new Button("É¾³ı");
+		del = new Button("åˆ é™¤");
 		p2.add(did);
 		p2.add(did1);
 		p2.add(del);
@@ -144,8 +144,8 @@ class Ex11_6_ScoreClient extends Frame implements ActionListener {
 	}
 	public void connection(String IP) {
 		try {
-			String accountnum1 = JOptionPane.showInputDialog(null, "ÇëÊäÈëipµØÖ·",
-					"Ñ¡Ôñ", JOptionPane.PLAIN_MESSAGE);
+			String accountnum1 = JOptionPane.showInputDialog(null, "è¯·è¾“å…¥ipåœ°å€",
+					"é€‰æ‹©", JOptionPane.PLAIN_MESSAGE);
 			if (accountnum1 == null)
 				System.exit(0);
 			;
@@ -154,44 +154,44 @@ class Ex11_6_ScoreClient extends Frame implements ActionListener {
 			MyThread my = new MyThread();
 			my.start();
 		} catch (UnknownHostException e) {
-			JOptionPane.showMessageDialog(null, "Á¬½Ó³ö´í!");
+			JOptionPane.showMessageDialog(null, "è¿æ¥å‡ºé”™!");
 		} catch (IOException e) {
-			JOptionPane.showMessageDialog(null, "Á¬½Ó³ö´í!");
+			JOptionPane.showMessageDialog(null, "è¿æ¥å‡ºé”™!");
 			connection("");
 		}
 	}
 	public void actionPerformed(ActionEvent e) {
-		if (e.getActionCommand() == "Á¬½Ó") {
+		if (e.getActionCommand() == "è¿æ¥") {
 			connection(t1.getText());
 			sendMessage("connect:");
 			MyThread my = new MyThread();
 			my.start();
 		}
-		if (e.getActionCommand() == "²éÑ¯") {
+		if (e.getActionCommand() == "æŸ¥è¯¢") {
 			ta1.setText("");
 			if (t2.getText().equalsIgnoreCase(""))
-				JOptionPane.showMessageDialog(null, "ÇëÊäÈëÑ§ºÅ!");
+				JOptionPane.showMessageDialog(null, "è¯·è¾“å…¥å­¦å·!");
 			else {
 				sendMessage("search" + ":" + t2.getText());
 				MyThread my = new MyThread();
 				my.start();
 			}
 		}
-		if (e.getActionCommand() == "¹ÜÀíĞÅÏ¢") {
+		if (e.getActionCommand() == "ç®¡ç†ä¿¡æ¯") {
 			t3.setText("");
 			f.setVisible(false);
 			f1.setVisible(true);
 		}
-		if (e.getActionCommand() == "µÇÂ¼") {
+		if (e.getActionCommand() == "ç™»å½•") {
 			if (t3.getText().equalsIgnoreCase(""))
-				JOptionPane.showMessageDialog(null, "ÇëÊäÈëÃÜÂë!");
+				JOptionPane.showMessageDialog(null, "è¯·è¾“å…¥å¯†ç !");
 			else {
 				sendMessage("login:" + t3.getText());
 				MyThread my = new MyThread();
 				my.start();
 			}
 		}
-		if (e.getActionCommand() == "Ôö¼ÓĞÅÏ¢") {
+		if (e.getActionCommand() == "å¢åŠ ä¿¡æ¯") {
 			cz.setVisible(false);
 			f2.setVisible(true);
 			p1.setVisible(true);
@@ -199,13 +199,13 @@ class Ex11_6_ScoreClient extends Frame implements ActionListener {
 			add.setVisible(true);
 			xg.setVisible(false);
 		}
-		if (e.getActionCommand() == "É¾³ıĞÅÏ¢") {
+		if (e.getActionCommand() == "åˆ é™¤ä¿¡æ¯") {
 			cz.setVisible(false);
 			f2.setVisible(true);
 			p1.setVisible(false);
 			p2.setVisible(true);
 		}
-		if (e.getActionCommand() == "ĞŞ¸ÄĞÅÏ¢") {
+		if (e.getActionCommand() == "ä¿®æ”¹ä¿¡æ¯") {
 			cz.setVisible(false);
 			f2.setVisible(true);
 			p1.setVisible(true);
@@ -213,9 +213,9 @@ class Ex11_6_ScoreClient extends Frame implements ActionListener {
 			add.setVisible(false);
 			xg.setVisible(true);
 		}
-		if (e.getActionCommand() == "Ìí¼Ó") {
+		if (e.getActionCommand() == "æ·»åŠ ") {
 			if (id1.getText().equalsIgnoreCase(""))
-				JOptionPane.showMessageDialog(null, "ÇëÊäÈëÃÜÂë!");
+				JOptionPane.showMessageDialog(null, "è¯·è¾“å…¥å¯†ç !");
 			else {
 
 				sendMessage("add" + ":" + id1.getText() + ":" + mz1.getText()
@@ -226,18 +226,18 @@ class Ex11_6_ScoreClient extends Frame implements ActionListener {
 				my.start();
 			}
 		}
-		if (e.getActionCommand() == "É¾³ı") {
+		if (e.getActionCommand() == "åˆ é™¤") {
 			if (did1.getText().equalsIgnoreCase(""))
-				JOptionPane.showMessageDialog(null, "ÇëÊäÈëÑ§ºÅ!");
+				JOptionPane.showMessageDialog(null, "è¯·è¾“å…¥å­¦å·!");
 			else {
 				sendMessage("del" + ":" + did1.getText());
 				MyThread my = new MyThread();
 				my.start();
 			}
 		}
-		if (e.getActionCommand() == "È·ÈÏĞŞ¸Ä") {
+		if (e.getActionCommand() == "ç¡®è®¤ä¿®æ”¹") {
 			if (id1.getText().equalsIgnoreCase(""))
-				JOptionPane.showMessageDialog(null, "ÇëÊäÈëÑ§ºÅ!");
+				JOptionPane.showMessageDialog(null, "è¯·è¾“å…¥å­¦å·!");
 			else {
 				sendMessage("xg" + ":" + id1.getText() + ":" + mz1.getText()
 						+ ":" + bj1.getText() + ":" + yw1.getText() + ":"
@@ -247,13 +247,13 @@ class Ex11_6_ScoreClient extends Frame implements ActionListener {
 				my.start();
 			}
 		}
-		if (e.getActionCommand() == "·µ»Ø²éÑ¯Ò³Ãæ") {
+		if (e.getActionCommand() == "è¿”å›æŸ¥è¯¢é¡µé¢") {
 			f.setVisible(true);
 			f1.setVisible(false);
 			cz.setVisible(false);
 			f2.setVisible(false);
 		}
-		if (e.getActionCommand() == "·µ»Ø¹ÜÀíÒ³Ãæ") {
+		if (e.getActionCommand() == "è¿”å›ç®¡ç†é¡µé¢") {
 			f2.setVisible(false);
 			cz.setVisible(true);
 		}
@@ -279,14 +279,14 @@ class Ex11_6_ScoreClient extends Frame implements ActionListener {
 	}
 	class MyThread extends Thread {
 		public void run() {
-			System.out.print("¿Í·ş¶Ë¿ªÊ¼½ÓÊÕÊı¾İ£º");
+			System.out.print("å®¢æœç«¯å¼€å§‹æ¥æ”¶æ•°æ®ï¼š");
 			for (;;) {
 				try {
 					isr = new InputStreamReader(s1.getInputStream());
 					br = new BufferedReader(isr);
 					String str = br.readLine();
 					if (str.equalsIgnoreCase("connect")) {
-						JOptionPane.showMessageDialog(null, "Á¬½Ó³É¹¦!");
+						JOptionPane.showMessageDialog(null, "è¿æ¥æˆåŠŸ!");
 						f.setVisible(true);
 						break;
 					}
@@ -298,23 +298,23 @@ class Ex11_6_ScoreClient extends Frame implements ActionListener {
 					if (str.equalsIgnoreCase("over"))
 						break;
 					if (str.equalsIgnoreCase("passwordwrong")) {
-						JOptionPane.showMessageDialog(null, "ÃÜÂë´íÎó!");
+						JOptionPane.showMessageDialog(null, "å¯†ç é”™è¯¯!");
 						break;
 					}
 					if (str.equalsIgnoreCase("unmodify")) {
-						JOptionPane.showMessageDialog(null, "²éÎŞ´ËÈË ÇëÖØĞÂÊäÈëÕıÈ·ID!");
+						JOptionPane.showMessageDialog(null, "æŸ¥æ— æ­¤äºº è¯·é‡æ–°è¾“å…¥æ­£ç¡®ID!");
 						break;
 					}
 					if (str.equalsIgnoreCase("modify")) {
-						JOptionPane.showMessageDialog(null, "ĞŞ¸Ä³É¹¦£¡");
+						JOptionPane.showMessageDialog(null, "ä¿®æ”¹æˆåŠŸï¼");
 						break;
 					}
 					if (str.equalsIgnoreCase("success")) {
-						JOptionPane.showMessageDialog(null, "²Ù×÷³É¹¦£¡");
+						JOptionPane.showMessageDialog(null, "æ“ä½œæˆåŠŸï¼");
 						break;
 					}
 					if (str.equalsIgnoreCase("have")) {
-						JOptionPane.showMessageDialog(null, "ÄãÊäÈëµÄÑ§ºÅÒÑ¾­´æÔÚ£¡");
+						JOptionPane.showMessageDialog(null, "ä½ è¾“å…¥çš„å­¦å·å·²ç»å­˜åœ¨ï¼");
 						break;
 					}
 					ta1.append(str);

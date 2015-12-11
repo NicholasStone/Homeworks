@@ -6,20 +6,20 @@
 %>
 <html>
 <head>
-<title>É¾³ýÑ§ÉúÐÅÏ¢</title>
+<title>åˆ é™¤å­¦ç”Ÿä¿¡æ¯</title>
 </head>
 <body>
 	<% 	Connection con = null;
 		Statement stmt = null;
 		ResultSet rs = null;
 		
-		//¼ÓÔØÇý¶¯³ÌÐò  
+		//åŠ è½½é©±åŠ¨ç¨‹åº  
 		try {
 			Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
 		} catch (ClassNotFoundException e) {
 		}
 
-		//½¨Á¢Êý¾Ý¿âÁ¬½Ó
+		//å»ºç«‹æ•°æ®åº“è¿žæŽ¥
 		try {
 			con = DriverManager.getConnection("jdbc:odbc:student", "", "");
 			stmt = con.createStatement();
@@ -47,23 +47,23 @@
 		session.setAttribute("id", id);
 	%>
 	<center>
-		<h2>È·¶¨É¾³ýÂð£¿</h2>
+		<h2>ç¡®å®šåˆ é™¤å—ï¼Ÿ</h2>
 		<hr>
 
 		<P>
-			ÐÕÃû£º<%=name%>
+			å§“åï¼š<%=name%>
 		<P>
-			ÐÔ±ð£º<%=gender%>
+			æ€§åˆ«ï¼š<%=gender%>
 		<P>
-			µØÖ·: <%=address%>
+			åœ°å€: <%=address%>
 		<P>
-			µç»°£º<%=phone%>
+			ç”µè¯ï¼š<%=phone%>
 		<P>
-			×¨Òµ: <%=major%>
+			ä¸“ä¸š: <%=major%>
 		<P>
 		<form action="EX14_12_delete_3.jsp" method="post">
-			<input type="submit" id="confirm" name="confirm" value="È·¶¨">&nbsp;&nbsp;
-			<input type="reset" id="back" name="back" value="·µ»Ø"
+			<input type="submit" id="confirm" name="confirm" value="ç¡®å®š">&nbsp;&nbsp;
+			<input type="reset" id="back" name="back" value="è¿”å›ž"
 				onclick="javascript:history.go(-1)">
 		</form>
 		</center>

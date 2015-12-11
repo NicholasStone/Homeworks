@@ -37,7 +37,7 @@ public class ThreeThread extends Thread{
         		}
         		catch(Exception e)
         		{
-        			System.out.println(name+"Ïß³Ì³ö´í");
+        			System.out.println(name+"çº¿ç¨‹å‡ºé”™");
         		}
         	}
         }
@@ -52,14 +52,14 @@ public class ThreeThread extends Thread{
         	try {
 				Thread.sleep(2000);
 			} catch (InterruptedException e) {
-				// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
 				e.printStackTrace();
 			}
        	ThreeThread thread2=new ThreeThread("thread2");thread2.start();
         	try {
 				Thread.sleep(2000);
 			} catch (InterruptedException e) {
-				// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
 				e.printStackTrace();
 			}
         	ThreeThread thread3=new ThreeThread("thread3");thread3.start();   

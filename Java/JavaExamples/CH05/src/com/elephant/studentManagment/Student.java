@@ -8,23 +8,23 @@ public class Student extends Person {
 	public void setData() {
 		String temp;
 		super.setData();
-		id = JOptionPane.showInputDialog(null, "ÇëÊäÈëÑ§ºÅ");
-		major = JOptionPane.showInputDialog(null, "ÇëÊäÈë×¨Òµ");
+		id = JOptionPane.showInputDialog(null, "è¯·è¾“å…¥å­¦å·");
+		major = JOptionPane.showInputDialog(null, "è¯·è¾“å…¥ä¸“ä¸š");
 		while (true) {
 			try {
 
-				temp = JOptionPane.showInputDialog(null, "ÇëÊäÈëÑ§·Ö");
+				temp = JOptionPane.showInputDialog(null, "è¯·è¾“å…¥å­¦åˆ†");
 				gpa = Double.parseDouble(temp);
 				break;
 			} catch (Exception e) {
-				JOptionPane.showMessageDialog(null, "ÇëÊäÈëºÏ·¨µÄÑ§·Ö");
+				JOptionPane.showMessageDialog(null, "è¯·è¾“å…¥åˆæ³•çš„å­¦åˆ†");
 			}
 		}
 	}
 
 	public void display() {
 		super.display();
-		System.out.println("\t×¨Òµ: " + major + " \tÑ§·Ö: " + gpa);
+		System.out.println("\tä¸“ä¸š: " + major + " \tå­¦åˆ†: " + gpa);
 	}
 
 	public String getMajor() {

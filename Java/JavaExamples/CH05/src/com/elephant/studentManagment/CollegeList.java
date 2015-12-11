@@ -14,8 +14,8 @@ public class CollegeList {
 		double maxAnnualSalary = 0, avGannualSalary = 0, tempAnnualSalary;
 		double sumAnnualSalary = 0;
 		double maxGpa = 0, avgGpa = 0, tempGpa, sumGpa = 0;
-		input = JOptionPane.showInputDialog(null, "ÊäÈëC Â¼ÈëÔ±¹¤ĞÅÏ¢" + "\nÊäÈëS Â¼ÈëÑ§ÉúĞÅÏ¢"
-				+ "\nÊäÈëQ ÍË³ö");
+		input = JOptionPane.showInputDialog(null, "è¾“å…¥C å½•å…¥å‘˜å·¥ä¿¡æ¯" + "\nè¾“å…¥S å½•å…¥å­¦ç”Ÿä¿¡æ¯"
+				+ "\nè¾“å…¥Q é€€å‡º");
 		input = input.toUpperCase();
 		letter = input.charAt(0);
 		while (letter != 'Q') {
@@ -26,13 +26,13 @@ public class CollegeList {
 					emp[empCount] = c;
 					++empCount;
 
-					// ¼ÆËãÆ½¾ùÄêĞ½ºÍ×î¸ßÄêĞ½
+					// è®¡ç®—å¹³å‡å¹´è–ªå’Œæœ€é«˜å¹´è–ª
 					tempAnnualSalary = c.getAnnualSalary();
 					sumAnnualSalary = tempAnnualSalary + sumAnnualSalary;
 					if (tempAnnualSalary > maxAnnualSalary)
 						maxAnnualSalary = tempAnnualSalary;
 				} else
-					JOptionPane.showMessageDialog(null, "¶Ô²»Æğ£¬Â¼ÈëÌ«¶àÔ±¹¤ĞÅÏ¢");
+					JOptionPane.showMessageDialog(null, "å¯¹ä¸èµ·ï¼Œå½•å…¥å¤ªå¤šå‘˜å·¥ä¿¡æ¯");
 			} else if (letter == 'S') {
 				if (stuCount < stu.length) {
 					Student s = new Student();
@@ -40,35 +40,35 @@ public class CollegeList {
 					stu[stuCount] = s;
 					++stuCount;
 
-					// ¼ÆËãÆ½¾ùÑ§·ÖºÍ×î¸ßÑ§·Ö
+					// è®¡ç®—å¹³å‡å­¦åˆ†å’Œæœ€é«˜å­¦åˆ†
 					tempGpa = s.getGpa();
 					sumGpa = tempGpa + sumGpa;
 					if (tempGpa > maxGpa)
 						maxGpa = tempGpa;
 				} else
-					JOptionPane.showMessageDialog(null, "¶Ô²»Æğ£¬Â¼ÈëÌ«¶àµÄÑ§ÉúĞÅÏ¢");
+					JOptionPane.showMessageDialog(null, "å¯¹ä¸èµ·ï¼Œå½•å…¥å¤ªå¤šçš„å­¦ç”Ÿä¿¡æ¯");
 			}
-			input = JOptionPane.showInputDialog(null, "ÊäÈëC Â¼ÈëÔ±¹¤ĞÅÏ¢"
-					+ "\nÊäÈëS Â¼ÈëÑ§ÉúĞÅÏ¢" + "\nÊäÈëQ ÍË³ö");
+			input = JOptionPane.showInputDialog(null, "è¾“å…¥C å½•å…¥å‘˜å·¥ä¿¡æ¯"
+					+ "\nè¾“å…¥S å½•å…¥å­¦ç”Ÿä¿¡æ¯" + "\nè¾“å…¥Q é€€å‡º");
 			input = input.toUpperCase();
 			letter = input.charAt(0);
 		}
-		System.out.println("\nÔ±¹¤ĞÅÏ¢:");
+		System.out.println("\nå‘˜å·¥ä¿¡æ¯:");
 		if (empCount == 0)
-			System.out.println("Ã»ÓĞÂ¼ÈëÔ±¹¤ĞÅÏ¢");
+			System.out.println("æ²¡æœ‰å½•å…¥å‘˜å·¥ä¿¡æ¯");
 		else
 			for (x = 0; x < empCount; ++x)
 				emp[x].display();
-		System.out.println("\n ÒÔÉÏÔ±¹¤ÖĞµÄ×î¸ßÄêĞ½:" + maxAnnualSalary + "Æ½¾ùÄêĞ½:"
+		System.out.println("\n ä»¥ä¸Šå‘˜å·¥ä¸­çš„æœ€é«˜å¹´è–ª:" + maxAnnualSalary + "å¹³å‡å¹´è–ª:"
 				+ sumAnnualSalary / empCount);
 
-		System.out.println("\nÑ§ÉúĞÅÏ¢:");
+		System.out.println("\nå­¦ç”Ÿä¿¡æ¯:");
 		if (stuCount == 0)
-			System.out.println("Ã»ÓĞÂ¼ÈëÑ§ÉúĞÅÏ¢");
+			System.out.println("æ²¡æœ‰å½•å…¥å­¦ç”Ÿä¿¡æ¯");
 		else
 			for (x = 0; x < stuCount; ++x)
 				stu[x].display();
-		System.out.println("\n ÒÔÉÏÑ§ÉúÖĞµÄ×î¸ßÑ§·Ö:" + maxGpa + "Æ½¾ùÑ§·Ö:" + sumGpa
+		System.out.println("\n ä»¥ä¸Šå­¦ç”Ÿä¸­çš„æœ€é«˜å­¦åˆ†:" + maxGpa + "å¹³å‡å­¦åˆ†:" + sumGpa
 				/ stuCount);
 		System.exit(0);
 	}

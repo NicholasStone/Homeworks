@@ -11,6 +11,6 @@ public class Ex9_14_ScannerDemo {
 			x=scan.nextDouble();
 		}
 		average=sum/count;
-		System.out.println("ƽ��ֵ="+average);
+		System.out.println("平均值="+average);
 	}
 }

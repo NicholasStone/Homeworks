@@ -2,7 +2,7 @@ import java.io.*;
 public class CopyFile {
 	public static void main(String[] args) throws Exception{
 		if(args.length != 2){
-			System.out.println("ÇëÊäÈëÁ½¸öÎÄ¼şÃû£¡");
+			System.out.println("è¯·è¾“å…¥ä¸¤ä¸ªæ–‡ä»¶åï¼");
 		}else{
 			String infile = args[0];
 			String outfile = args[1];
@@ -17,8 +17,8 @@ public class CopyFile {
 	    bw.write(words.toString());
 	    bw.close();
 	    
-	    System.out.println("ÊäÈëÎÄ¼şÃû£º"+infile);
-	    System.out.println("Êä³öÎÄ¼şÃû£º"+outfile);
+	    System.out.println("è¾“å…¥æ–‡ä»¶åï¼š"+infile);
+	    System.out.println("è¾“å‡ºæ–‡ä»¶åï¼š"+outfile);
        }
 		
 	}

@@ -3,7 +3,7 @@ public class Multiply99Table1 {
 
 	public static void main(String[] args) throws NumberFormatException{
 		// TODO Auto-generated method stub
-		String[] arr = {"Ê®", "Ò»", "¶ş", "Èı", "ËÄ", "Îå", "Áù", "Æß", "°Ë", "¾Å"};
+		String[] arr = {"å", "ä¸€", "äºŒ", "ä¸‰", "å››", "äº”", "å…­", "ä¸ƒ", "å…«", "ä¹"};
 		
 		for(double i=1; i<=9; i++)
 		{
@@ -13,7 +13,7 @@ public class Multiply99Table1 {
 				double k = i*j;
 				if(k<10)
 				{
-					System.out.print(arr[(int)j] + arr[(int)i] + "µÃ" + arr[(int)(i*j)] );
+					System.out.print(arr[(int)j] + arr[(int)i] + "å¾—" + arr[(int)(i*j)] );
 				}
 				else if (k>10)
 				{

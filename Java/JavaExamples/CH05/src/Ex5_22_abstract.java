@@ -1,6 +1,6 @@
 public class Ex5_22_abstract {
 	public static void main(String[] args) {
-		// Animal a= new Animal();//A 行，禁止实例化抽象类
+		// Animal a= new Animal();//A 琛岋紝绂佹瀹炰緥鍖栨娊璞＄被
 		Cat2 tom = new Cat2();
 		tom.eat();
 		tom.run();
@@ -23,10 +23,10 @@ abstract class Animal {
 
 class Cat2 extends Animal {
 	void run() {
-		System.out.println("猫扑");
+		System.out.println("鐚墤");
 	}
 
 	void eat() {
-		System.out.println("吃老鼠");
+		System.out.println("鍚冭�侀紶");
 	}
 }

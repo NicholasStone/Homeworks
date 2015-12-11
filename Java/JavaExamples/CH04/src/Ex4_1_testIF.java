@@ -3,11 +3,11 @@ import java.util.Scanner;
 public class Ex4_1_testIF {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("ÇëÊäÈë³É¼¨£º");
+		System.out.print("è¯·è¾“å…¥æˆç»©ï¼š");
 		int score = sc.nextInt();
 		
 		if(score >= 0 && score <= 100){
-			System.out.println("³É¼¨£º" + score);
+			System.out.println("æˆç»©ï¼š" + score);
 		}
 		sc.close();
 	}

@@ -5,7 +5,7 @@
 %>
 <html>
 <head>
-<title>�޸�ѧ����Ϣ</title>
+<title>修改学生信息</title>
 </head>
 <body>
 	<%
@@ -13,13 +13,13 @@
 		Statement stmt = null;
 		ResultSet rs = null;
 
-		//������������  
+		//加载驱动程序  
 		try {
 			Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
 		} catch (ClassNotFoundException e) {
 		}
 
-		//�������ݿ�����
+		//建立数据库连接
 		try {
 			con = DriverManager.getConnection("jdbc:odbc:student", "", "");
 			stmt = con.createStatement();
@@ -36,7 +36,7 @@
 	
 	<table width="100%"><tr>
 	<td align="left"><img src="imgs/left.gif" /></td>
-	<td align="center"><h2>�޸�ѧ����Ϣ</h2></td>
+	<td align="center"><h2>修改学生信息</h2></td>
 	<td align="right"><img src="imgs/right.gif" /></td>
 	</tr>
 	</table>
@@ -47,23 +47,23 @@
 	<center>	
 		<form action="EX14_11_modify_4.jsp" method="post">
 			<P>
-				������ <input type="text" id="name" name="name"
+				姓名： <input type="text" id="name" name="name"
 					value="<%=rs.getString("name")%>">
 			<P>
-				�Ա� <input type="text" id="gender" name="gender"
+				性别： <input type="text" id="gender" name="gender"
 					value="<%=rs.getString("gender")%>">
 			<P>
-				��ַ: <input type="text" id="address" name="address"
+				地址: <input type="text" id="address" name="address"
 					value="<%=rs.getString("address")%>">
 			<P>
-				�绰: <input type="text" id="phone" name="phone"
+				电话: <input type="text" id="phone" name="phone"
 					value="<%=rs.getString("phone")%>">
 			<P>
-				רҵ: <input type="text" id="major" name="major"
+				专业: <input type="text" id="major" name="major"
 					value="<%=rs.getString("major")%>">
 			<P>
-				<input type="submit" id="confirm" name="confirm" value="ȷ��">&nbsp;&nbsp;
-				<input type="reset" id="reinput" name="reinput" value="��д">
+				<input type="submit" id="confirm" name="confirm" value="确定">&nbsp;&nbsp;
+				<input type="reset" id="reinput" name="reinput" value="重写">
 			</P>
 		</form>
 	</center>

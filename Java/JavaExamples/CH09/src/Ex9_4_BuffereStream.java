@@ -3,21 +3,21 @@ public class Ex9_4_BuffereStream {
 	public static void main(String[] args) throws IOException{
 		InputStreamReader isr = new InputStreamReader(System.in);
 		BufferedReader br = new BufferedReader(isr);
-		FileWriter fout = new FileWriter(".\\buffer.txt");//´ò¿ªÎÄ±¾ÎÄ¼şĞ´
-		BufferedWriter bout=new BufferedWriter(fout);//×Ö·ûÁ÷×ª»»Îª»º³åÁ÷
+		FileWriter fout = new FileWriter(".\\buffer.txt");//æ‰“å¼€æ–‡æœ¬æ–‡ä»¶å†™
+		BufferedWriter bout=new BufferedWriter(fout);//å­—ç¬¦æµè½¬æ¢ä¸ºç¼“å†²æµ
 		String str;
 		while(true){
-			str=br.readLine(); //´Ó¼üÅÌ¶ÁÒ»ĞĞ×Ö·û
+			str=br.readLine(); //ä»é”®ç›˜è¯»ä¸€è¡Œå­—ç¬¦
 			if(str.equals("end"))
 				break;
-			bout.write(str); //½«¶ÁÈëµÄ×Ö·ûĞ´ÈëÎÄ¼şÖĞ
-			bout.newLine(); //Ğ´ĞĞ·Ö¸ô·ûµ½ÎÄ¼şÖĞ
+			bout.write(str); //å°†è¯»å…¥çš„å­—ç¬¦å†™å…¥æ–‡ä»¶ä¸­
+			bout.newLine(); //å†™è¡Œåˆ†éš”ç¬¦åˆ°æ–‡ä»¶ä¸­
 		}
-		bout.close(); //¹Ø±ÕÎÄ¼ş
-		FileReader fin=new FileReader(".\\buffer.txt");//´ò¿ªÎÄ±¾ÎÄ¼ş¶Á
-		BufferedReader bin=new BufferedReader(fin);//×Ö·ûÁ÷×ª»»Îª»º³åÁ÷	
-		while((str=bin.readLine())!=null)//´ÓÎÄ¼şÖĞ¶ÁÒ»ĞĞ×Ö·û
-			System.out.println(str); //ÏÔÊ¾
+		bout.close(); //å…³é—­æ–‡ä»¶
+		FileReader fin=new FileReader(".\\buffer.txt");//æ‰“å¼€æ–‡æœ¬æ–‡ä»¶è¯»
+		BufferedReader bin=new BufferedReader(fin);//å­—ç¬¦æµè½¬æ¢ä¸ºç¼“å†²æµ	
+		while((str=bin.readLine())!=null)//ä»æ–‡ä»¶ä¸­è¯»ä¸€è¡Œå­—ç¬¦
+			System.out.println(str); //æ˜¾ç¤º
 		bin.close();
 	}
 }

@@ -24,7 +24,7 @@ static Socket server=null;
 	        
 			server = new Socket ("127.0.0.1",4444);
 			 frm=new FormManagement();
-		  frm.creatForm("Client["+MultiSocketServer.sum+"]"+"server");   //¿Í»§»ú½çÃæ
+		  frm.creatForm("Client["+MultiSocketServer.sum+"]"+"server");   //å®¢æˆ·æœºç•Œé¢
 	        
 		  MultiSocketClient sendhandler=new MultiSocketClient();
 	         frm.send.addActionListener(sendhandler);
@@ -44,15 +44,15 @@ static Socket server=null;
 	        		    try {
 	        				is.close();
 	        			} catch (IOException e2) {
-	        				// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+	        				// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
 	        				System.out.println("4");
 	        			}try {
 	        				server.close();
 	        			} catch (IOException e1) {
-	        				// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+	        				// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
 	        				System.out.println("3");
 	        			}
-	        		    System.out.println("ÁÄÌì½áÊø.");
+	        		    System.out.println("èŠå¤©ç»“æŸ.");
 	        		    System.exit(0);
 	        		}
 	    }
@@ -71,7 +71,7 @@ static Socket server=null;
 		
 					frm.output.append(hour+"."+minute+"."+second+":"+"\r\n"+"    "+is.readLine()+"\r\n");
 				} catch (IOException e1) {
-					// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+					// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
 					System.out.println("10");
 				}
 	}
@@ -89,7 +89,7 @@ static Socket server=null;
 	}
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+		// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 		
 		if(frm.input.getText()!=null&&! frm.input.getText().equals("quit"))
 		    {
@@ -103,15 +103,15 @@ static Socket server=null;
 		    try {
 				is.close();
 			} catch (IOException e2) {
-				// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
 				System.out.println("4");
 			}try {
 				server.close();
 			} catch (IOException e1) {
-				// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
 				System.out.println("3");
 			}
-		    System.out.println("ÁÄÌì½áÊø.");
+		    System.out.println("èŠå¤©ç»“æŸ.");
 		    System.exit(0);
 		}
 	}

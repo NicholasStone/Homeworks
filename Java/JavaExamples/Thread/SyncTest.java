@@ -1,9 +1,9 @@
-/*	·¶ÀıÃû³Æ£ºÉú²úÕß--Ïû·ÑÕßÎÊÌâ
- * 	Ô´ÎÄ¼şÃû³Æ£ºSyncTest.java
- *	Òª  µã£º
- *		1. ¹²ÏíÊı¾İµÄ²»Ò»ÖÂĞÔ/ÁÙ½ç×ÊÔ´µÄ±£»¤
- *		2. Java¶ÔÏóËøµÄ¸ÅÄî
- *		3. synchronized¹Ø¼ü×Ö/wait()¼°notify()·½·¨
+/*	èŒƒä¾‹åç§°ï¼šç”Ÿäº§è€…--æ¶ˆè´¹è€…é—®é¢˜
+ * 	æºæ–‡ä»¶åç§°ï¼šSyncTest.java
+ *	è¦  ç‚¹ï¼š
+ *		1. å…±äº«æ•°æ®çš„ä¸ä¸€è‡´æ€§/ä¸´ç•Œèµ„æºçš„ä¿æŠ¤
+ *		2. Javaå¯¹è±¡é”çš„æ¦‚å¿µ
+ *		3. synchronizedå…³é”®å­—/wait()åŠnotify()æ–¹æ³•
  */
 
 
@@ -20,7 +20,7 @@ public class ProducerConsumer {
 }
 
 
-class SyncStack{  //Ö§³Ö¶àÏß³ÌÍ¬²½²Ù×÷µÄ¶ÑÕ»µÄÊµÏÖ
+class SyncStack{  //æ”¯æŒå¤šçº¿ç¨‹åŒæ­¥æ“ä½œçš„å †æ ˆçš„å®ç°
 	private int index = 0;
 	private char []data = new char[6];	
 	public synchronized void push(char c){
@@ -55,7 +55,7 @@ class  Producer implements Runnable{
 		for(int i=0; i<20; i++){
 			char c =(char)(Math.random()*26+'A');
 			stack.push(c);
-			System.out.println("produced£º"+c);
+			System.out.println("producedï¼š"+c);
 			try{							        
 				Thread.sleep((int)(Math.random()*1000)); 
 			}catch(InterruptedException e){
@@ -73,7 +73,7 @@ class Consumer implements Runnable{
 	public void run(){
 		for(int i=0;i<20;i++){
 			char c = stack.pop();
-			System.out.println("Ïû·Ñ£º"+c);
+			System.out.println("æ¶ˆè´¹ï¼š"+c);
 			try{							           
 				Thread.sleep((int)(Math.random()*1000));
 			}catch(InterruptedException e){

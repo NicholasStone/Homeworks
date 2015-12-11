@@ -2,16 +2,16 @@ import java.io.*;
 public class Ex9_2_FileReaderWriterStream {
 	public static void main(String[] args)throws IOException {
 		FileWriter fw;
-		fw=new FileWriter(".\\filestream.txt"); //´ò¿ªÎÄ¼şÊä³öÁ÷
-		char array[]={'ÎÄ','±¾','Êä','Èë','Êä','³ö','Ê¾','Àı','¡£'};
+		fw=new FileWriter(".\\filestream.txt"); //æ‰“å¼€æ–‡ä»¶è¾“å‡ºæµ
+		char array[]={'æ–‡','æœ¬','è¾“','å…¥','è¾“','å‡º','ç¤º','ä¾‹','ã€‚'};
 		for(int i=0;i<array.length ;i++)
-			fw.write(array[i]); //Ğ´Êı¾İµ½ÎÄ¼şÊä³öÁ÷£¬Ò²¾ÍÊÇĞ´ÈëÎÄ¼ş
-		fw.close(); //¹Ø±ÕÎÄ¼şÊä³öÁ÷£¬¼´¹Ø±ÕÎÄ¼ş
+			fw.write(array[i]); //å†™æ•°æ®åˆ°æ–‡ä»¶è¾“å‡ºæµï¼Œä¹Ÿå°±æ˜¯å†™å…¥æ–‡ä»¶
+		fw.close(); //å…³é—­æ–‡ä»¶è¾“å‡ºæµï¼Œå³å…³é—­æ–‡ä»¶
 		FileReader fr;
-		fr=new FileReader(".\\filestream.txt"); //´ò¿ªÎÄ¼şÊäÈëÁ÷
+		fr=new FileReader(".\\filestream.txt"); //æ‰“å¼€æ–‡ä»¶è¾“å…¥æµ
 		int value;
-		while((value=fr.read())!=-1)  //´ÓÎÄ¼şÊäÈëÁ÷¶ÁÊı¾İ£¬Ò²¾ÍÊÇ´ÓÎÄ¼ş¶ÁÊı¾İ
+		while((value=fr.read())!=-1)  //ä»æ–‡ä»¶è¾“å…¥æµè¯»æ•°æ®ï¼Œä¹Ÿå°±æ˜¯ä»æ–‡ä»¶è¯»æ•°æ®
 			System.out.print((char)value);  
-		fr.close(); //¹Ø±ÕÎÄ¼şÊäÈëÁ÷£¬¼´¹Ø±ÕÎÄ¼ş
+		fr.close(); //å…³é—­æ–‡ä»¶è¾“å…¥æµï¼Œå³å…³é—­æ–‡ä»¶
 	}
 }

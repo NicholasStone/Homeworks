@@ -16,12 +16,12 @@ class Doctor {
 		ID = ID1;
 		address = address1;
 
-		System.out.println("Ãû×Ö:" + name);
-		System.out.println("±àºÅ" + ID);
-		System.out.println("µØÖ·" + address);
+		System.out.println("åå­—:" + name);
+		System.out.println("ç¼–å·" + ID);
+		System.out.println("åœ°å€" + address);
 	}
 
-	public Doctor() {// Èç¹û²»¶¨Òå¸ÃÎŞ²Î¹¹Ôì·½·¨£¬½«µ¼ÖÂAĞĞÌáÊ¾Óï·¨´íÎó
+	public Doctor() {// å¦‚æœä¸å®šä¹‰è¯¥æ— å‚æ„é€ æ–¹æ³•ï¼Œå°†å¯¼è‡´Aè¡Œæç¤ºè¯­æ³•é”™è¯¯
 	}
 }
 
@@ -32,8 +32,8 @@ class Specialist extends Doctor {
 
 	public Specialist() {
 		
-		super();// AĞĞ ÓÉÓÚ¸¸ÀàÒÑ¾­Ìá¹©ÁËÓĞ²Î¹¹Ôì·½·¨£¬ÏµÍ³²»ÔÙÌá¹©Ä¬ÈÏµÄÎŞ²Î¹¹Ôì·½·¨
+		super();// Aè¡Œ ç”±äºçˆ¶ç±»å·²ç»æä¾›äº†æœ‰å‚æ„é€ æ–¹æ³•ï¼Œç³»ç»Ÿä¸å†æä¾›é»˜è®¤çš„æ— å‚æ„é€ æ–¹æ³•
 		name = "10";
-	//	System.out.println("Ãû×Ö:" + name);
+	//	System.out.println("åå­—:" + name);
 	}
 }

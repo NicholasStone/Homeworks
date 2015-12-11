@@ -3,18 +3,18 @@ import java.util.Date;
 public class Ex9_10_FileMethod {
 	public static void main(String[] args) {
 		File file=new File("./src/Ex8_12_FileMethod.java");
-		System.out.println("ÎÄ¼şÃû£º"+file.getName());
-		System.out.println("¸¸Ä¿Â¼£º"+file.getParent());
-		System.out.println("ÎÄ¼ş´æ·ÅÂ·¾¶£º"+file.getPath());
-		System.out.println("ÊÇ·ñ¾ø¶ÔÂ·¾¶£º"+file.isAbsolute());
-		System.out.println("¾ø¶ÔÂ·¾¶ÊÇ£º"+file.getAbsolutePath());
-		System.out.println("ÎÄ¼şÊÇ·ñ´æÔÚ£º"+file.exists());
-		System.out.println("ÊÇ·ñÊÇÎÄ¼ş£º"+file.isFile());
-		System.out.println("ÊÇ·ñÊÇÄ¿Â¼£º"+file.isDirectory());
-		System.out.println("ÊÇ·ñ¿É¶Á£º"+file.canRead());
-		System.out.println("ÊÇ·ñ¿ÉĞ´£º"+file.canWrite());
-		System.out.println("ÊÇ·ñÒş²Ø£º"+file.isHidden());
-		System.out.println("ÎÄ¼ş³¤¶È£º"+file.length()+"×Ö½Ú");
-		System.out.println("ÎÄ¼ş×îºóĞŞ¸ÄÈÕÆÚ£º"+ new Date(file.lastModified()));
+		System.out.println("æ–‡ä»¶åï¼š"+file.getName());
+		System.out.println("çˆ¶ç›®å½•ï¼š"+file.getParent());
+		System.out.println("æ–‡ä»¶å­˜æ”¾è·¯å¾„ï¼š"+file.getPath());
+		System.out.println("æ˜¯å¦ç»å¯¹è·¯å¾„ï¼š"+file.isAbsolute());
+		System.out.println("ç»å¯¹è·¯å¾„æ˜¯ï¼š"+file.getAbsolutePath());
+		System.out.println("æ–‡ä»¶æ˜¯å¦å­˜åœ¨ï¼š"+file.exists());
+		System.out.println("æ˜¯å¦æ˜¯æ–‡ä»¶ï¼š"+file.isFile());
+		System.out.println("æ˜¯å¦æ˜¯ç›®å½•ï¼š"+file.isDirectory());
+		System.out.println("æ˜¯å¦å¯è¯»ï¼š"+file.canRead());
+		System.out.println("æ˜¯å¦å¯å†™ï¼š"+file.canWrite());
+		System.out.println("æ˜¯å¦éšè—ï¼š"+file.isHidden());
+		System.out.println("æ–‡ä»¶é•¿åº¦ï¼š"+file.length()+"å­—èŠ‚");
+		System.out.println("æ–‡ä»¶æœ€åä¿®æ”¹æ—¥æœŸï¼š"+ new Date(file.lastModified()));
 	}
 }

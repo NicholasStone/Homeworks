@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=GB2312">
-<title>JSP 表达式</title>
+<title>JSP 琛ㄨ揪寮�</title>
 </head>
 <body>
 <%= 2 + 2 %>

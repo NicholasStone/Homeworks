@@ -1,4 +1,4 @@
-//¿Í»§¶Ë³ÌĞò£¬Ex11_3_Client.java
+//å®¢æˆ·ç«¯ç¨‹åºï¼ŒEx11_3_Client.java
 import java.io.*;
 import java.net.*;
 
@@ -7,35 +7,35 @@ public class Ex11_3_Client {
 		Socket server = null;
 		try {
 			String inputString;
-			server = new Socket("127.0.0.1", 4444);// Ïò±¾»ú4444¶Ë¿Ú·¢³ö¿Í»§ÇëÇó
-			System.out.println("ÇëÊäÈëĞÅÏ¢:");
+			server = new Socket("127.0.0.1", 4444);// å‘æœ¬æœº4444ç«¯å£å‘å‡ºå®¢æˆ·è¯·æ±‚
+			System.out.println("è¯·è¾“å…¥ä¿¡æ¯:");
 			BufferedReader sin = new BufferedReader(new InputStreamReader(
 					System.in));
-			// ÓÉÏµÍ³±ê×¼ÊäÈëÉè±¸¹¹ÔìBufferedReadder¶ÔÏó
+			// ç”±ç³»ç»Ÿæ ‡å‡†è¾“å…¥è®¾å¤‡æ„é€ BufferedReadderå¯¹è±¡
 			PrintWriter os = new PrintWriter(server.getOutputStream());
-			// ÓÉSocket¶ÔÏóµÃµ½Êä³öÁ÷£¬²¢¹¹ÔìPrintWriter¶ÔÏó
+			// ç”±Socketå¯¹è±¡å¾—åˆ°è¾“å‡ºæµï¼Œå¹¶æ„é€ PrintWriterå¯¹è±¡
 			BufferedReader is = new BufferedReader(new InputStreamReader(
 					server.getInputStream()));
-			// ÓÉSocket¶ÔÏóµÃµ½ÊäÈëÁ÷£¬²¢¹¹ÔìBufferedReader¶ÔÏó
-			inputString = sin.readLine();// ´Ó±ê×¼ÊäÈë¶ÁÈëÒ»×Ö·û´®
-			while (inputString != null && !inputString.trim().equals("quit")) {// Èç¹û¸Ã×Ö·û´®Îª"quit",ÔòÍ£Ö¹Ñ­»·
-				os.println(inputString);// ÏòServer¶ËÊä³ö¸Ã×Ö·û´®
-				os.flush();// Ë¢ĞÂÊä³öÁ÷£¬Ê¹Server¶ËÂíÉÏÊÕµ½¸Ã×Ö·û´®
-				System.out.println("Client·¢ËÍµÄÏûÏ¢Îª:" + inputString);
-				// ÔÚÆÁÄ»ÉÏÏÔÊ¾¶ÁÈëµÄ×Ö·û´®
-				System.out.println("Server·¢ËÍµÄÏûÏ¢Îª:" + is.readLine());
-				// ´ÓServer¶ÁÈëÒ»×Ö·û´®£¬²¢´òÓ¡µ½±ê×¼Êä³öÉÏ
-				inputString = sin.readLine(); // ´ÓÏµÍ³±ê×¼ÊäÈë¶ÁÈëÒ»×Ö·û´®
+			// ç”±Socketå¯¹è±¡å¾—åˆ°è¾“å…¥æµï¼Œå¹¶æ„é€ BufferedReaderå¯¹è±¡
+			inputString = sin.readLine();// ä»æ ‡å‡†è¾“å…¥è¯»å…¥ä¸€å­—ç¬¦ä¸²
+			while (inputString != null && !inputString.trim().equals("quit")) {// å¦‚æœè¯¥å­—ç¬¦ä¸²ä¸º"quit",åˆ™åœæ­¢å¾ªç¯
+				os.println(inputString);// å‘Serverç«¯è¾“å‡ºè¯¥å­—ç¬¦ä¸²
+				os.flush();// åˆ·æ–°è¾“å‡ºæµï¼Œä½¿Serverç«¯é©¬ä¸Šæ”¶åˆ°è¯¥å­—ç¬¦ä¸²
+				System.out.println("Clientå‘é€çš„æ¶ˆæ¯ä¸º:" + inputString);
+				// åœ¨å±å¹•ä¸Šæ˜¾ç¤ºè¯»å…¥çš„å­—ç¬¦ä¸²
+				System.out.println("Serverå‘é€çš„æ¶ˆæ¯ä¸º:" + is.readLine());
+				// ä»Serverè¯»å…¥ä¸€å­—ç¬¦ä¸²ï¼Œå¹¶æ‰“å°åˆ°æ ‡å‡†è¾“å‡ºä¸Š
+				inputString = sin.readLine(); // ä»ç³»ç»Ÿæ ‡å‡†è¾“å…¥è¯»å…¥ä¸€å­—ç¬¦ä¸²
 			}
-			os.close();// ¹Ø±ÕSocketÊä³öÁ÷
-			is.close();// ¹Ø±ÕSocketÊäÈëÁ÷
-			server.close();// ¹Ø±ÕServerSocket
-			System.out.println("ÁÄÌì½áÊø!");
+			os.close();// å…³é—­Socketè¾“å‡ºæµ
+			is.close();// å…³é—­Socketè¾“å…¥æµ
+			server.close();// å…³é—­ServerSocket
+			System.out.println("èŠå¤©ç»“æŸ!");
 		} catch (UnknownHostException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
-}// ¿Í»§¶Ë³ÌĞò½áÊø
+}// å®¢æˆ·ç«¯ç¨‹åºç»“æŸ
 

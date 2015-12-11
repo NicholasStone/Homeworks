@@ -30,7 +30,7 @@ public class ServerThread extends Thread {
 
 		this.client=client;
 		try{	this. frm=new FormManagement();
-		    this. frm.creatForm("Client["+MultiSocketServer.sum+"]");   //Ö÷»ú½çÃæ;
+		    this. frm.creatForm("Client["+MultiSocketServer.sum+"]");   //ä¸»æœºç•Œé¢;
 		   
 		    
 		    this. os = new PrintWriter(this.client.getOutputStream());
@@ -45,7 +45,7 @@ public class ServerThread extends Thread {
 	}
 	@Override
 	public void run() {
-		// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+		// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 		
 			
 		    
@@ -59,12 +59,12 @@ while(true)
 	int second=now.getSeconds();
 				frm.output.append(hour+"."+minute+"."+second+":"+"\r\n"+"    "+this.is.readLine()+"\r\n");
 			} catch (IOException e1) {
-				// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
 				System.out.println("9");
 			}
 }		   
 		  
-		//    System.out.println("ÁÄÌì½áÊø.");
+		//    System.out.println("èŠå¤©ç»“æŸ.");
 		
 		
 	}

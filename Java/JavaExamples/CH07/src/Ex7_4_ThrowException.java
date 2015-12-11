@@ -4,7 +4,7 @@ public class Ex7_4_ThrowException {
 		int age=200;
 		try{
 			if(age<0||age>120)
-				throw new Exception("年龄数据超出范围");
+				throw new Exception("骞撮緞鏁版嵁瓒呭嚭鑼冨洿");
 			System.out.println("age="+age);
 		}catch(Exception e){
 			e.printStackTrace();

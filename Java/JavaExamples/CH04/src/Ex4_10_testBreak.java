@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Ex4_10_testBreak{
 	public static void main(String args[]){
 		Scanner sc = new Scanner(System.in);
-		System.out.print("ÇëÊäÈëÒ»¸öÕıÕûÊı£º");
+		System.out.print("è¯·è¾“å…¥ä¸€ä¸ªæ­£æ•´æ•°ï¼š");
 		int n = sc.nextInt();
 
 boolean flag = true;
@@ -14,9 +14,9 @@ boolean flag = true;
 			}	
 		}
 		if( flag)
-			System.out.print("ÊÇËØÊı");
+			System.out.print("æ˜¯ç´ æ•°");
 		else
-			System.out.print("²»ÊÇËØÊı");
+			System.out.print("ä¸æ˜¯ç´ æ•°");
 	}
 }
 

@@ -10,15 +10,15 @@ public class Ex8_21_StudentScore {
 	}
 }
 
-class MainWindow extends JFrame { // Ö÷´°ÌåÀà
-	static JLabel submit;// »ØÏÔÂ¼Èë³É¼¨±êÇ©
+class MainWindow extends JFrame { // ä¸»çª—ä½“ç±»
+	static JLabel submit;// å›æ˜¾å½•å…¥æˆç»©æ ‡ç­¾
 
 	MainWindow() {
-		setTitle("Ñ§Éú³É¼¨Â¼ÈëÏµÍ³");
+		setTitle("å­¦ç”Ÿæˆç»©å½•å…¥ç³»ç»Ÿ");
 		setBounds(400, 200, 200, 120);
 		// setExtendedState(JFrame.MAXIMIZED_BOTH);
 		setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
-		setLayout(null);// ÉèÖÃÎª²»Ê¹ÓÃ²¼¾Ö¹ÜÀíÆ÷
+		setLayout(null);// è®¾ç½®ä¸ºä¸ä½¿ç”¨å¸ƒå±€ç®¡ç†å™¨
 		createMenu();
 		submit = new JLabel();
 		submit.setBounds(5, 5, 400, 20);
@@ -30,37 +30,37 @@ class MainWindow extends JFrame { // Ö÷´°ÌåÀà
 		});
 	}
 
-	void exitSystem() // ´¦ÀíÍË³öÏµÍ³ÊÂ¼ş
+	void exitSystem() // å¤„ç†é€€å‡ºç³»ç»Ÿäº‹ä»¶
 	{
-		int ret = JOptionPane.showConfirmDialog(this, "ÍË³öÏµÍ³Âğ£¿", "ÍË³öÏµÍ³Âğ£¿",
+		int ret = JOptionPane.showConfirmDialog(this, "é€€å‡ºç³»ç»Ÿå—ï¼Ÿ", "é€€å‡ºç³»ç»Ÿå—ï¼Ÿ",
 				JOptionPane.YES_NO_OPTION);
 		if (ret == JOptionPane.YES_OPTION) {
-			// dispose(); //²»ÄÜÍË³öµÇÂ¼¶Ô»°¿ò£¬ĞèĞŞ¸ÄµÇÂ¼¶Ô»°¿òÖĞµÄlogin()·½·¨¡£
+			// dispose(); //ä¸èƒ½é€€å‡ºç™»å½•å¯¹è¯æ¡†ï¼Œéœ€ä¿®æ”¹ç™»å½•å¯¹è¯æ¡†ä¸­çš„login()æ–¹æ³•ã€‚
 			System.exit(0);
 		}
 	}
 
 	void createMenu() {
-		// ´´½¨²Ëµ¥À¸²¢Ìí¼Óµ½´°Ìå¶¥²¿
+		// åˆ›å»ºèœå•æ å¹¶æ·»åŠ åˆ°çª—ä½“é¡¶éƒ¨
 		JMenuBar mbar = new JMenuBar();
 		setJMenuBar(mbar);
 
-		// ´´½¨2¸öÏÂÀ­Ê½²Ëµ¥,²¢Ìí¼Óµ½²Ëµ¥À¸
-		JMenu m1 = new JMenu("ÏµÍ³¹ÜÀí");
-		JMenu m2 = new JMenu("³É¼¨¹ÜÀí");
+		// åˆ›å»º2ä¸ªä¸‹æ‹‰å¼èœå•,å¹¶æ·»åŠ åˆ°èœå•æ 
+		JMenu m1 = new JMenu("ç³»ç»Ÿç®¡ç†");
+		JMenu m2 = new JMenu("æˆç»©ç®¡ç†");
 		mbar.add(m1);
 		mbar.add(m2);
 
-		// ´´½¨²Ëµ¥Ïî,²¢Ìí¼Óµ½ÏàÓ¦µÄ²Ëµ¥ÏÂ
-		JMenuItem mi11 = new JMenuItem("»ù±¾ĞÅÏ¢¹ÜÀí");
-		JMenuItem mi12 = new JMenuItem("ĞŞ¸ÄÃÜÂë");
-		JMenuItem mi13 = new JMenuItem("ÍË³öÏµÍ³");
+		// åˆ›å»ºèœå•é¡¹,å¹¶æ·»åŠ åˆ°ç›¸åº”çš„èœå•ä¸‹
+		JMenuItem mi11 = new JMenuItem("åŸºæœ¬ä¿¡æ¯ç®¡ç†");
+		JMenuItem mi12 = new JMenuItem("ä¿®æ”¹å¯†ç ");
+		JMenuItem mi13 = new JMenuItem("é€€å‡ºç³»ç»Ÿ");
 		mi11.setEnabled(false);
 		mi12.setEnabled(false);
 		m1.add(mi11);
 		m1.add(mi12);
 		m1.add(mi13);
-		// ÎªÍË³öÏµÍ³²Ëµ¥ÏîÌí¼ÓÊÂ¼ş
+		// ä¸ºé€€å‡ºç³»ç»Ÿèœå•é¡¹æ·»åŠ äº‹ä»¶
 		mi13.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -68,12 +68,12 @@ class MainWindow extends JFrame { // Ö÷´°ÌåÀà
 			}
 		});
 
-		JMenuItem mi21 = new JMenuItem("³É¼¨Â¼Èë");
-		JMenuItem mi22 = new JMenuItem("³É¼¨²éÑ¯");
+		JMenuItem mi21 = new JMenuItem("æˆç»©å½•å…¥");
+		JMenuItem mi22 = new JMenuItem("æˆç»©æŸ¥è¯¢");
 		mi22.setEnabled(false);
 		m2.add(mi21);
 		m2.add(mi22);
-		// Îª³É¼¨Â¼Èë²Ëµ¥ÏîÌí¼ÓÊÂ¼ş
+		// ä¸ºæˆç»©å½•å…¥èœå•é¡¹æ·»åŠ äº‹ä»¶
 		mi21.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
@@ -82,7 +82,7 @@ class MainWindow extends JFrame { // Ö÷´°ÌåÀà
 		});
 	}
 
-	void inputScores() {// Â¼Èë³É¼¨·½·¨
+	void inputScores() {// å½•å…¥æˆç»©æ–¹æ³•
 		InputScoresDialog isd = new InputScoresDialog();
 		isd.setVisible(true);
 	}
@@ -92,13 +92,13 @@ class MainWindow extends JFrame { // Ö÷´°ÌåÀà
 	}
 }// class MainWindow
 
-class InputScoresDialog extends JDialog {// Â¼Èë³É¼¨¶Ô»°¿òÀà
+class InputScoresDialog extends JDialog {// å½•å…¥æˆç»©å¯¹è¯æ¡†ç±»
 	JComboBox name;
 	JTextField maths;
 	JComboBox english;
 
 	InputScoresDialog() {
-		setTitle("³É¼¨Â¼Èë");
+		setTitle("æˆç»©å½•å…¥");
 		setBounds(500, 250, 240, 180);
 		setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
 		setLayout(null);
@@ -107,61 +107,61 @@ class InputScoresDialog extends JDialog {// Â¼Èë³É¼¨¶Ô»°¿òÀà
 	}
 
 	void createGUIElements() {
-		JLabel namelbl = new JLabel("ĞÕÃû:");
+		JLabel namelbl = new JLabel("å§“å:");
 		namelbl.setBounds(10, 20, 60, 25);
 		add(namelbl);
-		JLabel mathslbl = new JLabel("ÊıÑ§:");
+		JLabel mathslbl = new JLabel("æ•°å­¦:");
 		mathslbl.setBounds(10, 50, 60, 25);
 		add(mathslbl);
-		JLabel englishlbl = new JLabel("Ó¢Óï:");
+		JLabel englishlbl = new JLabel("è‹±è¯­:");
 		englishlbl.setBounds(10, 80, 80, 25);
 		add(englishlbl);
 		name = new JComboBox();
 		name.setBounds(100, 20, 120, 25);
-		name.addItem("ËïÎÄĞù");
-		name.addItem("ËïÎÄµÏ");
+		name.addItem("å­™æ–‡è½©");
+		name.addItem("å­™æ–‡è¿ª");
 		add(name);
 		maths = new JTextField();
 		maths.setBounds(100, 50, 120, 25);
 		maths.setText("100");
 		add(maths);
-		String[] ranks = { "ÓÅĞã", "Á¼ºÃ", "ÖĞµÈ", "¼°¸ñ", "²»¼°¸ñ" };
+		String[] ranks = { "ä¼˜ç§€", "è‰¯å¥½", "ä¸­ç­‰", "åŠæ ¼", "ä¸åŠæ ¼" };
 		english = new JComboBox(ranks);
 		english.setBounds(100, 80, 120, 25);
 		add(english);
 
-		JButton submitBtn = new JButton("Ìá½»");
+		JButton submitBtn = new JButton("æäº¤");
 		submitBtn.setBounds(20, 120, 80, 25);
 		add(submitBtn);
-		JButton cancelBtn = new JButton("·ÅÆú");
+		JButton cancelBtn = new JButton("æ”¾å¼ƒ");
 		cancelBtn.setBounds(130, 120, 80, 25);
 		add(cancelBtn);
 
-		// ±éÀúÈİÆ÷ÖĞµÄËùÓĞ×é¼ş£¬ÉèÖÃ×ÖÌå
+		// éå†å®¹å™¨ä¸­çš„æ‰€æœ‰ç»„ä»¶ï¼Œè®¾ç½®å­—ä½“
 		for (int i = 0; i < this.getContentPane().getComponentCount(); i++) {
 			Component comp = this.getContentPane().getComponent(i);
-			comp.setFont(new Font("ËÎÌå", Font.BOLD, 20));
+			comp.setFont(new Font("å®‹ä½“", Font.BOLD, 20));
 		}
-		// Ìí¼ÓÌá½»³É¼¨ÊÂ¼ş
+		// æ·»åŠ æäº¤æˆç»©äº‹ä»¶
 		submitBtn.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				String str = "ĞÕÃû:" + name.getSelectedItem().toString() + ";ÊıÑ§:"
-						+ maths.getText() + ";Ó¢Óï:"
+				String str = "å§“å:" + name.getSelectedItem().toString() + ";æ•°å­¦:"
+						+ maths.getText() + ";è‹±è¯­:"
 						+ english.getSelectedItem().toString();
-				MainWindow.setSubmit(str);// µ÷ÓÃÖ÷´°ÌåµÄ¾²Ì¬·½·¨ÏÔÊ¾,´Ë´¦¿É¸ÄÎª´æÈëÊı¾İ¿âÖĞ
+				MainWindow.setSubmit(str);// è°ƒç”¨ä¸»çª—ä½“çš„é™æ€æ–¹æ³•æ˜¾ç¤º,æ­¤å¤„å¯æ”¹ä¸ºå­˜å…¥æ•°æ®åº“ä¸­
 			}
 		});
 		cancelBtn.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				dispose();// ³·Ïú³É¼¨Â¼Èë¶Ô»°¿ò£¬·µ»ØÖ÷´°Ìå
+				dispose();// æ’¤é”€æˆç»©å½•å…¥å¯¹è¯æ¡†ï¼Œè¿”å›ä¸»çª—ä½“
 			}
 		});
 	}
 }
 
-class LoginDialog extends JDialog {// µÇÂ¼¶Ô»°¿òÀà
+class LoginDialog extends JDialog {// ç™»å½•å¯¹è¯æ¡†ç±»
 	JLabel usernamelbl;
 	JLabel passwordlbl;
 	JComboBox username;
@@ -174,21 +174,21 @@ class LoginDialog extends JDialog {// µÇÂ¼¶Ô»°¿òÀà
 	}//
 
 	void createGUIElements() {
-		// ÉèÖÃµÇÂ¼¶Ô»°¿ò,²¢ÉèÖÃÎ»ÖÃ¼°´óĞ¡¡¢Ä£Ì¬µÈ
-		setTitle("µÇÂ¼ÏµÍ³");
+		// è®¾ç½®ç™»å½•å¯¹è¯æ¡†,å¹¶è®¾ç½®ä½ç½®åŠå¤§å°ã€æ¨¡æ€ç­‰
+		setTitle("ç™»å½•ç³»ç»Ÿ");
 		setBounds(500, 250, 200, 120);
 		setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
 		setLayout(null);
 		setModal(true);
-		// ´´½¨ÓÃ»§ÃûÓëÃÜÂë±êÇ©
-		usernamelbl = new JLabel("ÓÃ»§Ãû:");
+		// åˆ›å»ºç”¨æˆ·åä¸å¯†ç æ ‡ç­¾
+		usernamelbl = new JLabel("ç”¨æˆ·å:");
 		usernamelbl.setBounds(20, 10, 50, 20);
 		this.add(usernamelbl);
-		passwordlbl = new JLabel("ÃÜ  Âë:");
+		passwordlbl = new JLabel("å¯†  ç :");
 		passwordlbl.setBounds(20, 32, 50, 20);
 		this.add(passwordlbl);
 
-		// ´´½¨ÓÃ»§ÃûÓëÃÜÂëÊäÈë×é¼ş,²¢¸³´¦Öµ
+		// åˆ›å»ºç”¨æˆ·åä¸å¯†ç è¾“å…¥ç»„ä»¶,å¹¶èµ‹å¤„å€¼
 		username = new JComboBox();
 		username.addItem("administrator");
 		username.addItem("whitesun");
@@ -199,17 +199,17 @@ class LoginDialog extends JDialog {// µÇÂ¼¶Ô»°¿òÀà
 		password.setEchoChar('*');
 		this.add(password);
 
-		// ´´½¨µÇÂ¼ÓëÍË³ö°´Å¥,²¢Ìí¼ÓÊÂ¼ş
-		loginBtn = new JButton("µÇÂ¼");
+		// åˆ›å»ºç™»å½•ä¸é€€å‡ºæŒ‰é’®,å¹¶æ·»åŠ äº‹ä»¶
+		loginBtn = new JButton("ç™»å½•");
 		loginBtn.setBounds(25, 60, 60, 20);
 		add(loginBtn);
 		loginBtn.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				login();
-			} // ·½·¨½áÊø
+			} // æ–¹æ³•ç»“æŸ
 		});
-		cancelBtn = new JButton("ÍË³ö");
+		cancelBtn = new JButton("é€€å‡º");
 		cancelBtn.setBounds(110, 60, 60, 20);
 		add(cancelBtn);
 		cancelBtn.addActionListener(new ActionListener() {
@@ -220,30 +220,30 @@ class LoginDialog extends JDialog {// µÇÂ¼¶Ô»°¿òÀà
 		});
 	}
 
-	void login() // ´¦ÀíµÇÂ¼°´Å¥ÊÂ¼ş
+	void login() // å¤„ç†ç™»å½•æŒ‰é’®äº‹ä»¶
 	{
 		String accout = username.getSelectedItem().toString();
 		String pwd = new String(password.getPassword());
 
-		// Èç¹ûÓÃ»§ÃûÓëÃÜÂëÕıÈ·,ÔòÒş²ØµÇÂ¼¶Ô»°¿ò,ÏÔÊ¾Ö÷´°Ìå
+		// å¦‚æœç”¨æˆ·åä¸å¯†ç æ­£ç¡®,åˆ™éšè—ç™»å½•å¯¹è¯æ¡†,æ˜¾ç¤ºä¸»çª—ä½“
 		if (accout.equals("administrator") && pwd.equals("123456")) {
-			setVisible(false);// Ö»Òş²Ø´æÔÚÇ±ÔÚÎÊÌâ£¬¿ÉÓÃdispose()³¹µ×Ïú»Ù
-			showMianWindow();// ÏÔÊ¾Ö÷´°Ìå
+			setVisible(false);// åªéšè—å­˜åœ¨æ½œåœ¨é—®é¢˜ï¼Œå¯ç”¨dispose()å½»åº•é”€æ¯
+			showMianWindow();// æ˜¾ç¤ºä¸»çª—ä½“
 		} else {
-			JOptionPane.showMessageDialog(this, "ÓÃ»§ÃûÊÇ" + accout + ",ÃÜÂëÊÇ" + pwd);
+			JOptionPane.showMessageDialog(this, "ç”¨æˆ·åæ˜¯" + accout + ",å¯†ç æ˜¯" + pwd);
 		}
 	}
 
-	void logout()// ´¦ÀíÈ¡Ïû°´Å¥ÊÂ¼ş
+	void logout()// å¤„ç†å–æ¶ˆæŒ‰é’®äº‹ä»¶
 	{
-		int ret = JOptionPane.showConfirmDialog(this, "Ñ¡ÔñÊÇ£¬È¡ÏûµÇÂ¼¡£", "È¡ÏûµÇÂ¼",
+		int ret = JOptionPane.showConfirmDialog(this, "é€‰æ‹©æ˜¯ï¼Œå–æ¶ˆç™»å½•ã€‚", "å–æ¶ˆç™»å½•",
 				JOptionPane.YES_NO_OPTION);
 		if (ret == JOptionPane.YES_OPTION) {
 			dispose();
 		}
 	}
 
-	void showMianWindow() {// ÏÔÊ¾Ö÷´°Ìå
+	void showMianWindow() {// æ˜¾ç¤ºä¸»çª—ä½“
 		MainWindow frm = new MainWindow();
 		frm.setVisible(true);
 	}

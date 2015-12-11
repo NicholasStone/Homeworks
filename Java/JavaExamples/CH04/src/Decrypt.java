@@ -3,26 +3,26 @@ import java.awt.*;
 import javax.swing.JOptionPane;
 
 public class Decrypt {
-   // JavaÓ¦ÓÃ³ÌĞòµÄÈë¿Ú£ºmain()·½·¨
+   // Javaåº”ç”¨ç¨‹åºçš„å…¥å£ï¼šmain()æ–¹æ³•
    public static void main( String args[] )
    {
-      int number;          // ÃÜÎÄ
-      int digit1;          // µÚ1Î»Êı
-      int digit2;          // µÚ2Î»Êı
-      int digit3;          // µÚ3Î»Êı
-      int digit4;          // µÚ4Î»Êı
-      int decryptedNumber; // ½âÃÜºóµÄÔ­ÎÄ
+      int number;          // å¯†æ–‡
+      int digit1;          // ç¬¬1ä½æ•°
+      int digit2;          // ç¬¬2ä½æ•°
+      int digit3;          // ç¬¬3ä½æ•°
+      int digit4;          // ç¬¬4ä½æ•°
+      int decryptedNumber; // è§£å¯†åçš„åŸæ–‡
 
-      // ÊäÈëÃÜÎÄ£¬±£´æµ½±äÁ¿numberÖĞ
+      // è¾“å…¥å¯†æ–‡ï¼Œä¿å­˜åˆ°å˜é‡numberä¸­
       number = Integer.parseInt( JOptionPane.showInputDialog(
          "Enter a four digit number: " ) );
 
-      // ½âÃÜ
-      /* ±àĞ´´úÂë£¬ÏÈ·ÖÀëÃÜÎÄÖĞµÄ¸÷Î»Êı×Ö£¬È»ºó¶ÔËÄÎ»ÊıÖĞµÄÃ¿Ò»Î»Êı½øĞĞ½âÃÜÔËËã */
+      // è§£å¯†
+      /* ç¼–å†™ä»£ç ï¼Œå…ˆåˆ†ç¦»å¯†æ–‡ä¸­çš„å„ä½æ•°å­—ï¼Œç„¶åå¯¹å››ä½æ•°ä¸­çš„æ¯ä¸€ä½æ•°è¿›è¡Œè§£å¯†è¿ç®— */
 
-      /* ½«½âÃÜºóµÄ¸÷Î»Êı×ÖÁ¬½ÓĞÎ³ÉÔ­ÎÄ */
+      /* å°†è§£å¯†åçš„å„ä½æ•°å­—è¿æ¥å½¢æˆåŸæ–‡ */
 
-      /* ±àĞ´´úÂë£¬ÓÃmessage dialogÏÔÊ¾½âÃÜºóµÄÔ­ÎÄ */
+      /* ç¼–å†™ä»£ç ï¼Œç”¨message dialogæ˜¾ç¤ºè§£å¯†åçš„åŸæ–‡ */
 
       System.exit( 0 );
 

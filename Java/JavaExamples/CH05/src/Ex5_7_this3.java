@@ -1,9 +1,9 @@
 public class Ex5_7_this3 {
 	public static void main(String[] args) {
 		Dog tom = new Dog();
-		System.out.println("新生的tom 身高:"+tom.height+"cm, 年龄:"+tom.age);
+		System.out.println("鏂扮敓鐨則om 韬珮:"+tom.height+"cm, 骞撮緞:"+tom.age);
 		tom=tom.grow();
-		System.out.println("长大后的tom 身高:"+tom.height+"cm, 年龄:"+tom.age);
+		System.out.println("闀垮ぇ鍚庣殑tom 韬珮:"+tom.height+"cm, 骞撮緞:"+tom.age);
 	}
 }
 

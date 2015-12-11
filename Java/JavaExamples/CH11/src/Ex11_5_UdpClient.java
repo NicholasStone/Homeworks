@@ -1,36 +1,36 @@
-//¿Í»§¶Ë´úÂë£¬Ex11_5_UdpClient.java
+//å®¢æˆ·ç«¯ä»£ç ï¼ŒEx11_5_UdpClient.java
 import java.io.*;
 import java.net.*;
 class Ex11_5_UdpClient{
 public static void main(String[] args){
-String host = "localhost";//Ö¸¶¨±¾»úÎªÖ÷»ú
-DatagramSocket datagramSocket = null;//¶¨ÒåÊı¾İ°üÌ×½Ó×Ö
+String host = "localhost";//æŒ‡å®šæœ¬æœºä¸ºä¸»æœº
+DatagramSocket datagramSocket = null;//å®šä¹‰æ•°æ®åŒ…å¥—æ¥å­—
 try{
 datagramSocket = new DatagramSocket();
-//¿Í»§¶Ë´´½¨Ò»¸öÊı¾İ±¨Ì×½Ó×Ö £¬ÓÉÏµÍ³×Ô¶¯·ÖÅä¶Ë¿ÚºÅ
+//å®¢æˆ·ç«¯åˆ›å»ºä¸€ä¸ªæ•°æ®æŠ¥å¥—æ¥å­— ï¼Œç”±ç³»ç»Ÿè‡ªåŠ¨åˆ†é…ç«¯å£å·
 byte[] sendBuffer;
 sendBuffer = new String("This is a datagram").getBytes();
-//´´½¨Ò»¸ö×Ö½ÚÊı×é£¬ÓÃÀ´±£´æÊı¾İ°üĞÅÏ¢µÄÊı¾İ²¿·Ö 
-//Õâ¸öĞÅÏ¢×î³õÊÇ×Ö·û´®¶ÔÏó£¬ÔÚµ÷ÓÃgetBytes()·½·¨Ö®ºó£¬¿ÉÒÔ×ª»»³É×Ö½ÚĞòÁĞ
+//åˆ›å»ºä¸€ä¸ªå­—èŠ‚æ•°ç»„ï¼Œç”¨æ¥ä¿å­˜æ•°æ®åŒ…ä¿¡æ¯çš„æ•°æ®éƒ¨åˆ† 
+//è¿™ä¸ªä¿¡æ¯æœ€åˆæ˜¯å­—ç¬¦ä¸²å¯¹è±¡ï¼Œåœ¨è°ƒç”¨getBytes()æ–¹æ³•ä¹‹åï¼Œå¯ä»¥è½¬æ¢æˆå­—èŠ‚åºåˆ—
 InetAddress address = InetAddress.getByName(host);
-//½«Ö÷»úÃû×ª»»³ÉInetAddress¶ÔÏó
+//å°†ä¸»æœºåè½¬æ¢æˆInetAddresså¯¹è±¡
 DatagramPacket datagramPacket = new DatagramPacket(sendBuffer,sendBuffer.length,address,5555);
-//´´½¨Ò»¸öDatagramPacket ¶ÔÏó£¬Ëü·â×°ÁË¶Ô×Ö½ÚÊı×éµÄÒıÓÃºÍÄ¿±êµØÖ·ĞÅÏ¢
+//åˆ›å»ºä¸€ä¸ªDatagramPacket å¯¹è±¡ï¼Œå®ƒå°è£…äº†å¯¹å­—èŠ‚æ•°ç»„çš„å¼•ç”¨å’Œç›®æ ‡åœ°å€ä¿¡æ¯
 datagramSocket.send(datagramPacket);
-//Í¨¹ısocket·¢ËÍÊı¾İ°ü
+//é€šè¿‡socketå‘é€æ•°æ®åŒ…
 byte[] receiveBuffer = new byte[200];
-//´´½¨Ò»¸ö×Ö½ÚÊı×é±£´æ·şÎñÆ÷µÄ·µ»Ø
+//åˆ›å»ºä¸€ä¸ªå­—èŠ‚æ•°ç»„ä¿å­˜æœåŠ¡å™¨çš„è¿”å›
 datagramPacket = new DatagramPacket(receiveBuffer,sendBuffer.length,address,5555);
-//´´½¨Ò»¸öDatagramPacket¶ÔÏó£¬Õâ¸ö¶ÔÏó±£´æÁË·şÎñÆ÷µÄ·µ»ØÖµ
+//åˆ›å»ºä¸€ä¸ªDatagramPacketå¯¹è±¡ï¼Œè¿™ä¸ªå¯¹è±¡ä¿å­˜äº†æœåŠ¡å™¨çš„è¿”å›å€¼
 datagramSocket.receive(datagramPacket);
-//Í¨¹ısocket½ÓÊÜµÄÊı¾İ°ü
+//é€šè¿‡socketæ¥å—çš„æ•°æ®åŒ…
 
 System.out.println(new String(datagramPacket.getData()));
-//´òÓ¡·şÎñÆ÷·µ»Ø²¢±£´æÔÚÊı¾İ°üÖĞµÄÖµ
+//æ‰“å°æœåŠ¡å™¨è¿”å›å¹¶ä¿å­˜åœ¨æ•°æ®åŒ…ä¸­çš„å€¼
 }
 catch (IOException e){
 System.out.println(e.toString());
-//´òÓ¡³ö´íĞÅÏ¢
+//æ‰“å°å‡ºé”™ä¿¡æ¯
 }
 finally{
 if (datagramSocket !=null){

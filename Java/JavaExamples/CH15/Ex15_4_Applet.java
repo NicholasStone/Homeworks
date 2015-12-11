@@ -1,5 +1,5 @@
 /**
- *ÔÚappletÀïÒÆ¶¯Í¼Æ¬
+ *åœ¨appleté‡Œç§»åŠ¨å›¾ç‰‡
  **/
 import java.awt.*;
 import java.awt.event.*;
@@ -7,34 +7,34 @@ import java.applet.Applet;
 
 public class Ex15_4_Applet extends Applet implements MouseMotionListener,
 		MouseListener {
-	Image img; // ÉùÃ÷ImageÀàÐÍµÄ±äÁ¿img
+	Image img; // å£°æ˜ŽImageç±»åž‹çš„å˜é‡img
 	int x = 70, y = 60, posX = 70, posY = 60, dx, dy;
 
 	public void init() {
-		img = getImage(getCodeBase(), "demo.gif");// ¼ÓÔØÓ°Ïñ
+		img = getImage(getCodeBase(), "demo.gif");// åŠ è½½å½±åƒ
 		addMouseListener(this);
 		addMouseMotionListener(this);
 	}
 
 	public void mousePressed(MouseEvent e) {
-		dx = e.getX() - posX; // È¡µÃ°´ÏÂµãÓë»ù×¼µãx·½ÏòµÄ¾àÀë
-		dy = e.getY() - posY; // È¡µÃ°´ÏÂµãÓë»ù×¼µãy·½ÏòµÄ¾àÀë
+		dx = e.getX() - posX; // å–å¾—æŒ‰ä¸‹ç‚¹ä¸ŽåŸºå‡†ç‚¹xæ–¹å‘çš„è·ç¦»
+		dy = e.getY() - posY; // å–å¾—æŒ‰ä¸‹ç‚¹ä¸ŽåŸºå‡†ç‚¹yæ–¹å‘çš„è·ç¦»
 	}
 
 	public void mouseDragged(MouseEvent e) {
-		x = e.getX() - dx; // È¡µÃÍÏÒ·Ê±»ù×¼µãµÄx×ø±ê
-		y = e.getY() - dy; // È¡µÃÍÏÒ·Ê±»ù×¼µãµÄy×ø±ê
-		if (dx > 0 && dx < 120 && dy > 0 && dy < 60) // Èç¹ûÖ¸ÕëÂäÔÚÍ¼ÐÎÉÏ·½
+		x = e.getX() - dx; // å–å¾—æ‹–æ›³æ—¶åŸºå‡†ç‚¹çš„xåæ ‡
+		y = e.getY() - dy; // å–å¾—æ‹–æ›³æ—¶åŸºå‡†ç‚¹çš„yåæ ‡
+		if (dx > 0 && dx < 120 && dy > 0 && dy < 60) // å¦‚æžœæŒ‡é’ˆè½åœ¨å›¾å½¢ä¸Šæ–¹
 		{
 			Graphics g = getGraphics();
-			update(g); // Çå¿Õ»­ÃæÎª±³¾°ÑÕÉ«£¬ÔÙµ÷ÓÃpaint()
+			update(g); // æ¸…ç©ºç”»é¢ä¸ºèƒŒæ™¯é¢œè‰²ï¼Œå†è°ƒç”¨paint()
 		}
 	}
 
 	public void paint(Graphics g) {
-		g.drawImage(img, x, y, 80, 100, this); // ½«img»­ÔÚappletÉÏ
-		posX = x; // ¸üÐÂ»ù×¼µãµÄx×ø±ê
-		posY = y; // ¸üÐÂ»ù×¼µãµÄy×ø±ê
+		g.drawImage(img, x, y, 80, 100, this); // å°†imgç”»åœ¨appletä¸Š
+		posX = x; // æ›´æ–°åŸºå‡†ç‚¹çš„xåæ ‡
+		posY = y; // æ›´æ–°åŸºå‡†ç‚¹çš„yåæ ‡
 	}
 
 	public void mouseMoved(MouseEvent e) {

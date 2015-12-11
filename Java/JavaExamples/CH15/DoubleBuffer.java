@@ -1,26 +1,26 @@
 import java.awt.*;
 import java.awt.event.*;
-public class DoubleBuffer extends Frame//Ö÷Àà¼Ì³ĞFrameÀà
+public class DoubleBuffer extends Frame//ä¸»ç±»ç»§æ‰¿Frameç±»
 {
-    public paintThread pT;//»æÍ¼Ïß³Ì
-    public int ypos=-80; //Ğ¡Ô²×óÉÏ½ÇµÄ×İ×ø±ê
-    public DoubleBuffer()//¹¹Ôìº¯Êı
+    public paintThread pT;//ç»˜å›¾çº¿ç¨‹
+    public int ypos=-80; //å°åœ†å·¦ä¸Šè§’çš„çºµåæ ‡
+    public DoubleBuffer()//æ„é€ å‡½æ•°
     {
        pT=new paintThread(this);
        this.setResizable(false);
-       this.setSize(300,300); //ÉèÖÃ´°¿ÚµÄÊ×Ñ¡´óĞ¡
-       this.setVisible(true); //ÏÔÊ¾´°¿Ú
-       pT.start();//»æÍ¼Ïß³ÌÆô¶¯
+       this.setSize(300,300); //è®¾ç½®çª—å£çš„é¦–é€‰å¤§å°
+       this.setVisible(true); //æ˜¾ç¤ºçª—å£
+       pT.start();//ç»˜å›¾çº¿ç¨‹å¯åŠ¨
     }
-   public void paint(Graphics scr) //ÖØÔØ»æÍ¼º¯Êı
+   public void paint(Graphics scr) //é‡è½½ç»˜å›¾å‡½æ•°
    {
-       scr.setColor(Color.RED);//ÉèÖÃĞ¡Ô²ÑÕÉ«
-       scr.fillOval(90,ypos,80,80); //»æÖÆĞ¡Ô²
+       scr.setColor(Color.RED);//è®¾ç½®å°åœ†é¢œè‰²
+       scr.fillOval(90,ypos,80,80); //ç»˜åˆ¶å°åœ†
     }
     public static void main(String[] args)
     {
-       DoubleBuffer DB=new DoubleBuffer();//´´½¨Ö÷ÀàµÄ¶ÔÏó
-       DB.addWindowListener(new WindowAdapter()//Ìí¼Ó´°¿Ú¹Ø±Õ´¦Àíº¯Êı
+       DoubleBuffer DB=new DoubleBuffer();//åˆ›å»ºä¸»ç±»çš„å¯¹è±¡
+       DB.addWindowListener(new WindowAdapter()//æ·»åŠ çª—å£å…³é—­å¤„ç†å‡½æ•°
        {
            public void windowClosing(WindowEvent e)
            {
@@ -28,24 +28,24 @@ public class DoubleBuffer extends Frame//Ö÷Àà¼Ì³ĞFrameÀà
            }});
     }
 }
-class paintThread extends Thread//»æÍ¼Ïß³ÌÀà
+class paintThread extends Thread//ç»˜å›¾çº¿ç¨‹ç±»
 {
     DoubleBuffer DB;
-       public paintThread(DoubleBuffer DB) //¹¹Ôìº¯Êı
+       public paintThread(DoubleBuffer DB) //æ„é€ å‡½æ•°
        {
            this.DB=DB;
        }
-       public void run()//ÖØÔØrun()º¯Êı
+       public void run()//é‡è½½run()å‡½æ•°
        {
-           while(true)//Ïß³ÌÖĞµÄÎŞÏŞÑ­»·
+           while(true)//çº¿ç¨‹ä¸­çš„æ— é™å¾ªç¯
            {
               try{
-                  sleep(30); //Ïß³ÌĞİÃß30ms
+                  sleep(30); //çº¿ç¨‹ä¼‘çœ 30ms
                   }catch(InterruptedException e){}
-              DB.ypos+=5; //ĞŞ¸ÄĞ¡Ô²×óÉÏ½ÇµÄ×İ×ø±ê
-              if(DB.ypos>300) //Ğ¡Ô²Àë¿ª´°¿ÚºóÖØÉè×óÉÏ½ÇµÄ×İ×ø±ê
+              DB.ypos+=5; //ä¿®æ”¹å°åœ†å·¦ä¸Šè§’çš„çºµåæ ‡
+              if(DB.ypos>300) //å°åœ†ç¦»å¼€çª—å£åé‡è®¾å·¦ä¸Šè§’çš„çºµåæ ‡
                   DB.ypos=-80;
-              DB.repaint();//´°¿ÚÖØ»æ
+              DB.repaint();//çª—å£é‡ç»˜
            }
        }
 }

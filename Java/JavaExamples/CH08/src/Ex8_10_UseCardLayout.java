@@ -4,25 +4,25 @@ import javax.swing.JLabel;
 
 public class Ex8_10_UseCardLayout {
 	public static void main(String[] args) {
-		JFrame frm = new JFrame("Ê¹ÓÃ¿¨Æ¬²¼¾Ö¹ÜÀíÆ÷");
-		// ´´½¨¿¨Æ¬²¼¾Ö¹ÜÀíÆ÷£¬²¢ÉèÖÃ
+		JFrame frm = new JFrame("ä½¿ç”¨å¡ç‰‡å¸ƒå±€ç®¡ç†å™¨");
+		// åˆ›å»ºå¡ç‰‡å¸ƒå±€ç®¡ç†å™¨ï¼Œå¹¶è®¾ç½®
 		CardLayout cardlayout = new CardLayout();
 		frm.setLayout(cardlayout);
 
-		// ´´½¨5¸ö×é¼ş²¢Ìí¼Óµ½ÈİÆ÷ÖĞ
-		JLabel label1 = new JLabel("Ó¢Óï");
-		JLabel label2 = new JLabel("ÊıÑ§");
-		JLabel label3 = new JLabel("µØÀí");
-		JLabel label4 = new JLabel("ÀúÊ·");
-		JLabel label5 = new JLabel("ÒôÀÖ");
-		frm.add(label1, "¿Î³Ì1");
-		frm.add(label2, "¿Î³Ì2");
-		frm.add(label3, "¿Î³Ì3");
-		frm.add(label4, "¿Î³Ì4");
-		frm.add(label5, "¿Î³Ì5");
+		// åˆ›å»º5ä¸ªç»„ä»¶å¹¶æ·»åŠ åˆ°å®¹å™¨ä¸­
+		JLabel label1 = new JLabel("è‹±è¯­");
+		JLabel label2 = new JLabel("æ•°å­¦");
+		JLabel label3 = new JLabel("åœ°ç†");
+		JLabel label4 = new JLabel("å†å²");
+		JLabel label5 = new JLabel("éŸ³ä¹");
+		frm.add(label1, "è¯¾ç¨‹1");
+		frm.add(label2, "è¯¾ç¨‹2");
+		frm.add(label3, "è¯¾ç¨‹3");
+		frm.add(label4, "è¯¾ç¨‹4");
+		frm.add(label5, "è¯¾ç¨‹5");
 
-		// ÏÔÊ¾Ö¸¶¨µÄ¿¨Æ¬»òÏÂÒ»¡¢Ç°Ò»¡¢µÚÒ»»ò×îºóÒ»ÕÅ¿¨Æ¬,
-		cardlayout.show(frm.getContentPane(), "¿Î³Ì4");
+		// æ˜¾ç¤ºæŒ‡å®šçš„å¡ç‰‡æˆ–ä¸‹ä¸€ã€å‰ä¸€ã€ç¬¬ä¸€æˆ–æœ€åä¸€å¼ å¡ç‰‡,
+		cardlayout.show(frm.getContentPane(), "è¯¾ç¨‹4");
 		// cardlayout.next(frm.getContentPane());
 		// cardlayout.previous(frm.getContentPane());
 		// cardlayout.first(frm.getContentPane());

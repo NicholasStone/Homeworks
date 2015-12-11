@@ -7,12 +7,12 @@ public class Ex7_3_CatchException {
 			c=a/b;
 			System.out.println(a+"/"+b+"="+c);
 		}catch(ArithmeticException e){
-			System.out.println("³öÏÖ±»0³ıµÄÒì³£Çé¿ö");
+			System.out.println("å‡ºç°è¢«0é™¤çš„å¼‚å¸¸æƒ…å†µ");
 		}catch(Exception e){
-			System.out.println("Òì³£ÀàĞÍÎª"+e);
+			System.out.println("å¼‚å¸¸ç±»å‹ä¸º"+e);
 		}finally{
-			System.out.println("³ıÊı="+a);
-			System.out.println("±»³ıÊı="+b);
+			System.out.println("é™¤æ•°="+a);
+			System.out.println("è¢«é™¤æ•°="+b);
 		}
 		a=9;
 		b=3;
@@ -20,12 +20,12 @@ public class Ex7_3_CatchException {
 			c=a/b;
 			System.out.println(a+"/"+b+"="+c);
 		}catch(ArithmeticException e){
-			System.out.println("³öÏÖ±»0³ıµÄÒì³£Çé¿ö");
+			System.out.println("å‡ºç°è¢«0é™¤çš„å¼‚å¸¸æƒ…å†µ");
 		}catch(Exception e){
-			System.out.println("Òì³£ÀàĞÍÎª"+e);
+			System.out.println("å¼‚å¸¸ç±»å‹ä¸º"+e);
 		}finally{
-			System.out.println("³ıÊı="+a);
-			System.out.println("±»³ıÊı="+b);
+			System.out.println("é™¤æ•°="+a);
+			System.out.println("è¢«é™¤æ•°="+b);
 		}
 	}
 }

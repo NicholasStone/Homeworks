@@ -3,19 +3,19 @@ import java.io.*;
 import java.net.*;
 
 public class Ex11_2_URLReader {
-	// ÉùÃ÷main·½·¨Å×³öËùÓĞÀıÍâ
+	// å£°æ˜mainæ–¹æ³•æŠ›å‡ºæ‰€æœ‰ä¾‹å¤–
 	public static void main(String[] args) throws Exception {
-		// ¹¹½¨Ò»¸öURL ¶ÔÏó
+		// æ„å»ºä¸€ä¸ªURL å¯¹è±¡
 		URL urlSina = new URL("http://www.sina.com.cn/");
-		// Ê¹ÓÃopenStreamµÃµ½Ò»ÊäÈëÁ÷²¢ÓÉ´Ë¹¹ÔìÒ»¸öBufferedReader¶ÔÏó
+		// ä½¿ç”¨openStreamå¾—åˆ°ä¸€è¾“å…¥æµå¹¶ç”±æ­¤æ„é€ ä¸€ä¸ªBufferedReaderå¯¹è±¡
 		BufferedReader in = new BufferedReader(new InputStreamReader(
 				urlSina.openStream()));
 		String inputLine;
-		// ´ÓÊäÈëÁ÷²»¶ÏµÄ¶ÁÊı¾İ£¬Ö±µ½¶ÁÍêÎªÖ¹
+		// ä»è¾“å…¥æµä¸æ–­çš„è¯»æ•°æ®ï¼Œç›´åˆ°è¯»å®Œä¸ºæ­¢
 		while ((inputLine = in.readLine()) != null)
-			// °Ñ¶ÁÈëµÄÊı¾İ´òÓ¡µ½ÆÁÄ»ÉÏ
+			// æŠŠè¯»å…¥çš„æ•°æ®æ‰“å°åˆ°å±å¹•ä¸Š
 			System.out.println(inputLine);
-		// ¹Ø±ÕÊäÈëÁ÷
+		// å…³é—­è¾“å…¥æµ
 		in.close();
 	}
 }

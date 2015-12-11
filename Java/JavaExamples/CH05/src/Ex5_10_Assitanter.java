@@ -1,10 +1,10 @@
 public class Ex5_10_Assitanter {
 	public static void main(String[] args) {
 		Examination exam;
-		Student1 zhangGang = new Student1(19, "É½Î÷Ì«Ô­", "ÕÅ¸Õ", 350);
-		Teacher missLiu = new Teacher(35, "beijing", "ÁõÀÏÊ¦", 2000, "102198");
-		ComputerCourse c1 = new ComputerCourse(missLiu, "12345", 3.5f, "±ØÐÞ",
-				"JavaÓïÑÔ³ÌÐòÉè¼Æ¼¼Êõ", "5");
+		Student1 zhangGang = new Student1(19, "å±±è¥¿å¤ªåŽŸ", "å¼ åˆš", 350);
+		Teacher missLiu = new Teacher(35, "beijing", "åˆ˜è€å¸ˆ", 2000, "102198");
+		ComputerCourse c1 = new ComputerCourse(missLiu, "12345", 3.5f, "å¿…ä¿®",
+				"Javaè¯­è¨€ç¨‹åºè®¾è®¡æŠ€æœ¯", "5");
 		c1.putInfo();
 		exam = new Examination(zhangGang, c1, 55f);
 		exam.putCredit();
@@ -28,15 +28,15 @@ class Examination {
 		float c = 0.0f;
 		if (score >= 60) {
 			c = course.credit;
-			System.out.println("Í¨¹ý¿¼ÊÔ£¬Êµ¼ÊÑ§·ÖÎª" + c);
+			System.out.println("é€šè¿‡è€ƒè¯•ï¼Œå®žé™…å­¦åˆ†ä¸º" + c);
 		}
 		if (score < 60) {
 			c = 0;
-			System.out.println("Î´Í¨¹ý¿¼ÊÔ£¬Êµ¼ÊÑ§·ÖÎª" + c);
+			System.out.println("æœªé€šè¿‡è€ƒè¯•ï¼Œå®žé™…å­¦åˆ†ä¸º" + c);
 		}
 
-		// System.out.println("¿Î³ÌÐÔÖÊ"+courseCharacter);
-		// courseCharacterÎªprotecedÈ¨ÏÞ£¬²»¿É±»²»Í¬°üµÄ·Ç×ÓÀà·ÃÎÊ
+		// System.out.println("è¯¾ç¨‹æ€§è´¨"+courseCharacter);
+		// courseCharacterä¸ºprotecedæƒé™ï¼Œä¸å¯è¢«ä¸åŒåŒ…çš„éžå­ç±»è®¿é—®
 		return c;
 	}
 }
@@ -51,10 +51,10 @@ class ComputerCourse extends Course {
 	}
 
 	public void putInfo() {
-		System.out.println("¿Î³Ì±àºÅ " + courseID);
-		System.out.println("Ñ§·Ö " + credit);
-		System.out.println("¿Î³ÌÐÔÖÊ " + courseCharacter);
-		// System.out.println("¿ªÉèÑ§ÆÚ"+term);//termÎªprivateÈ¨ÏÞ£¬²»¿É±»²»Í¬°üµÄ×ÓÀà·ÃÎÊ
-		// System.out.println("¿Î³Ì½éÉÜ"+description);//descriptionÎªÄ¬ÈÏÈ¨ÏÞ£¬²»¿É±»²»Í¬°üµÄ×ÓÀà·ÃÎÊ
+		System.out.println("è¯¾ç¨‹ç¼–å· " + courseID);
+		System.out.println("å­¦åˆ† " + credit);
+		System.out.println("è¯¾ç¨‹æ€§è´¨ " + courseCharacter);
+		// System.out.println("å¼€è®¾å­¦æœŸ"+term);//termä¸ºprivateæƒé™ï¼Œä¸å¯è¢«ä¸åŒåŒ…çš„å­ç±»è®¿é—®
+		// System.out.println("è¯¾ç¨‹ä»‹ç»"+description);//descriptionä¸ºé»˜è®¤æƒé™ï¼Œä¸å¯è¢«ä¸åŒåŒ…çš„å­ç±»è®¿é—®
 	}
 }

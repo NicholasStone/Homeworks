@@ -1,12 +1,12 @@
-import java.util.ArrayList; //ÔÚÀàµÄ¶¨ÒåµÄÇ°ÃæÊ¹ÓÃÁËimportÓï¾ä
+import java.util.ArrayList; //åœ¨ç±»çš„å®šä¹‰çš„å‰é¢ä½¿ç”¨äº†importè¯­å¥
 
 public class Ex13_5_Notebook {
-	// ÔÚNotebookÀàÖĞ¶¨ÒåÁËÒ»¸öArrayListÀàĞÍµÄ×Ö¶Înotes£¬ÓÃ¸Ã×Ö¶Î±£´æ¼ÇÊÂ±¾ÖĞµÄÈô¸É¼ÇÂ¼¡£
-	// Ê¹ÓÃÈİÆ÷Ê±ĞèÒªÈ·¶¨Á½ÖÖÀàĞÍ£ºÈİÆ÷µÄÀàĞÍ£¨ÕâÀïÊÇArrayList£©ºÍÈİÆ÷ÖĞ´æ·ÅµÄÔªËØÀàĞÍ£¨ÕâÀïÊÇString£©¡£
+	// åœ¨Notebookç±»ä¸­å®šä¹‰äº†ä¸€ä¸ªArrayListç±»å‹çš„å­—æ®µnotesï¼Œç”¨è¯¥å­—æ®µä¿å­˜è®°äº‹æœ¬ä¸­çš„è‹¥å¹²è®°å½•ã€‚
+	// ä½¿ç”¨å®¹å™¨æ—¶éœ€è¦ç¡®å®šä¸¤ç§ç±»å‹ï¼šå®¹å™¨çš„ç±»å‹ï¼ˆè¿™é‡Œæ˜¯ArrayListï¼‰å’Œå®¹å™¨ä¸­å­˜æ”¾çš„å…ƒç´ ç±»å‹ï¼ˆè¿™é‡Œæ˜¯Stringï¼‰ã€‚
 	private ArrayList<String> notes;
 
 	public Ex13_5_Notebook() {
-		// ÔÚNotebookµÄ¹¹ÔìÆ÷ÖĞ£¬´´½¨ArrayList<String>ÀàĞÍµÄ¶ÔÏó£¬²¢±£´æÔÚnotes×Ö¶ÎÖĞ¡£
+		// åœ¨Notebookçš„æ„é€ å™¨ä¸­ï¼Œåˆ›å»ºArrayList<String>ç±»å‹çš„å¯¹è±¡ï¼Œå¹¶ä¿å­˜åœ¨noteså­—æ®µä¸­ã€‚
 		notes = new ArrayList<String>();
 	}
 
@@ -15,12 +15,12 @@ public class Ex13_5_Notebook {
 		notes.add(note);
 	}
 
-	// »ñµÃ¼ÇÊÂ±¾ÖĞ¼ÇÂ¼µÄÊıÁ¿
+	// è·å¾—è®°äº‹æœ¬ä¸­è®°å½•çš„æ•°é‡
 	public int numberOfNotes() {
 		return notes.size();
 	}
 
-	// ¶ÁÈ¡¼ÇÊÂ±¾ÖĞÖ¸¶¨µÄ¼ÇÂ¼
+	// è¯»å–è®°äº‹æœ¬ä¸­æŒ‡å®šçš„è®°å½•
 	public void showNote(int noteNumber) {
 		if (noteNumber < 0) {
 			//
@@ -31,7 +31,7 @@ public class Ex13_5_Notebook {
 		}
 	}
 
-	// É¾³ı¼ÇÊÂ±¾ÖĞÖ¸¶¨µÄ¼ÇÂ¼
+	// åˆ é™¤è®°äº‹æœ¬ä¸­æŒ‡å®šçš„è®°å½•
 	public void removeNote(int noteNumber) {
 		if (noteNumber < 0) {
 			//

@@ -3,14 +3,14 @@ public class Ex9_3_FileAppendStream {
 	public static void main(String[] args)throws IOException {
 		String str="Welcom to Java!";
 		FileWriter fw;
-		fw=new FileWriter(".\\filestream.txt",true); //´ò¿ªÊä³öÁ÷
-		fw.write(str); //Ğ´×Ö·û´®µ½ÎÄ¼şÊä³öÁ÷
-		fw.close(); //¹Ø±ÕÎÄ¼şÊä³öÁ÷
+		fw=new FileWriter(".\\filestream.txt",true); //æ‰“å¼€è¾“å‡ºæµ
+		fw.write(str); //å†™å­—ç¬¦ä¸²åˆ°æ–‡ä»¶è¾“å‡ºæµ
+		fw.close(); //å…³é—­æ–‡ä»¶è¾“å‡ºæµ
 		FileReader fr;
-		fr=new FileReader(".\\filestream.txt"); //´ò¿ªÊäÈëÁ÷
+		fr=new FileReader(".\\filestream.txt"); //æ‰“å¼€è¾“å…¥æµ
 		int value;
-		while((value=fr.read())!=-1)  //´ÓÎÄ¼şÊäÈëÁ÷¶ÁÊı¾İ
+		while((value=fr.read())!=-1)  //ä»æ–‡ä»¶è¾“å…¥æµè¯»æ•°æ®
 			System.out.print((char)value);  
-		fr.close(); //¹Ø±ÕÎÄ¼şÊäÈëÁ÷
+		fr.close(); //å…³é—­æ–‡ä»¶è¾“å…¥æµ
 	}
 }

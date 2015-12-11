@@ -6,19 +6,19 @@ public class Ex7_9_ExceptionDemo {
 		int position;
 		BufferedReader inputReader = new BufferedReader(new InputStreamReader(System.in));
 		while(true){
-			System.out.print("ÊäÈëĞòºÅ(ÊäÈëend½áÊø)£º");
+			System.out.print("è¾“å…¥åºå·(è¾“å…¥endç»“æŸ)ï¼š");
 			try{
 				index=inputReader.readLine();
 				if(index.equals("end"))
 					break;
 				position=Integer.parseInt(index);
-				System.out.println("ÔªËØÖµÎª£º"+arr[position]);
+				System.out.println("å…ƒç´ å€¼ä¸ºï¼š"+arr[position]);
 			}catch(ArrayIndexOutOfBoundsException e){
-				System.out.println("Êı×éÏÂ±êÔ½½ç£¡");
+				System.out.println("æ•°ç»„ä¸‹æ ‡è¶Šç•Œï¼");
 			}catch(NumberFormatException e){
-				System.out.println("ÇëÊäÈëÒ»¸öÕûÊı£¡");
+				System.out.println("è¯·è¾“å…¥ä¸€ä¸ªæ•´æ•°ï¼");
 			}catch(IOException e){}
 		}
-		System.out.println("³ÌĞòÔËĞĞ½áÊø.");
+		System.out.println("ç¨‹åºè¿è¡Œç»“æŸ.");
 	}
 }

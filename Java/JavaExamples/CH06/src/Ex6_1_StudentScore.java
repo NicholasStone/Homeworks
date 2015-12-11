@@ -2,10 +2,10 @@ import java.io.*;
 
 public class Ex6_1_StudentScore {
 	public static void main(String[] args) throws IOException {
-		int k, count = 10;// countÎªÑ§ÉúµÄ¸öÊı
-		double score[] = new double[count];// Ñ§ÉúµÄ³É¼¨Êı×é
+		int k, count = 10;// countä¸ºå­¦ç”Ÿçš„ä¸ªæ•°
+		double score[] = new double[count];// å­¦ç”Ÿçš„æˆç»©æ•°ç»„
 		double doubleSum = 0.0, doubleAver = 0.0, maxScore = 0.0;
-		// Ñ§ÉúµÄ×Ü³É¼¨¡¢Æ½¾ù³É¼¨ºÍ×î¸ß³É¼¨
+		// å­¦ç”Ÿçš„æ€»æˆç»©ã€å¹³å‡æˆç»©å’Œæœ€é«˜æˆç»©
 		boolean contiGo = true;
 		String str;
 		BufferedReader buf = new BufferedReader(
@@ -13,11 +13,11 @@ public class Ex6_1_StudentScore {
 		for (k = 0; k < count; k++) {
 
 			while (contiGo) {
-				System.out.print("ÇëÊäÈëµÚ" + (k + 1) + "¸öÑ§ÉúµÄ³É¼¨£º");
+				System.out.print("è¯·è¾“å…¥ç¬¬" + (k + 1) + "ä¸ªå­¦ç”Ÿçš„æˆç»©ï¼š");
 				str = buf.readLine();
 				score[k] = Double.parseDouble(str);
 				if (0 > score[k] || 100 < score[k])
-					System.out.println("³É¼¨Ó¦¸Ã½éÓÚ0µ½100Ö®¼ä,ÇëÖØĞÂÊäÈë¡£");
+					System.out.println("æˆç»©åº”è¯¥ä»‹äº0åˆ°100ä¹‹é—´,è¯·é‡æ–°è¾“å…¥ã€‚");
 				else
 					break;
 			}
@@ -26,8 +26,8 @@ public class Ex6_1_StudentScore {
 			if (score[k] > maxScore)
 				maxScore = score[k];
 		}
-		doubleAver = doubleSum / count;// Æ½¾ù³É¼¨±£Áô2Î»Ğ¡Êı
-		System.out.println("Õâ" + count + "¸öÍ¬Ñ§µÄÆ½¾ù³É¼¨ÊÇ£º" + doubleAver);
-		System.out.println("Õâ" + count + "¸öÍ¬Ñ§µÄ×îºÃ³É¼¨ÊÇ£º" + maxScore);
+		doubleAver = doubleSum / count;// å¹³å‡æˆç»©ä¿ç•™2ä½å°æ•°
+		System.out.println("è¿™" + count + "ä¸ªåŒå­¦çš„å¹³å‡æˆç»©æ˜¯ï¼š" + doubleAver);
+		System.out.println("è¿™" + count + "ä¸ªåŒå­¦çš„æœ€å¥½æˆç»©æ˜¯ï¼š" + maxScore);
 	}
 }

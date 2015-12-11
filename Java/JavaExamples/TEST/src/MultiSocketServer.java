@@ -24,10 +24,10 @@ public class MultiSocketServer {
 			try {
 				client = serverSocket.accept();
 			} catch (Exception e) {
-				System.out.println("½ÓÊÕÇëÇóÊ§°Ü.");
+				System.out.println("æŽ¥æ”¶è¯·æ±‚å¤±è´¥.");
 				System.exit(-1);
 			}
-			// System.out.println("Client["+MultiSocketServer.sum+"]µÇÂ½......");
+			// System.out.println("Client["+MultiSocketServer.sum+"]ç™»é™†......");
 
 			ServerThread st = new ServerThread(client);
 
@@ -41,7 +41,7 @@ public class MultiSocketServer {
 			try {
 				serverSocket.close();
 			} catch (IOException e) {
-				System.out.println("¹Ø±ÕÊ§°Ü.");
+				System.out.println("å…³é—­å¤±è´¥.");
 				MultiSocketServer.sum++;
 			}
 		}

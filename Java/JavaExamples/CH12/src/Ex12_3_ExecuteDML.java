@@ -11,7 +11,7 @@ public class Ex12_3_ExecuteDML {
 	Statement stmt;
 
 	public void initParam(String paramFile)throws Exception	{
-		//Ê¹ÓÃPropertiesÀàÀ´¼ÓÔØÊôĞÔÎÄ¼ş
+		//ä½¿ç”¨Propertiesç±»æ¥åŠ è½½å±æ€§æ–‡ä»¶
 		Properties props = new Properties();
 		props.load(new FileInputStream(paramFile));
 		driver = props.getProperty("driver");
@@ -22,16 +22,16 @@ public class Ex12_3_ExecuteDML {
 
 	public int insertData(String sql)throws Exception	{
 		try{
-			//¼ÓÔØÇı¶¯
+			//åŠ è½½é©±åŠ¨
 			Class.forName(driver);
-			//»ñÈ¡Êı¾İ¿âÁ¬½Ó
+			//è·å–æ•°æ®åº“è¿æ¥
 			conn = DriverManager.getConnection(url , user , pass);
-			//Ê¹ÓÃConnectionÀ´´´½¨Ò»¸öStatment¶ÔÏó
+			//ä½¿ç”¨Connectionæ¥åˆ›å»ºä¸€ä¸ªStatmentå¯¹è±¡
 			stmt = conn.createStatement();
-			//Ö´ĞĞDML,·µ»ØÊÜÓ°ÏìµÄ¼ÇÂ¼ÌõÊı
+			//æ‰§è¡ŒDML,è¿”å›å—å½±å“çš„è®°å½•æ¡æ•°
 			return stmt.executeUpdate(sql);
 		}
-		//Ê¹ÓÃfinally¿éÀ´¹Ø±ÕÊı¾İ¿â×ÊÔ´
+		//ä½¿ç”¨finallyå—æ¥å…³é—­æ•°æ®åº“èµ„æº
 		finally{
 			if (stmt != null){
 				stmt.close();
@@ -46,6 +46,6 @@ public class Ex12_3_ExecuteDML {
 		ed.initParam("mysql.ini");
 		int result = ed.insertData("insert into jdbc_test(jdbc_name,jdbc_desc)" 
 			+ "select s.student_name , t.teacher_name "	+ "from student_table s , teacher_table t "+ "where s.java_teacher = t.teacher_id;");
-		System.out.println("------ÏµÍ³ÖĞ¹²ÓĞ" + result + "Ìõ¼ÇÂ¼ÊÜÓ°Ïì------");
+		System.out.println("------ç³»ç»Ÿä¸­å…±æœ‰" + result + "æ¡è®°å½•å—å½±å“------");
 	}
 }

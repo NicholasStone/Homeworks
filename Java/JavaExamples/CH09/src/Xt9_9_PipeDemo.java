@@ -1,4 +1,4 @@
-//¹ÜµÀÁ÷PipedInputStreamºÍPipedOutputStreamÓ¦ÓÃ¡£
+//ç®¡é“æµPipedInputStreamå’ŒPipedOutputStreamåº”ç”¨ã€‚
 import java.io.*;
 public class Xt9_9_PipeDemo {
 	public static void main(String args[])throws Exception{

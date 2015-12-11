@@ -2,32 +2,32 @@ import javax.swing.*;
 
 public class Ex8_5_UseSplitPane {
 	public static void main(String[] args) {
-		// ´´½¨´°Ìå¡¢ÉèÖÃ´°Ìå±êÌâºÍ´°Ìå¹Ø±Õ·½Ê½
+		// åˆ›å»ºçª—ä½“ã€è®¾ç½®çª—ä½“æ ‡é¢˜å’Œçª—ä½“å…³é—­æ–¹å¼
 		JFrame frm = new JFrame();
-		frm.setTitle("Ê¹ÓÃJSplitPane");
+		frm.setTitle("ä½¿ç”¨JSplitPane");
 		frm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		// ´´½¨Ë®Æ½·Ö¸îÃæ°å
+		// åˆ›å»ºæ°´å¹³åˆ†å‰²é¢æ¿
 		JSplitPane splitPane = new JSplitPane();
 		splitPane.setOrientation(JSplitPane.HORIZONTAL_SPLIT);
 		frm.add(splitPane);
 
-		// ´´½¨ÊäÈë¿ò,ÉèÖÃÎª¿É±à¼­,×ó²àÊäÈë,20ÁĞ,²¢Ìí¼Óµ½Ãæ°åµÄ×ó²à
+		// åˆ›å»ºè¾“å…¥æ¡†,è®¾ç½®ä¸ºå¯ç¼–è¾‘,å·¦ä¾§è¾“å…¥,20åˆ—,å¹¶æ·»åŠ åˆ°é¢æ¿çš„å·¦ä¾§
 		JTextArea input = new JTextArea();
 		input.setEditable(true);
 		input.setRows(5);
 		input.setColumns(25);
-		input.setText("¿ÉÀ­¶¯ÖĞ¼ä·Ö½çÏß,\n\r¹Û²ì´°¿Ú±ä»¯,\n\rÈçÊäÈë½Ï¶à×Ö·û¡£");
+		input.setText("å¯æ‹‰åŠ¨ä¸­é—´åˆ†ç•Œçº¿,\n\rè§‚å¯Ÿçª—å£å˜åŒ–,\n\rå¦‚è¾“å…¥è¾ƒå¤šå­—ç¬¦ã€‚");
 		splitPane.setLeftComponent(input);
 
-		// ´´½¨Ìá½»°´Å¥²¢Ìí¼Óµ½Ãæ°åµÄÓÒ²à
-		JButton submitBtn = new JButton("Ìá½»");
+		// åˆ›å»ºæäº¤æŒ‰é’®å¹¶æ·»åŠ åˆ°é¢æ¿çš„å³ä¾§
+		JButton submitBtn = new JButton("æäº¤");
 		splitPane.setRightComponent(submitBtn);
 
-		// ÉèÖÃ·Ö¸î±ÈÀı,×ó²àÎª140¸öÏñËØ¿í
+		// è®¾ç½®åˆ†å‰²æ¯”ä¾‹,å·¦ä¾§ä¸º140ä¸ªåƒç´ å®½
 		splitPane.setDividerLocation(140);
 
-		// ÉèÖÃ½á¹¹(JFrame)µÄÎ»ÖÃÓë´óĞ¡²¢ÏÔÊ¾
+		// è®¾ç½®ç»“æ„(JFrame)çš„ä½ç½®ä¸å¤§å°å¹¶æ˜¾ç¤º
 		frm.setBounds(450, 230, 400, 200);
 		frm.setVisible(true);
 	}

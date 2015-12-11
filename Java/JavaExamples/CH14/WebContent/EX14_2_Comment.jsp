@@ -3,11 +3,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-<title>基本测试</title>
+<title>鍩烘湰娴嬭瘯</title>
 </head>
 <body bgcolor="#e7e7e7">
 <body>
-<h2>你好！</h2>
-<%-- 该注释不会在页面源代码中显示 --%>
+<h2>浣犲ソ锛�</h2>
+<%-- 璇ユ敞閲婁笉浼氬湪椤甸潰婧愪唬鐮佷腑鏄剧ず --%>
 </body>
 </html>

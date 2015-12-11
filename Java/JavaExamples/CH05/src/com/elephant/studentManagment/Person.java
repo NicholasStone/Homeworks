@@ -9,14 +9,14 @@ public class Person {
 	private String phone;
 
 	public void setData() {
-		name = JOptionPane.showInputDialog(null, "ÇëÊäÈëĞÕÃû");
-		address = JOptionPane.showInputDialog(null, "ÇëÊäÈëµØÖ·");
-		gender = JOptionPane.showInputDialog(null, "ÇëÊäÈëĞÔ±ğ");
-		phone = JOptionPane.showInputDialog(null, "ÇëÊäÈëÁªÏµµç»°");
+		name = JOptionPane.showInputDialog(null, "è¯·è¾“å…¥å§“å");
+		address = JOptionPane.showInputDialog(null, "è¯·è¾“å…¥åœ°å€");
+		gender = JOptionPane.showInputDialog(null, "è¯·è¾“å…¥æ€§åˆ«");
+		phone = JOptionPane.showInputDialog(null, "è¯·è¾“å…¥è”ç³»ç”µè¯");
 	}
 
 	public void display() {
-		System.out.println("ĞÕÃû:" + name + "\tĞÔ±ğ £º" + gender + "\tµØÖ· £º"
-				+ address + "\tÁªÏµµç»°£º " + phone);
+		System.out.println("å§“å:" + name + "\tæ€§åˆ« ï¼š" + gender + "\tåœ°å€ ï¼š"
+				+ address + "\tè”ç³»ç”µè¯ï¼š " + phone);
 	}
 }

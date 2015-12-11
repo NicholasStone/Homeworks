@@ -13,25 +13,25 @@ public class Club {
 	}
 
 	public int numberOfMembers() {
-		return members.size();// ÈÝÆ÷¶ÔÏómembershipÖÐµÄÔªËØµÄ¸öÊý¾ÍÊÇµ±Ç°»áÔ±µÄÈËÊý¡£
+		return members.size();// å®¹å™¨å¯¹è±¡membershipä¸­çš„å…ƒç´ çš„ä¸ªæ•°å°±æ˜¯å½“å‰ä¼šå‘˜çš„äººæ•°ã€‚
 	}
 
 	public int joinedInMonth(int month) {
 		if (month >= 1 && month <= 12) {
-			int num = 0; // ¶¨Òå±äÁ¿£¬±£´æÍ³¼Æ½á¹û
+			int num = 0; // å®šä¹‰å˜é‡ï¼Œä¿å­˜ç»Ÿè®¡ç»“æžœ
 			for (Membership member : members) {
 				if (member.getMonth() == month)
 					num++;
 			}
-			return num; // Í³¼Æ½áÊøºó·µ»ØÍ³¼Æ½á¹û
+			return num; // ç»Ÿè®¡ç»“æŸåŽè¿”å›žç»Ÿè®¡ç»“æžœ
 		} else {
-			System.out.println("ÊäÈëµÄÔÂ·ÝÎÞÐ§£¡");
+			System.out.println("è¾“å…¥çš„æœˆä»½æ— æ•ˆï¼");
 			return 0;
 		}
 	}
 
 	public static void main(String[] args) {
-		Club club = new Club(); // ´´½¨Ò»¸öClub¶ÔÏó
+		Club club = new Club(); // åˆ›å»ºä¸€ä¸ªClubå¯¹è±¡
 
 		club.join(new Membership("David", 2, 2004));
 		club.join(new Membership("Michael", 1, 2004));

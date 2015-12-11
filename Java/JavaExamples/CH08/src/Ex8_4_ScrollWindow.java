@@ -2,28 +2,28 @@ import javax.swing.*;
 
 public class Ex8_4_ScrollWindow {
 	public static void main(String[] args) {
-		// ´´½¨´°Ìå¡¢ÉèÖÃ´°Ìå±êÌâºÍ´°Ìå¹Ø±Õ·½Ê½
+		// åˆ›å»ºçª—ä½“ã€è®¾ç½®çª—ä½“æ ‡é¢˜å’Œçª—ä½“å…³é—­æ–¹å¼
 		JFrame frm = new JFrame();
-		frm.setTitle("´ø¹ö¶¯ÌõµÄ´°Ìå");
+		frm.setTitle("å¸¦æ»šåŠ¨æ¡çš„çª—ä½“");
 		frm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		// ´´½¨Ò»¸ö5ĞĞ32ÁĞÎÄ±¾¿ò,²¢ÉèÖÃÄ¬ÈÏÄÚÈİ
+		// åˆ›å»ºä¸€ä¸ª5è¡Œ32åˆ—æ–‡æœ¬æ¡†,å¹¶è®¾ç½®é»˜è®¤å†…å®¹
 		JTextArea ta = new JTextArea();
 		ta.setRows(5);
 		ta.setColumns(32);
-		ta.setText("ÕâÊÇÒ»¸ö5ĞĞ32ÁĞµÄÎÄ±¾¿ò,\n\rÇëÀ­¶¯´°ÌåÒÔ¼°ÊäÈë¶àĞĞ¹Û²ìĞ§¹û!");
-		// ´´½¨Ò»¸ö°´Å¥
-		JButton btn = new JButton("°´Å¥");
+		ta.setText("è¿™æ˜¯ä¸€ä¸ª5è¡Œ32åˆ—çš„æ–‡æœ¬æ¡†,\n\rè¯·æ‹‰åŠ¨çª—ä½“ä»¥åŠè¾“å…¥å¤šè¡Œè§‚å¯Ÿæ•ˆæœ!");
+		// åˆ›å»ºä¸€ä¸ªæŒ‰é’®
+		JButton btn = new JButton("æŒ‰é’®");
 
-		// ´´½¨Ò»¸ö·ÅÖÃ×é¼şµÄÃæ°å,²¢Ìí¼ÓÎÄ±¾¿òºÍ°´Å¥
+		// åˆ›å»ºä¸€ä¸ªæ”¾ç½®ç»„ä»¶çš„é¢æ¿,å¹¶æ·»åŠ æ–‡æœ¬æ¡†å’ŒæŒ‰é’®
 		JPanel p = new JPanel();
 		p.add(ta);
 		p.add(btn);
 
-		// ´´½¨¹ö¶¯Ãæ°å,²¢ÉèÖÃÉÏÃæ´´½¨µÄÃæ°åÎª×é¼ş
+		// åˆ›å»ºæ»šåŠ¨é¢æ¿,å¹¶è®¾ç½®ä¸Šé¢åˆ›å»ºçš„é¢æ¿ä¸ºç»„ä»¶
 		JScrollPane sp = new JScrollPane();
 		sp.setViewportView(p);
-		// ½«¹ö¶¯Ãæ°åÉèÖÃÎª´°ÌåµÄÄÚÈİÃæ°å
+		// å°†æ»šåŠ¨é¢æ¿è®¾ç½®ä¸ºçª—ä½“çš„å†…å®¹é¢æ¿
 		frm.setContentPane(sp);
 
 		frm.setBounds(450, 230, 300, 150);

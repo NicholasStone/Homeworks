@@ -25,17 +25,17 @@ class CarD123{
  int card[][];
  
 
- //Ëæ»ú²úÉúÒ»¸öÊı
+ //éšæœºäº§ç”Ÿä¸€ä¸ªæ•°
  Random r1;
  Random r2;
  
- public CarD123(){ //¹¹Ôì·½·¨ 
+ public CarD123(){ //æ„é€ æ–¹æ³• 
 
   card= new int[4][13]; 
   r1 = new Random();
   r2 = new Random();
   
-  for (i = 0; i < 4; i++){   // °Ñ¶şÎ¬Êı×éµÄÖµÈ«¸³ÖµÎª0£¬0±íÊ¾¸Ã²»ÊôÓÚÈÎºÎÈË£»
+  for (i = 0; i < 4; i++){   // æŠŠäºŒç»´æ•°ç»„çš„å€¼å…¨èµ‹å€¼ä¸º0ï¼Œ0è¡¨ç¤ºè¯¥ä¸å±äºä»»ä½•äººï¼›
    for (j = 0; j < 13; j++) {
     card[i][j] = 0;
    }
@@ -64,10 +64,10 @@ class CarD123{
  public void OutHuaSe(int k,int d){
   int i=k;
   int p=d;
-  String huase1="ºÚÌÒ";
-  String huase2="ºìÌÒ";
-  String huase3="Ã·»¨";
-  String huase4="·½¿é";
+  String huase1="é»‘æ¡ƒ";
+  String huase2="çº¢æ¡ƒ";
+  String huase3="æ¢…èŠ±";
+  String huase4="æ–¹å—";
   if(i==0){
    OutZiMu(p,huase1);
   }else if(i==1){  
@@ -80,7 +80,7 @@ class CarD123{
  }
  
  public void Out12(){     
-  //·¢ÅÆ²¿·Ö£º¸øËÄ¸öÍæ¼Ò·¢ÅÆ£¬KÎªÅÆÊı¡£FÎªÍæ¼Ò1£¬2£¬3£¬4¡£Í¨¹ıÍ¨¹ıËæ»ú.card[i][j]µÄÖµ½øĞĞÕÒÅÆ
+  //å‘ç‰Œéƒ¨åˆ†ï¼šç»™å››ä¸ªç©å®¶å‘ç‰Œï¼ŒKä¸ºç‰Œæ•°ã€‚Fä¸ºç©å®¶1ï¼Œ2ï¼Œ3ï¼Œ4ã€‚é€šè¿‡é€šè¿‡éšæœº.card[i][j]çš„å€¼è¿›è¡Œæ‰¾ç‰Œ
   for (k = 0; k < 13; k++) {
    for (f = 1; f < 5; f++) {
     do {
@@ -97,7 +97,7 @@ class CarD123{
 
   }
    
-  System.out.println("  Íæ¼Ò1:");
+  System.out.println("  ç©å®¶1:");
   for(i=0;i<4;i++){
    for(j=0;j<13;j++){
     if(card[i][j]==1){
@@ -108,7 +108,7 @@ class CarD123{
   
   System.out.println(" ");
   System.out.println(" ");
-  System.out.println("  Íæ¼Ò2:");
+  System.out.println("  ç©å®¶2:");
   for(i=0;i<4;i++){
    for(j=0;j<13;j++){
     if(card[i][j]==2){
@@ -121,7 +121,7 @@ class CarD123{
   
   System.out.println(" ");
   System.out.println(" ");
-  System.out.println("  Íæ¼Ò3:");
+  System.out.println("  ç©å®¶3:");
   for(i=0;i<4;i++){
    for(j=0;j<13;j++){
     if(card[i][j]==3){
@@ -132,7 +132,7 @@ class CarD123{
   
   System.out.println(" ");
   System.out.println(" ");
-  System.out.println("  Íæ¼Ò4:");
+  System.out.println("  ç©å®¶4:");
   for(i=0;i<4;i++){
    for(j=0;j<13;j++){
     if(card[i][j]==4){

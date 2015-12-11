@@ -6,7 +6,7 @@ public class Ex9_5_DataInputOutputStream {
 		long l=123456;
 		float f=3.14f;
 		double d=3.1415926535;
-		String  str="基本类型数据输入输出示例";
+		String  str="鍩烘湰绫诲瀷鏁版嵁杈撳叆杈撳嚭绀轰緥";
 		DataOutputStream output=new DataOutputStream(new FileOutputStream(".\\datastream.dat"));
 		output.writeChar(c);
 		output.writeInt(i);

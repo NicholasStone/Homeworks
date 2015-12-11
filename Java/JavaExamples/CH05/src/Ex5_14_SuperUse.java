@@ -22,13 +22,13 @@ class SubClass extends SuperClass {
 	private int n;
 
 	SubClass(int n) {
-		super();// AĞĞ£¬¿ÉÒÔÍ¨¹ısuperµ÷ÓÃ¸¸Àà¹¹Ôì·½·¨
+		super();// Aè¡Œï¼Œå¯ä»¥é€šè¿‡superè°ƒç”¨çˆ¶ç±»æ„é€ æ–¹æ³•
 		System.out.println("SubClass(" + n + ")");
 		this.n = n;
 	}
 
 	SubClass() {
-		super(300); // BĞĞ£¬ÏÔÊ½µ÷ÓÃ¸¸ÀàµÄÌØ¶¨¹¹Ôì·½·¨
+		super(300); // Bè¡Œï¼Œæ˜¾å¼è°ƒç”¨çˆ¶ç±»çš„ç‰¹å®šæ„é€ æ–¹æ³•
 		System.out.println("SubClass()");
 	}
 }

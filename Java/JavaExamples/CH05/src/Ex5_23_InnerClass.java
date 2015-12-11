@@ -2,8 +2,8 @@ public class Ex5_23_InnerClass {
 	public static void main(String[] args) {
 		Parcel p =new Parcel();
 		Parcel.Contents c = p.new Contents(33);
-		Parcel.Destination d = p.new Destination("É½Î÷´óÍ¬");//D ĞĞ
-		//Destination d = new Destination("É½Î÷Ì«Ô­");//A ĞĞ
+		Parcel.Destination d = p.new Destination("å±±è¥¿å¤§åŒ");//D è¡Œ
+		//Destination d = new Destination("å±±è¥¿å¤ªåŸ");//A è¡Œ
 		p.setValue(c,d);
 		p.ship();
 		p.testShip();
@@ -18,7 +18,7 @@ class Parcel{
 		private int i;
 		Contents(int i){
 			this.i=i;
-			contentsCount++;//CĞĞ
+			contentsCount++;//Cè¡Œ
 		}
 		int value(){
 			return i;
@@ -42,12 +42,12 @@ class Parcel{
 	}
 	
 	void ship(){
-		System.out.println("ÔËÊä"+c.value()+"µ½"+d.label) ;//BĞĞ
+		System.out.println("è¿è¾“"+c.value()+"åˆ°"+d.label) ;//Bè¡Œ
 	}
 	
 	public void testShip(){
 		c = new Contents(22);
-		d = new Destination("É½Î÷Ì«Ô­");
+		d = new Destination("å±±è¥¿å¤ªåŸ");
 		ship();
 	}
 }

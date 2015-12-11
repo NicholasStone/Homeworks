@@ -28,11 +28,11 @@ public class FormManagement {
 		this.input.setEditable(true);
 		this.input.setHorizontalAlignment(SwingConstants.LEFT);
 		this.input.setColumns(25);
-		this.bottomPanel.add(this.input); // Ìí¼ÓÊäÈë¿ò;
+		this.bottomPanel.add(this.input); // æ·»åŠ è¾“å…¥æ¡†;
 
-		this.send = new JButton("·¢ËÍ");
+		this.send = new JButton("å‘é€");
 		this.send.setBounds(0, 0, 40, 20);
-		this.bottomPanel.add(this.send); // ·¢ËÍ°´Å¥
+		this.bottomPanel.add(this.send); // å‘é€æŒ‰é’®
 
 		this.output = new JTextArea();
 		this.output.setRows(6);

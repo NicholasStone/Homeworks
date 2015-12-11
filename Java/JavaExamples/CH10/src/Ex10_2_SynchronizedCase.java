@@ -52,8 +52,8 @@ class CardAccount implements Runnable {
 				fund -= num;
 			}
 			try {
-				System.out.println("µ±Ç°Ïß³ÌÊÇ" + accessType + ",ÕË»§Ê£Óà×Ê½ğÎª" + fund
-						+ "¡£");
+				System.out.println("å½“å‰çº¿ç¨‹æ˜¯" + accessType + ",è´¦æˆ·å‰©ä½™èµ„é‡‘ä¸º" + fund
+						+ "ã€‚");
 				Thread.sleep(2000);
 			} catch (InterruptedException ex) {
 				System.err.println(ex.toString());

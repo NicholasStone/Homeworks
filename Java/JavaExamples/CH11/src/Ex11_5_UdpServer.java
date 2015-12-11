@@ -1,23 +1,23 @@
-//·şÎñ¶Ë³ÌĞò£¬Ex11_5_UdpServer.java
+//æœåŠ¡ç«¯ç¨‹åºï¼ŒEx11_5_UdpServer.java
 import java.io.*;
 import java.net.*;
 class Ex11_5_UdpServer{
 public static void main(String[] args) throws IOException{
- System.out.println("Server starting¡­\n"); 
+ System.out.println("Server startingâ€¦\n"); 
 DatagramSocket s = new DatagramSocket(5555);
-//´´½¨Ò»¸ö°ó¶¨µ½5555¶Ë¿ÚµÄÊı¾İ±¨Ì×½Ó×Ö
+//åˆ›å»ºä¸€ä¸ªç»‘å®šåˆ°5555ç«¯å£çš„æ•°æ®æŠ¥å¥—æ¥å­—
 byte[] data = new byte[200];
-//´´½¨Ò»¸öÓÃÓÚ±£´æÊı¾İ°üµÄ×Ö½ÚÊı×é
+//åˆ›å»ºä¸€ä¸ªç”¨äºä¿å­˜æ•°æ®åŒ…çš„å­—èŠ‚æ•°ç»„
 DatagramPacket dgp = new DatagramPacket(data,data.length);
-//´´½¨Ò»¸öDatagramPacket¶ÔÏó·â×°ÁËÒ»¸öÖ¸Ïò×Ö½ÚÊı×éºÍÄ¿±êµÄµØÖ·//ĞÅÏ¢,Õâ¸öDatagramPacket¶ÔÏóÃ»ÓĞ³õÊ¼»¯µØÖ·ÊÇÒòÎªËü°üº¬ÁË
-//À´×Ô¿Í»§¶ËµÄµØÖ·ĞÅÏ¢
+//åˆ›å»ºä¸€ä¸ªDatagramPacketå¯¹è±¡å°è£…äº†ä¸€ä¸ªæŒ‡å‘å­—èŠ‚æ•°ç»„å’Œç›®æ ‡çš„åœ°å€//ä¿¡æ¯,è¿™ä¸ªDatagramPacketå¯¹è±¡æ²¡æœ‰åˆå§‹åŒ–åœ°å€æ˜¯å› ä¸ºå®ƒåŒ…å«äº†
+//æ¥è‡ªå®¢æˆ·ç«¯çš„åœ°å€ä¿¡æ¯
 while(true){
 s.receive(dgp);
-//´Ó¿Í»§¶Ë½ÓÊÜÊı¾İ°ü
+//ä»å®¢æˆ·ç«¯æ¥å—æ•°æ®åŒ…
 System.out.println(new String(data));
-//ÏÔÊ¾Êı¾İ°üµÄÄÚÈİ
+//æ˜¾ç¤ºæ•°æ®åŒ…çš„å†…å®¹
 s.send(dgp);
-//»ØÓ¦Ò»¸öĞÅÏ¢¸ø¿Í»§¶Ë
+//å›åº”ä¸€ä¸ªä¿¡æ¯ç»™å®¢æˆ·ç«¯
 }
 }
 }

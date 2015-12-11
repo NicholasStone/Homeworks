@@ -3,7 +3,7 @@ public class Ex7_6_ThrowsException {
 	public static int calc(int x) throws Exception{
 		int z=0;
 		if(x==0)
-			throw new Exception("³ıÊıÎªÁã£¡");
+			throw new Exception("é™¤æ•°ä¸ºé›¶ï¼");
 		z=110/x;
 		return z;	
 	}
@@ -13,7 +13,7 @@ public class Ex7_6_ThrowsException {
 			a=calc(0);
 			System.out.println("a="+a);
 		}catch(Exception e){
-			System.out.println("µ÷ÓÃ·½·¨calcÊ±·¢ÉúÒì³£:"+e.getMessage());
+			System.out.println("è°ƒç”¨æ–¹æ³•calcæ—¶å‘ç”Ÿå¼‚å¸¸:"+e.getMessage());
 			e.printStackTrace();
 		}
 	}

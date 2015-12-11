@@ -25,7 +25,7 @@ public class Ex11_6_ScoreServer implements ActionListener {
 	public void Connection() {
 		try {
 			String ip = InetAddress.getLocalHost().getHostAddress();
-			l.setText("·şÎñÆ÷µ±Ç°ip£º" + ip);
+			l.setText("æœåŠ¡å™¨å½“å‰ipï¼š" + ip);
 		} catch (Exception e) {
 		}
 		try {
@@ -70,7 +70,7 @@ public class Ex11_6_ScoreServer implements ActionListener {
 					+ id + "'");
 			if (rs.next()) {
 				sendMessage("have");
-				System.out.print("Ìí¼Ó");
+				System.out.print("æ·»åŠ ");
 			} else {
 				sendMessage("success");
 				stm.executeQuery("insert into score values('" + id + "','"
@@ -122,7 +122,7 @@ public class Ex11_6_ScoreServer implements ActionListener {
 				sendMessage("loginsuccess");
 				System.out.print("loginsuccess");
 			} else {
-				System.out.print("ÃÜÂë´íÎó£¡");
+				System.out.print("å¯†ç é”™è¯¯ï¼");
 				sendMessage("password is wrong");
 			}
 			rs.close();
@@ -134,8 +134,8 @@ public class Ex11_6_ScoreServer implements ActionListener {
 	}
 	public void search(String str) {
 		try {
-			System.out.print("²éÕÒÊı¾İ¿â" + str);
-			//ÔËĞĞÇ°£¬ÇëĞŞ¸ÄÊı¾İ¿âÂ·¾¶£¬»ò½«score.mdb·ÅÔÚDÅÌ¸ùÄ¿Â¼ÏÂ¡£
+			System.out.print("æŸ¥æ‰¾æ•°æ®åº“" + str);
+			//è¿è¡Œå‰ï¼Œè¯·ä¿®æ”¹æ•°æ®åº“è·¯å¾„ï¼Œæˆ–å°†score.mdbæ”¾åœ¨Dç›˜æ ¹ç›®å½•ä¸‹ã€‚
 			String url = "jdbc:odbc:driver={Microsoft Access Driver (*.mdb)};DBQ=D:\\score.mdb";
 			Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
 			Connection con = DriverManager.getConnection(url);
@@ -143,16 +143,16 @@ public class Ex11_6_ScoreServer implements ActionListener {
 			ResultSet rs = stm.executeQuery("select * from  score where Id='"
 					+ str + "'");
 			if (rs.next()) {
-				sendMessage("²éÑ¯³É¹¦");
-				sendMessage("Ñ§ºÅ£º" + rs.getString(1));
-				sendMessage("Ãû×Ö£º" + rs.getString(2));
-				sendMessage("°à¼¶£º" + rs.getString(3));
-				sendMessage("ÓïÎÄ£º" + rs.getString(4));
-				sendMessage("ÊıÑ§£º" + rs.getString(5));
-				sendMessage("Ó¢Óï£º" + rs.getString(6));
-				sendMessage("¿ÆÑ§£º" + rs.getString(7));
+				sendMessage("æŸ¥è¯¢æˆåŠŸ");
+				sendMessage("å­¦å·ï¼š" + rs.getString(1));
+				sendMessage("åå­—ï¼š" + rs.getString(2));
+				sendMessage("ç­çº§ï¼š" + rs.getString(3));
+				sendMessage("è¯­æ–‡ï¼š" + rs.getString(4));
+				sendMessage("æ•°å­¦ï¼š" + rs.getString(5));
+				sendMessage("è‹±è¯­ï¼š" + rs.getString(6));
+				sendMessage("ç§‘å­¦ï¼š" + rs.getString(7));
 			} else {
-				sendMessage("Ã»ÓĞ¸ÃÑ§ÉúĞÅÏ¢£¡");
+				sendMessage("æ²¡æœ‰è¯¥å­¦ç”Ÿä¿¡æ¯ï¼");
 			}
 			sendMessage("over");
 			rs.close();

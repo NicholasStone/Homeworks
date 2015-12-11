@@ -5,17 +5,17 @@ import javax.swing.JLabel;
 public class Ex8_9_UseGridLayout {
 
 	public static void main(String[] args) {
-		JFrame frm = new JFrame("Ê¹ÓÃÍø¸ñ²¼¾Ö¹ÜÀíÆ÷");
-		// ´´½¨ÁËÒ»¸ö2ĞĞ2ÁĞµÄÍø¸ñ²¼¾Ö¹ÜÀíÆ÷£¬²¢ÉèÖÃ
+		JFrame frm = new JFrame("ä½¿ç”¨ç½‘æ ¼å¸ƒå±€ç®¡ç†å™¨");
+		// åˆ›å»ºäº†ä¸€ä¸ª2è¡Œ2åˆ—çš„ç½‘æ ¼å¸ƒå±€ç®¡ç†å™¨ï¼Œå¹¶è®¾ç½®
 		GridLayout gridlayout = new GridLayout(2, 2);
 		frm.setLayout(gridlayout);
 
-		// ´´½¨5¸ö×é¼ş²¢Ìí¼Óµ½ÈİÆ÷ÖĞ
-		JLabel label1 = new JLabel("Ó¢Óï");
-		JLabel label2 = new JLabel("ÊıÑ§");
-		JLabel label3 = new JLabel("µØÀí");
-		JLabel label4 = new JLabel("ÀúÊ·");
-		JLabel label5 = new JLabel("ÒôÀÖ");
+		// åˆ›å»º5ä¸ªç»„ä»¶å¹¶æ·»åŠ åˆ°å®¹å™¨ä¸­
+		JLabel label1 = new JLabel("è‹±è¯­");
+		JLabel label2 = new JLabel("æ•°å­¦");
+		JLabel label3 = new JLabel("åœ°ç†");
+		JLabel label4 = new JLabel("å†å²");
+		JLabel label5 = new JLabel("éŸ³ä¹");
 		frm.add(label1);
 		frm.add(label2);
 		frm.add(label3);

@@ -9,7 +9,7 @@ class Cone<E> {
 	public void computeVolume() {
 		String s = bottom.toString();
 		double area = Double.parseDouble(s);
-		System.out.println("Ìå»ýÊÇ" + 1.0 / 3.0 * area * height);
+		System.out.println("ä½“ç§¯æ˜¯" + 1.0 / 3.0 * area * height);
 	}
 }
 

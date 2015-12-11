@@ -21,7 +21,7 @@ class Timer{
 	    num ++;
 	    try {Thread.sleep(1);} 
 	    catch (InterruptedException e) {}
-	    System.out.println(name+", ÄãÊÇµÚ"+num+"¸öÊ¹ÓÃtimerµÄÏß³Ì");
+	    System.out.println(name+", ä½ æ˜¯ç¬¬"+num+"ä¸ªä½¿ç”¨timerçš„çº¿ç¨‹");
 	  //}
   }
 }

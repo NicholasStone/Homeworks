@@ -6,12 +6,12 @@ import javax.swing.JScrollPane;
 
 public class Ex8_16_UseListAndComboBox {
 	public static void main(String[] args) {
-		JFrame frm = new JFrame("Ê¹ÓÃÁĞ±íºÍ×éºÏ¿ò");
+		JFrame frm = new JFrame("ä½¿ç”¨åˆ—è¡¨å’Œç»„åˆæ¡†");
 		frm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frm.setLayout(null);// ÉèÖÃÎª²»Ê¹ÓÃ²¼¾Ö¹ÜÀíÆ÷
+		frm.setLayout(null);// è®¾ç½®ä¸ºä¸ä½¿ç”¨å¸ƒå±€ç®¡ç†å™¨
 
-		// ´´½¨ÁĞ±í¼°ÉèÖÃÊôĞÔ
-		String[] likes = { "¸ßµÈÊıÑ§", "´óÑ§Ó¢Óï", "´óÑ§ÎïÀí", "³ÌĞòÉè¼Æ", "ÈË¹¤ÖÇÄÜ", "ÔÆ¼ÆËã" };
+		// åˆ›å»ºåˆ—è¡¨åŠè®¾ç½®å±æ€§
+		String[] likes = { "é«˜ç­‰æ•°å­¦", "å¤§å­¦è‹±è¯­", "å¤§å­¦ç‰©ç†", "ç¨‹åºè®¾è®¡", "äººå·¥æ™ºèƒ½", "äº‘è®¡ç®—" };
 		JList list = new JList(likes);
 		list.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
 		list.setFixedCellHeight(20);
@@ -21,11 +21,11 @@ public class Ex8_16_UseListAndComboBox {
 		scrollpane.setBounds(50, 30, 130, 110);
 		frm.add(scrollpane);
 
-		// ´´½¨×éºÏ¿ò¼°ÉèÖÃÊôĞÔ
+		// åˆ›å»ºç»„åˆæ¡†åŠè®¾ç½®å±æ€§
 		JComboBox comboBox = new JComboBox(likes);
 		comboBox.setEditable(true);
 		comboBox.setMaximumRowCount(6);
-		comboBox.insertItemAt("Èí¼ş´úÂë¿ª·¢¼¼Êõ", 3);
+		comboBox.insertItemAt("è½¯ä»¶ä»£ç å¼€å‘æŠ€æœ¯", 3);
 		comboBox.setBounds(230, 30, 130, 25);
 		frm.add(comboBox);
 

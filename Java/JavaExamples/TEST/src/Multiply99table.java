@@ -7,7 +7,7 @@ public class Multiply99table {
 			
 			for(int j=1; j<=i; j++){
 				
-				System.out.print( j +"*"+ i +"="+ i*j +" ");//<" "ÊÇÅÅÁÐºóµÄ¿Õ¸ñ>
+				System.out.print( j +"*"+ i +"="+ i*j +" ");//<" "æ˜¯æŽ’åˆ—åŽçš„ç©ºæ ¼>
 				
 				}
 			

@@ -3,38 +3,38 @@ import javax.swing.*;
 
 public class Ex8_3_UseScrollPane {
 	public static void main(String[] args) {
-		// ´´½¨´°Ìå¡¢ÉèÖÃ´°Ìå±êÌâºÍ´°Ìå¹Ø±Õ·½Ê½
+		// åˆ›å»ºçª—ä½“ã€è®¾ç½®çª—ä½“æ ‡é¢˜å’Œçª—ä½“å…³é—­æ–¹å¼
 		JFrame frm = new JFrame();
-		frm.setTitle("Ê¹ÓÃJScrollPane");
+		frm.setTitle("ä½¿ç”¨JScrollPane");
 		frm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		// ´´½¨3¸öÊä³ö¿ò,¾ùÎª2ĞĞ32ÁĞ,²¢ÉèÖÃÄ¬ÈÏÄÚÈİ
+		// åˆ›å»º3ä¸ªè¾“å‡ºæ¡†,å‡ä¸º2è¡Œ32åˆ—,å¹¶è®¾ç½®é»˜è®¤å†…å®¹
 		JTextArea toutput = new JTextArea();
 		toutput.setRows(2);
 		toutput.setColumns(32);
-		toutput.setText("ÕâÊÇJScrollPaneÊ¹ÓÃÊ¾Àı!\n\r ÇëÔÚÒ»ĞĞÊäÈë½Ï¶à×Ö·û¹Û²ìÏÔÊ¾ÇøµÄ±ä»¯!");
+		toutput.setText("è¿™æ˜¯JScrollPaneä½¿ç”¨ç¤ºä¾‹!\n\r è¯·åœ¨ä¸€è¡Œè¾“å…¥è¾ƒå¤šå­—ç¬¦è§‚å¯Ÿæ˜¾ç¤ºåŒºçš„å˜åŒ–!");
 
 		JTextArea coutput = new JTextArea();
 		coutput.setRows(2);
 		coutput.setColumns(32);
-		coutput.setText("ÕâÊÇJScrollPaneÊ¹ÓÃÊ¾Àı!\n\r ÇëÊäÈë¶àĞĞ×Ö·ûºÍÒ»ĞĞĞí¶à×Ö·û¹Û²ìÏÔÊ¾ÇøµÄ±ä»¯! ");
+		coutput.setText("è¿™æ˜¯JScrollPaneä½¿ç”¨ç¤ºä¾‹!\n\r è¯·è¾“å…¥å¤šè¡Œå­—ç¬¦å’Œä¸€è¡Œè®¸å¤šå­—ç¬¦è§‚å¯Ÿæ˜¾ç¤ºåŒºçš„å˜åŒ–! ");
 
 		JTextArea boutput = new JTextArea();
 		boutput.setRows(2);
 		boutput.setColumns(32);
-		boutput.setText("ÕâÊÇJScrollPaneÊ¹ÓÃÊ¾Àı!\n\r ÇëÊäÈë¶àĞĞ×Ö·û¹Û²ìÏÔÊ¾ÇøµÄ±ä»¯! ");
+		boutput.setText("è¿™æ˜¯JScrollPaneä½¿ç”¨ç¤ºä¾‹!\n\r è¯·è¾“å…¥å¤šè¡Œå­—ç¬¦è§‚å¯Ÿæ˜¾ç¤ºåŒºçš„å˜åŒ–! ");
 
-		// ´´½¨3¸ö¹ö¶¯Ãæ°å
+		// åˆ›å»º3ä¸ªæ»šåŠ¨é¢æ¿
 		JScrollPane toutputScrollPane = new JScrollPane();
 		JScrollPane coutputScrollPane = new JScrollPane();
 		JScrollPane boutputScrollPane = new JScrollPane();
 
-		// ÎªÃ¿¸ö¹ö¶¯Ãæ°åÌí¼Ó¸÷×ÔµÄ×é¼ş
+		// ä¸ºæ¯ä¸ªæ»šåŠ¨é¢æ¿æ·»åŠ å„è‡ªçš„ç»„ä»¶
 		toutputScrollPane.setViewportView(toutput);
 		coutputScrollPane.setViewportView(coutput);
 		boutputScrollPane.setViewportView(boutput);
 
-		// ÎªÃ¿¸ö¹ö¶¯Ãæ°åÉèÖÃÏÔÊ¾Ë®Æ½ºÍ´¹Ö±²ßÂÔ
+		// ä¸ºæ¯ä¸ªæ»šåŠ¨é¢æ¿è®¾ç½®æ˜¾ç¤ºæ°´å¹³å’Œå‚ç›´ç­–ç•¥
 		toutputScrollPane
 				.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 		toutputScrollPane
@@ -50,12 +50,12 @@ public class Ex8_3_UseScrollPane {
 		boutputScrollPane
 				.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
 
-		// ÔÚ´°ÌåÖĞÌí¼Ó3¸ö¹ö¶¯Ãæ°å
+		// åœ¨çª—ä½“ä¸­æ·»åŠ 3ä¸ªæ»šåŠ¨é¢æ¿
 		frm.add(toutputScrollPane, BorderLayout.NORTH);
 		frm.add(coutputScrollPane, BorderLayout.CENTER);
 		frm.add(boutputScrollPane, BorderLayout.SOUTH);
 
-		// ÉèÖÃ½á¹¹(JFrame)µÄÎ»ÖÃÓë´óĞ¡²¢ÏÔÊ¾
+		// è®¾ç½®ç»“æ„(JFrame)çš„ä½ç½®ä¸å¤§å°å¹¶æ˜¾ç¤º
 		frm.setBounds(450, 230, 400, 180);
 		frm.setVisible(true);
 	}

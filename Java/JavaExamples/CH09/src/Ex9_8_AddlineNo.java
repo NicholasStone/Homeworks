@@ -9,7 +9,7 @@ public class Ex9_8_AddlineNo {
 				System.out.println(in.getLineNumber()+":"+str);
 			in.close();
 		}catch(IOException e){
-			System.out.println("ÎÄ¼ş´ò²»¿ª»ò¶ÁÎÄ¼ş´íÎó£¡");
+			System.out.println("æ–‡ä»¶æ‰“ä¸å¼€æˆ–è¯»æ–‡ä»¶é”™è¯¯ï¼");
 		}
 	}
 }

@@ -1,30 +1,30 @@
-import java.sql.*;	//µ¼ÈëËùĞèÒªµÄ°ü
+import java.sql.*;	//å¯¼å…¥æ‰€éœ€è¦çš„åŒ…
 
 public class Ex12_1_ConnMySql {
 	public static void main(String[] args) throws Exception{
-		//1.¼ÓÔØÇı¶¯¡£
+		//1.åŠ è½½é©±åŠ¨ã€‚
 		Class.forName("com.mysql.jdbc.Driver");
 
-		//2.Ê¹ÓÃDriverManager»ñÈ¡Êı¾İ¿âÁ¬½Ó,
-		//ÆäÖĞ·µ»ØµÄConnection´ú±íÁËJava³ÌĞòºÍÊı¾İ¿âµÄÁ¬½Ó
-		//²»Í¬Êı¾İ¿âµÄURLĞ´·¨ĞèÒª²éÇı¶¯ÎÄµµÖªµÀ£¬¶øÓÃ»§Ãû¡¢ÃÜÂëÓÉDBA·ÖÅä
+		//2.ä½¿ç”¨DriverManagerè·å–æ•°æ®åº“è¿æ¥,
+		//å…¶ä¸­è¿”å›çš„Connectionä»£è¡¨äº†Javaç¨‹åºå’Œæ•°æ®åº“çš„è¿æ¥
+		//ä¸åŒæ•°æ®åº“çš„URLå†™æ³•éœ€è¦æŸ¥é©±åŠ¨æ–‡æ¡£çŸ¥é“ï¼Œè€Œç”¨æˆ·åã€å¯†ç ç”±DBAåˆ†é…
 		Connection conn = DriverManager.getConnection(
 			"jdbc:mysql://127.0.0.1:3306/select_test" ,"root" , "123456");
 
-		//3.Ê¹ÓÃConnection´´½¨Ò»¸öStatment¶ÔÏó
+		//3.ä½¿ç”¨Connectionåˆ›å»ºä¸€ä¸ªStatmentå¯¹è±¡
 		Statement stmt = conn.createStatement();
 
-		//4.Ö´ĞĞSQLÓï¾ä¡£
+		//4.æ‰§è¡ŒSQLè¯­å¥ã€‚
 		/*
-         ÏÂÃæÓï¾ä´Óproduct±íÖĞÑ¡È¡priceÖµ´óÓÚ100µÄËùÓĞÁĞĞÅÏ¢
+         ä¸‹é¢è¯­å¥ä»productè¡¨ä¸­é€‰å–priceå€¼å¤§äº100çš„æ‰€æœ‰åˆ—ä¿¡æ¯
 		*/
 		ResultSet rs = stmt.executeQuery("select *  from product  where  price > 100");
-		//5¡¢·ÃÎÊ½á¹û¼¯
+		//5ã€è®¿é—®ç»“æœé›†
 		while(rs.next()){
 				System.out.println(rs.getInt(1) + "\t"
 					+ rs.getString(2) + "\t"+ rs.getString(3) + "\t"+ rs.getFloat(4));
 		}
-    //6¡¢¹Ø±ÕÊı¾İ¿â×ÊÔ´
+    //6ã€å…³é—­æ•°æ®åº“èµ„æº
 	if (rs != null)	{
 			rs.close();
 		}

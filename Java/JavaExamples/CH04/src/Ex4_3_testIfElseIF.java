@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Ex4_3_testIfElseIF {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("ÇëÊäÈë³É¼¨£º");
+		System.out.print("è¯·è¾“å…¥æˆç»©ï¼š");
 		int score = sc.nextInt();
 		
 		char grade;
@@ -18,7 +18,7 @@ public class Ex4_3_testIfElseIF {
         } else {
             grade = 'F';
         }
-        System.out.println("³É¼¨µÄµÈ¼¶ÊÇ£º" + grade);
+        System.out.println("æˆç»©çš„ç­‰çº§æ˜¯ï¼š" + grade);
 		sc.close();
 	}
 }

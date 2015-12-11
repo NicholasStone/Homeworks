@@ -9,11 +9,11 @@ public class Ex13_6_TestStack{
 		s.push("flower");  
 		s.push("sky");
 		
-		System.out.println("µ¯Õ»Ç°:size=" + s.size());
+		System.out.println("å¼¹æ ˆå‰:size=" + s.size());
 		System.out.println(s.pop());
-		System.out.println("µ¯Õ»ºó:size=" + s.size());
+		System.out.println("å¼¹æ ˆå:size=" + s.size());
 		System.out.println(s.peek());
-		System.out.println("peek²Ù×÷ºó:size=" + s.size());
+		System.out.println("peekæ“ä½œå:size=" + s.size());
 		while(!s.isEmpty())
 			System.out.println(s.pop());
 	}

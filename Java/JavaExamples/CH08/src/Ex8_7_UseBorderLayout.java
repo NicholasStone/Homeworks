@@ -4,24 +4,24 @@ import javax.swing.*;
 public class Ex8_7_UseBorderLayout {
 
 	public static void main(String[] args) {
-		JFrame frm = new JFrame("Ê¹ÓÃ±ß½ç²¼¾Ö¹ÜÀíÆ÷");
+		JFrame frm = new JFrame("ä½¿ç”¨è¾¹ç•Œå¸ƒå±€ç®¡ç†å™¨");
 		frm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		// ÉèÖÃÊ¹ÓÃ±ß½ç²¼¾Ö¹ÜÀíÆ÷
+		// è®¾ç½®ä½¿ç”¨è¾¹ç•Œå¸ƒå±€ç®¡ç†å™¨
 		frm.setLayout(new BorderLayout());
 
-		// ´´½¨5¸ö±êÇ©,²¢ÉèÖÃÆä¶ÔÆäË®Æ½·½Ê½
-		JLabel northLabel = new JLabel("ÈİÆ÷¶¥²¿(NORTH)");
+		// åˆ›å»º5ä¸ªæ ‡ç­¾,å¹¶è®¾ç½®å…¶å¯¹å…¶æ°´å¹³æ–¹å¼
+		JLabel northLabel = new JLabel("å®¹å™¨é¡¶éƒ¨(NORTH)");
 		northLabel.setHorizontalAlignment(JLabel.HORIZONTAL);
-		JLabel southLabel = new JLabel("ÈİÆ÷µ×²¿(SOUTH)");
+		JLabel southLabel = new JLabel("å®¹å™¨åº•éƒ¨(SOUTH)");
 		southLabel.setHorizontalAlignment(JLabel.HORIZONTAL);
-		JLabel westLabel = new JLabel("ÈİÆ÷×ó²à(WEST)");
+		JLabel westLabel = new JLabel("å®¹å™¨å·¦ä¾§(WEST)");
 		westLabel.setHorizontalAlignment(JLabel.HORIZONTAL);
-		JLabel eastLabel = new JLabel("ÈİÆ÷ÓÒ²à(EAST)");
+		JLabel eastLabel = new JLabel("å®¹å™¨å³ä¾§(EAST)");
 		eastLabel.setHorizontalAlignment(JLabel.HORIZONTAL);
-		JLabel centerLabel = new JLabel("ÈİÆ÷ÖĞĞÄ(CENTER)");
+		JLabel centerLabel = new JLabel("å®¹å™¨ä¸­å¿ƒ(CENTER)");
 		centerLabel.setHorizontalAlignment(JLabel.HORIZONTAL);
 
-		// ½«¸ö±êÇ©Ìí¼ÓÖÁÈİÆ÷ÏìÓ¦Î»ÖÃ
+		// å°†ä¸ªæ ‡ç­¾æ·»åŠ è‡³å®¹å™¨å“åº”ä½ç½®
 		frm.add(northLabel, BorderLayout.NORTH);
 		frm.add(southLabel, BorderLayout.SOUTH);
 		frm.add(westLabel, BorderLayout.WEST);

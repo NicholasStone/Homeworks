@@ -4,7 +4,7 @@ import java.util.*;
 
 public class YangHui {
 
-	public static void yanghui(int n) { // 输出杨辉三角
+	public static void yanghui(int n) { // 杈撳嚭鏉ㄨ緣涓夎
 		int[][] s = new int[n + 1][n + 1];
 
 		for (int x = 1; x <= n; x++) {
@@ -31,7 +31,7 @@ public class YangHui {
 
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
-		System.out.println("请输入一个数字代表行数：");
+		System.out.println("璇疯緭鍏ヤ竴涓暟瀛椾唬琛ㄨ鏁帮細");
 		Scanner s = new Scanner(System.in);
 		yanghui(s.nextInt());
 	}

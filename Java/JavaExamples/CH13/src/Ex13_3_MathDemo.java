@@ -2,13 +2,13 @@ public class Ex13_3_MathDemo {
 	public static void main(String args[]) {
 		double a = 3.0, b = 4.0;
 		double c = Math.sqrt(a * a + b * b);
-		System.out.println("°ë¾¶Îª3.0µÄÔ²Ãæ»ıÊÇ£º" + Math.PI * a * a);
-		System.out.println("Ö±½ÇÈı½ÇĞÍÖ±½Ç±ßÎª3.0ºÍ4.0Ê±µÄĞ±±ß³¤Îª£º" + c);
-		System.out.println("-8ºÍ-4µÄ½Ï´ó¶¼ÊÇ£º" + Math.max(-8, -4));
-		System.out.println("-18µÄ¾ø¶ÔÖµÊÇ£º" + Math.abs(-18));
-		System.out.println("²»Ğ¡ÓÚ45.7µÄ×îĞ¡ÕûÊıÊÇ£º" + Math.ceil(45.7));
-		System.out.println("²»´óÓÚ45.7µÄ×îĞ¡ÕûÊıÊÇ£º" + Math.floor(45.7));
-		System.out.println("sin25¶ÈµÄÖµÊÇ£º" + Math.sin(25.0 / 180 * Math.PI));
+		System.out.println("åŠå¾„ä¸º3.0çš„åœ†é¢ç§¯æ˜¯ï¼š" + Math.PI * a * a);
+		System.out.println("ç›´è§’ä¸‰è§’å‹ç›´è§’è¾¹ä¸º3.0å’Œ4.0æ—¶çš„æ–œè¾¹é•¿ä¸ºï¼š" + c);
+		System.out.println("-8å’Œ-4çš„è¾ƒå¤§éƒ½æ˜¯ï¼š" + Math.max(-8, -4));
+		System.out.println("-18çš„ç»å¯¹å€¼æ˜¯ï¼š" + Math.abs(-18));
+		System.out.println("ä¸å°äº45.7çš„æœ€å°æ•´æ•°æ˜¯ï¼š" + Math.ceil(45.7));
+		System.out.println("ä¸å¤§äº45.7çš„æœ€å°æ•´æ•°æ˜¯ï¼š" + Math.floor(45.7));
+		System.out.println("sin25åº¦çš„å€¼æ˜¯ï¼š" + Math.sin(25.0 / 180 * Math.PI));
 	}
 }
 

@@ -5,7 +5,7 @@
 %>
 <html>
 <head>
-<title>пч╦дя╖иЗпео╒</title>
+<title>Д©╝Ф■╧Е╜╕Г■÷Д©║Ф│╞</title>
 </head>
 <body>
 	<%
@@ -13,13 +13,13 @@
 		Statement stmt = null;
 		ResultSet rs = null;
 
-		//╪стьгЩ╤╞ЁлпР  
+		//Е┼═Х╫╫И╘╠Е┼╗Г╗▀Е╨▐  
 		try {
 			Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
 		} catch (ClassNotFoundException e) {
 		}
 
-		//╫╗а╒йЩ╬щ©Ба╛╫с
+		//Е╩╨Г╚▀Ф∙╟Ф█╝Е╨⌠Х©·Ф▌╔
 		try {
 			con = DriverManager.getConnection("jdbc:odbc:student", "", "");
 			stmt = con.createStatement();
@@ -37,7 +37,7 @@
 		String sql_3 = "select * from student2 where id='" + id.trim()
 				+ "'";
 		rs = stmt.executeQuery(sql_3);
-		if (rs.next())//хГ╧Шя╖иЗ╢Фтз
+		if (rs.next())//Е╕┌Ф·°Е╜╕Г■÷Е╜≤Е°╗
 		{
 			name = request.getParameter("name");
 			gender = request.getParameter("gender");
@@ -54,7 +54,7 @@
 	
 	<table width="100%"><tr>
 	<td align="left"><img src="imgs/left.gif" /></td>
-	<td align="center"><h2>пч╦дя╖иЗпео╒</h2></td>
+	<td align="center"><h2>Д©╝Ф■╧Е╜╕Г■÷Д©║Ф│╞</h2></td>
 	<td align="right"><img src="imgs/right.gif" /></td>
 	</tr>
 	</table>
@@ -64,9 +64,9 @@
 	
 	<center>
 
-		<br> <font color="blue"><%=name%></font> ╣дпео╒ря╬╜пч╦дмЙ╠оё║
+		<br> <font color="blue"><%=name%></font> Г └Д©║Ф│╞Е╥╡Г╩▐Д©╝Ф■╧Е╝▄Ф╞∙О╪│
 		<form action="EX14_8_index.jsp" method="post">
-			<input type="submit" id="back" name="back" value="╥╣╩ь">
+			<input type="submit" id="back" name="back" value="Х©■Е⌡·">
 		</form>
 	</center>
 

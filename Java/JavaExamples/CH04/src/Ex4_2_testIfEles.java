@@ -3,14 +3,14 @@ import java.util.Scanner;
 public class Ex4_2_testIfEles {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("ÇëÊäÈë³É¼¨£º");
+		System.out.print("è¯·è¾“å…¥æˆç»©ï¼š");
 		int score = sc.nextInt();
 		
 		if(score >= 0 && score <= 100){
-			System.out.println("³É¼¨£º" + score);
+			System.out.println("æˆç»©ï¼š" + score);
 		}
 		else{
-			System.out.println("ÊäÈëµÄ³É¼¨Ó¦¸ÃÔÚ0~100Ö®¼ä£¡");
+			System.out.println("è¾“å…¥çš„æˆç»©åº”è¯¥åœ¨0~100ä¹‹é—´ï¼");
 		}
 		sc.close();
 	}

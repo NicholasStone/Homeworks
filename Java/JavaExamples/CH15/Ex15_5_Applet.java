@@ -1,29 +1,29 @@
-//ÔÚapplet²¥·ÅÒôÀÖÎÄ¼ş
+//åœ¨appletæ’­æ”¾éŸ³ä¹æ–‡ä»¶
 import java.awt.*;
 import java.awt.event.*;
 import java.applet.Applet;
-import java.applet.AudioClip;   //¶¨ÒåÀà²¢½øĞĞ±ØÒªµÄ±äÁ¿ÉèÖÃ
+import java.applet.AudioClip;   //å®šä¹‰ç±»å¹¶è¿›è¡Œå¿…è¦çš„å˜é‡è®¾ç½®
 public class Ex15_5_Applet extends Applet implements ItemListener{
-	AudioClip midi[]=new AudioClip[3];  // ÉùÃ÷AudioClip½Ó¿ÚÀàĞÍµÄÊı×é
-	AudioClip current;         // ÉùÃ÷AudioClip½Ó¿ÚÀàĞÍµÄ±äÁ¿current
-	Choice chc = new Choice();  // ´´½¨Choice×é¼ş¼ÓÔØÈı¸öÉùÒôÎÄ¼ş£¬²¢°ÑËüÃÇÉèÖÃ¸ømidiÊı×éINIT()·½·¨£¬½øĞĞ±ØÒªµÄ³õÊ¼»¯¹¤×÷
-	public void init(){  //¼ÓÔØÉùÒôÎÄ¼ş£¬²¢°ÑËüÃÇ·ÅÈëmidi[]Êı×éÖĞ
+	AudioClip midi[]=new AudioClip[3];  // å£°æ˜AudioClipæ¥å£ç±»å‹çš„æ•°ç»„
+	AudioClip current;         // å£°æ˜AudioClipæ¥å£ç±»å‹çš„å˜é‡current
+	Choice chc = new Choice();  // åˆ›å»ºChoiceç»„ä»¶åŠ è½½ä¸‰ä¸ªå£°éŸ³æ–‡ä»¶ï¼Œå¹¶æŠŠå®ƒä»¬è®¾ç½®ç»™midiæ•°ç»„INIT()æ–¹æ³•ï¼Œè¿›è¡Œå¿…è¦çš„åˆå§‹åŒ–å·¥ä½œ
+	public void init(){  //åŠ è½½å£°éŸ³æ–‡ä»¶ï¼Œå¹¶æŠŠå®ƒä»¬æ”¾å…¥midi[]æ•°ç»„ä¸­
 		midi[0]=getAudioClip(getCodeBase(),"flourish.midi");
 		midi[1]=getAudioClip(getCodeBase(),"onestop.midi");
-		midi[2]=getAudioClip(getCodeBase(),"town.midi");  //ÔÚÑ¡Ôñ¿Ø¼şÖĞÌí¼ÓÒª²¥·ÅµÄÎÄ¼şÃû³ÆÈçÏÂ
-		chc.add("windows×Ô´ømidi1");
-		chc.add("windows×Ô´ømidi2");
-		chc.add("windows×Ô´ømidi3");
-		add(chc);        //½«Ñ¡Ôñ¿Ø¼şÌí¼Óµ½APPLETÉÏ°Ñappletµ±³ÉchcµÄñöÌıÕß£¬¼°¼àÊÓÆ÷
+		midi[2]=getAudioClip(getCodeBase(),"town.midi");  //åœ¨é€‰æ‹©æ§ä»¶ä¸­æ·»åŠ è¦æ’­æ”¾çš„æ–‡ä»¶åç§°å¦‚ä¸‹
+		chc.add("windowsè‡ªå¸¦midi1");
+		chc.add("windowsè‡ªå¸¦midi2");
+		chc.add("windowsè‡ªå¸¦midi3");
+		add(chc);        //å°†é€‰æ‹©æ§ä»¶æ·»åŠ åˆ°APPLETä¸ŠæŠŠappletå½“æˆchcçš„è†å¬è€…ï¼ŒåŠç›‘è§†å™¨
 		chc.addItemListener(this);
-		current=midi[0];     // ÉèÖÃÄ¿Ç°²¥·ÅµÄ¸èÇúÎªmidi[0]
-		current.play();      // ²¥·Å¸èÇú
-		}      //´¦ÀíÑ¡Ôñ¿Ø¼şµÄÑ¡ÔñÊÂ¼ş
+		current=midi[0];     // è®¾ç½®ç›®å‰æ’­æ”¾çš„æ­Œæ›²ä¸ºmidi[0]
+		current.play();      // æ’­æ”¾æ­Œæ›²
+		}      //å¤„ç†é€‰æ‹©æ§ä»¶çš„é€‰æ‹©äº‹ä»¶
 	public void itemStateChanged(ItemEvent e){
-		current.stop();       // Í£Ö¹²¥·Å¸èÇú£¬ È¡µÃ±»Ñ¡È¡µÄË÷ÒıÖµ
-		int index=chc.getSelectedIndex();   // ÉèÖÃ²¥·ÅµÄ¸èÇúÎªmidi[index]
+		current.stop();       // åœæ­¢æ’­æ”¾æ­Œæ›²ï¼Œ å–å¾—è¢«é€‰å–çš„ç´¢å¼•å€¼
+		int index=chc.getSelectedIndex();   // è®¾ç½®æ’­æ”¾çš„æ­Œæ›²ä¸ºmidi[index]
 		current=midi[index];
-		current.play();        // ²¥·Å¸èÇú
+		current.play();        // æ’­æ”¾æ­Œæ›²
 		}
 	
    }

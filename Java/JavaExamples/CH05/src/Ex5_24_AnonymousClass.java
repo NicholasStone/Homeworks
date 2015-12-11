@@ -15,9 +15,9 @@ public class Ex5_24_AnonymousClass {
 		Teacher2 zhang = new Teacher2();
 		Student3 liu = new Student3() {
 			void speak() {
-				System.out.println("ÕâÊÇÄäÃûÀàÖĞµÄ·½·¨");
+				System.out.println("è¿™æ˜¯åŒ¿åç±»ä¸­çš„æ–¹æ³•");
 			}
-		};// ÄäÃûÀàÌå½áÊø
+		};// åŒ¿åç±»ä½“ç»“æŸ
 		zhang.look(liu);
 	}
 }

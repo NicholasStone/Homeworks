@@ -3,25 +3,25 @@ public class Ex5_11_setGet {
 		Student2 s1;
 		s1 = new Student2();
 		s1.setgpa(26.5f);
-		s1.setInfo("ÕÔÇ¿", "20100038", "É½Î÷Ì«Ô­");
+		s1.setInfo("èµµå¼º", "20100038", "å±±è¥¿å¤ªåŸ");
 		s1.getInfo();
 	}
 }
 
 class Student2 {
-	public String name; // ĞÕÃû
-	public String studentID; // Ñ§ºÅ
-	private String address; // ×¡Ö·
-	public String mobilePhone;// ÁªÏµµç»°
-	protected String major; // ×¨Òµ
-	private float gpa; // Æ½¾ù³É¼¨µãÊı
+	public String name; // å§“å
+	public String studentID; // å­¦å·
+	private String address; // ä½å€
+	public String mobilePhone;// è”ç³»ç”µè¯
+	protected String major; // ä¸“ä¸š
+	private float gpa; // å¹³å‡æˆç»©ç‚¹æ•°
 
-	// »ñµÃÆ½¾ù³É¼¨µãÊı
+	// è·å¾—å¹³å‡æˆç»©ç‚¹æ•°
 	public float getgpa() {
 		return gpa;
 	}
 
-	// ĞŞ¸ÄÆ½¾ù³É¼¨µãÊı
+	// ä¿®æ”¹å¹³å‡æˆç»©ç‚¹æ•°
 	public void setgpa(float gpa) {
 		this.gpa = gpa;
 	}
@@ -38,7 +38,7 @@ class Student2 {
 	}
 
 	public void getInfo() {
-		System.out.println("Ñ§ºÅ£º" + studentID + "\tĞÕÃû:" + name + "\tµØÖ·£º"
-				+ address + "\t×ÜÑ§·Ö¼¨µã:" + gpa);
+		System.out.println("å­¦å·ï¼š" + studentID + "\tå§“å:" + name + "\tåœ°å€ï¼š"
+				+ address + "\tæ€»å­¦åˆ†ç»©ç‚¹:" + gpa);
 	}
 }

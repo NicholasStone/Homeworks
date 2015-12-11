@@ -2,7 +2,7 @@ public class Ex5_17_Convert {
 	public static void main(String[] args) {
 		TaxRate taxRate = new TaxRate();
 		Manager2 manager = new Manager2();
-		taxRate.findTaxRate(manager);// ²ÎÊı´«µİÊ±£¬¶ÔÏóÀàĞÍ×ª»»
+		taxRate.findTaxRate(manager);// å‚æ•°ä¼ é€’æ—¶ï¼Œå¯¹è±¡ç±»å‹è½¬æ¢
 	}
 }
 

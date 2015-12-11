@@ -2,12 +2,12 @@ import java.io.*;
 public class Ex6_3_MatrixMultiply{
   public static void main(String args[]) throws IOException
   {
-    int j,k,m,aH=2,aL=3,bL=4,a[][],b[][],c[][];//ÔİÉèaÊı×é´óĞ¡Îª2¡Á3£¬bÊı×éÎª3¡Á4
+    int j,k,m,aH=2,aL=3,bL=4,a[][],b[][],c[][];//æš‚è®¾aæ•°ç»„å¤§å°ä¸º2Ã—3ï¼Œbæ•°ç»„ä¸º3Ã—4
         
     a=new int[aH][aL];
     b=new int[aL][bL];
     c=new int[aH][bL];
-    //Ëæ»ú²úÉúÁ½¸öÊı×éµÄÔªËØ
+    //éšæœºäº§ç”Ÿä¸¤ä¸ªæ•°ç»„çš„å…ƒç´ 
     for(j=0;j<aH;j++)
       for(k=0;k<aL;k++){       
         a[j][k]=(int)(Math.random()*10);
@@ -17,23 +17,23 @@ public class Ex6_3_MatrixMultiply{
       for(k=0;k<bL;k++){        
         b[j][k]=(int)(Math.random()*10);
       }
-    System.out.println("a¾ØÕóÔªËØÈçÏÂ£º");
+    System.out.println("açŸ©é˜µå…ƒç´ å¦‚ä¸‹ï¼š");
     for(j=0;j<aH;j++){
       for(k=0;k<aL;k++)
         System.out.print(a[j][k]+"\t");
       System.out.println();
     }
-    System.out.println("b¾ØÕóÔªËØÈçÏÂ£º");
+    System.out.println("bçŸ©é˜µå…ƒç´ å¦‚ä¸‹ï¼š");
     for(j=0;j<aL;j++){
       for(k=0;k<bL;k++)
         System.out.print(b[j][k]+"\t");
       System.out.println();
     }
-    System.out.println("Çó³öµÄ(c=a¡Áb)¾ØÕóÔªËØÈçÏÂ£º");
+    System.out.println("æ±‚å‡ºçš„(c=aÃ—b)çŸ©é˜µå…ƒç´ å¦‚ä¸‹ï¼š");
     for(j=0;j<aH;j++){
       for(m=0;m<bL;m++){
         for(k=0;k<aL;k++)
-          c[j][m]=c[j][m]+a[j][k]*b[k][m];//¾ØÕóÏà³Ë¼ÆËã¹Ø¼üËã·¨
+          c[j][m]=c[j][m]+a[j][k]*b[k][m];//çŸ©é˜µç›¸ä¹˜è®¡ç®—å…³é”®ç®—æ³•
         System.out.print(c[j][m]+"\t\t");
       }
       System.out.println();

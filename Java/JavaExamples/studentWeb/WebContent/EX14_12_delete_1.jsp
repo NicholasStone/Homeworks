@@ -6,20 +6,20 @@
 %>
 <html>
 <head>
-<title>É¾³ýÑ§ÉúÐÅÏ¢</title>
+<title>åˆ é™¤å­¦ç”Ÿä¿¡æ¯</title>
 </head>
 <body>
 	<% 	Connection con = null;
 		Statement stmt = null;
 		ResultSet rs = null;
 		
-		//¼ÓÔØÇý¶¯³ÌÐò  
+		//åŠ è½½é©±åŠ¨ç¨‹åº  
 		try {
 			Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
 		} catch (ClassNotFoundException e) {
 		}
 
-		//½¨Á¢Êý¾Ý¿âÁ¬½Ó
+		//å»ºç«‹æ•°æ®åº“è¿žæŽ¥
 		try {
 			con = DriverManager.getConnection("jdbc:odbc:student", "", "");
 			stmt = con.createStatement();
@@ -29,7 +29,7 @@
 	
 	<table width="100%"><tr>
 	<td align="left"><img src="imgs/left.gif" /></td>
-	<td align="center"><h2>É¾³ýÑ§ÉúÐÅÏ¢</h2></td>
+	<td align="center"><h2>åˆ é™¤å­¦ç”Ÿä¿¡æ¯</h2></td>
 	<td align="right"><img src="imgs/right.gif" /></td>
 	</tr>
 	</table>
@@ -38,7 +38,7 @@
 	
 	<center>
 		<form action="EX14_12_delete_2.jsp" method="post">
-			ÇëÑ¡ÔñÒªÉ¾³ýµÄÑ§Éú£º <br> <select name="id">
+			è¯·é€‰æ‹©è¦åˆ é™¤çš„å­¦ç”Ÿï¼š <br> <select name="id">
 				<%
 					String sql = "select * from student2";
 					rs = stmt.executeQuery(sql);
@@ -52,8 +52,8 @@
 				%>
 			</select>
 			<P>
-				<input type="submit" id="confirm" name="confirm" value="È·¶¨">&nbsp;&nbsp;
-				<input type="button" id="reset" name="reset" value="·µ»Ø"
+				<input type="submit" id="confirm" name="confirm" value="ç¡®å®š">&nbsp;&nbsp;
+				<input type="button" id="reset" name="reset" value="è¿”å›ž"
 					onclick="javascript:history.go(-1)">
 			</p>
 		</form>

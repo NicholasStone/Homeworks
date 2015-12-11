@@ -1,8 +1,8 @@
 public class Ex5_8_this4 {
 	public static void main(String[] args){
 		Annimal a= new  Annimal(10,20);
-		System.out.println("ĞÂÉúĞ¡¶¯Îï");
-		System.out.println("ÄêÁä=" + a.age  + "\tÌåÖØ= " + a.weight + "¿Ë\tÉí¸ß=" + a.height + "cm");		
+		System.out.println("æ–°ç”Ÿå°åŠ¨ç‰©");
+		System.out.println("å¹´é¾„=" + a.age  + "\tä½“é‡= " + a.weight + "å…‹\tèº«é«˜=" + a.height + "cm");		
 	}
 }
 
@@ -26,7 +26,7 @@ class Annimal{
 	}
 	
 	public Annimal(float height,float weight){
-		this(height);// AĞĞ Ê¹ÓÃthisµ÷ÓÃÆäËü¹¹Ôìº¯Êı
+		this(height);// Aè¡Œ ä½¿ç”¨thisè°ƒç”¨å…¶å®ƒæ„é€ å‡½æ•°
 		this.weight = weight;
 	}	
 }

@@ -1,14 +1,14 @@
 public class Ex5_19_Static {
 	public static void main(String[] args) {
-		System.out.println("Ä¿Ç°³öÉúµÄÈËÊı:" + Person.totalNum);
+		System.out.println("ç›®å‰å‡ºç”Ÿçš„äººæ•°:" + Person.totalNum);
 
 		Person wang = new Person("Wang");
-		//System.out.println("Ä¿Ç°³öÉúµÄÈËÊı:" + wang.totalNum);
+		//System.out.println("ç›®å‰å‡ºç”Ÿçš„äººæ•°:" + wang.totalNum);
 		Person liu = new Person("Liu");
 		Person zhao = new Person("Zhao");
 
-		System.out.println("Ä¿Ç°³öÉúµÄÈËÊı:" + Person.totalNum);
-		System.out.println("Ä¿Ç°³öÉúµÄÈËÊı:" + wang.totalNum);
+		System.out.println("ç›®å‰å‡ºç”Ÿçš„äººæ•°:" + Person.totalNum);
+		System.out.println("ç›®å‰å‡ºç”Ÿçš„äººæ•°:" + wang.totalNum);
 	}
 }
 

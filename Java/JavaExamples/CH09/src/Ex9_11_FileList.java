@@ -1,19 +1,19 @@
 import java.io.File;
 public class Ex9_11_FileList {
 	public static void main(String[] args) {
-		File files=new File(".\\");  //ÓÃµ±Ç°Ä¿Â¼¹¹Ôì³éÏóÎÄ¼ş
+		File files=new File(".\\");  //ç”¨å½“å‰ç›®å½•æ„é€ æŠ½è±¡æ–‡ä»¶
 		File newDir=new File("c:\\sub1\\sub2");
-		newDir.mkdirs();  //ĞÂ½¨Ä¿Â¼¼°Æä×ÓÄ¿Â¼
-		System.out.println("µ±Ç°Ä¿Â¼µÄ¾ø¶ÔÂ·¾¶ÊÇ£º"+files.getAbsolutePath());
+		newDir.mkdirs();  //æ–°å»ºç›®å½•åŠå…¶å­ç›®å½•
+		System.out.println("å½“å‰ç›®å½•çš„ç»å¯¹è·¯å¾„æ˜¯ï¼š"+files.getAbsolutePath());
 		fileList(files,1);
 	}
-	public static void fileList(File file,int level){ //ÎÄ¼şÁĞ±í·½·¨
+	public static void fileList(File file,int level){ //æ–‡ä»¶åˆ—è¡¨æ–¹æ³•
 		String preStr="";
 		int dcount=0,fcount=0,tsize=0; 
 		for(int i=0;i<level;i++)
 			preStr+="\t";
-		File[] childs=file.listFiles(); //»ñµÃ³éÏóÂ·¾¶ÃûfileÄ¿Â¼ÖĞµÄÎÄ¼ş»òÄ¿Â¼
-		for(int i=0;i<childs.length;i++){ //ÏÔÊ¾¸ÃÄ¿Â¼ÖĞµÄÎÄ¼ş»òÄ¿Â¼
+		File[] childs=file.listFiles(); //è·å¾—æŠ½è±¡è·¯å¾„åfileç›®å½•ä¸­çš„æ–‡ä»¶æˆ–ç›®å½•
+		for(int i=0;i<childs.length;i++){ //æ˜¾ç¤ºè¯¥ç›®å½•ä¸­çš„æ–‡ä»¶æˆ–ç›®å½•
 			if(childs[i].isDirectory()){
 				System.out.println(preStr+"["+childs[i].getName()+"]");
 				dcount++;
@@ -27,7 +27,7 @@ public class Ex9_11_FileList {
 				fileList(childs[i],level+1);
 		}
 		if(file.isDirectory())
-			System.out.println(preStr+"ÔÚ["+file.getName()+"]Ä¿Â¼ÏÂÓĞ"+dcount
-					+"¸öÄ¿Â¼,"+fcount+"¸öÎÄ¼ş,¹²"+tsize+"×Ö½Ú");
+			System.out.println(preStr+"åœ¨["+file.getName()+"]ç›®å½•ä¸‹æœ‰"+dcount
+					+"ä¸ªç›®å½•,"+fcount+"ä¸ªæ–‡ä»¶,å…±"+tsize+"å­—èŠ‚");
 	}
 }

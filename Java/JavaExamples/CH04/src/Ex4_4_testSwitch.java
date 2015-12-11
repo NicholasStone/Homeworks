@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class Ex4_4_testSwitch {
 	public static void main(String[] args) {
-		// ²úÉúÒ»¸ö1-4Ö®¼äµÄËæ»úÊı
+		// äº§ç”Ÿä¸€ä¸ª1-4ä¹‹é—´çš„éšæœºæ•°
         int random = 1 + ( int ) ( Math.random() * 4 );
         switch ( random ){
         	case 1:

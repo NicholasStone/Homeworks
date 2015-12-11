@@ -3,13 +3,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-<title>ÉùÃ÷²âÊÔ</title>
+<title>å£°æ˜Žæµ‹è¯•</title>
 </head>
 <body><font size=5>
 <%!  int i=0; %>
 <%i++;   %>
-  <%--½«iµÄÖµ¼Ó1Êä³ö--%>
- <p> ÄãÊÇµÚ<%=i%>¸ö·ÃÎÊ±¾ÍøÒ³µÄ¿Í»§¡£ </p>
+  <%--å°†içš„å€¼åŠ 1è¾“å‡º--%>
+ <p> ä½ æ˜¯ç¬¬<%=i%>ä¸ªè®¿é—®æœ¬ç½‘é¡µçš„å®¢æˆ·ã€‚ </p>
 <br>
 </font>
 </body>

@@ -9,19 +9,19 @@ import java.io.OutputStreamWriter;
 
 public class Ex_2_2_numberfoundcase {
 	public static void main(String[] args) {
-		/* ¼ì²éÊÇ·ñÊäÈëÁ½¸öÎÄ¼şÃû£ºÊäÈëÎÄ¼şÃûºÍÊä³öÎÄ¼şÃû */
+		/* æ£€æŸ¥æ˜¯å¦è¾“å…¥ä¸¤ä¸ªæ–‡ä»¶åï¼šè¾“å…¥æ–‡ä»¶åå’Œè¾“å‡ºæ–‡ä»¶å */
 		if (args.length != 2) {
-			System.out.println("ÇëÊäÈëÁ½¸öÎÄ¼şÃû£¡£¡£¡");
+			System.out.println("è¯·è¾“å…¥ä¸¤ä¸ªæ–‡ä»¶åï¼ï¼ï¼");
 		} else {
-			/* step1:»ñµÃÊäÈëÊä³öÎÄ¼şÃû */
-			String infile = args[0]; // ÊäÈëÎÄ¼şÃû
-			String outfile = args[1]; // Êä³öÎÄ¼şÃû
+			/* step1:è·å¾—è¾“å…¥è¾“å‡ºæ–‡ä»¶å */
+			String infile = args[0]; // è¾“å…¥æ–‡ä»¶å
+			String outfile = args[1]; // è¾“å‡ºæ–‡ä»¶å
 			try {
-				/* step2:´ò¿ªÊäÈëÎÄ¼ş */
+				/* step2:æ‰“å¼€è¾“å…¥æ–‡ä»¶ */
 				BufferedReader br = new BufferedReader(new InputStreamReader(
 						new FileInputStream(infile), "GBK"));
 				String lineBuffer;
-				/* step3:¶ÔÃ¿Ò»ĞĞ£¬Ê¹ÓÃ×Ö·û¶ÁÈ¡º¯Êı£¬¶Á³öÃ¿Ò»¸ö×Ö·û£»ÅĞ¶Ï×Ö·ûÊÇ·ñÊÇÊı×Ö£¬Èç¹ûÊÇ£¬½«Ëü¸½¼Óµ½»º´æ×Ö·û´®µÄÎ²²¿£» */
+				/* step3:å¯¹æ¯ä¸€è¡Œï¼Œä½¿ç”¨å­—ç¬¦è¯»å–å‡½æ•°ï¼Œè¯»å‡ºæ¯ä¸€ä¸ªå­—ç¬¦ï¼›åˆ¤æ–­å­—ç¬¦æ˜¯å¦æ˜¯æ•°å­—ï¼Œå¦‚æœæ˜¯ï¼Œå°†å®ƒé™„åŠ åˆ°ç¼“å­˜å­—ç¬¦ä¸²çš„å°¾éƒ¨ï¼› */
 				StringBuffer ages = new StringBuffer();
 				while (null != (lineBuffer = br.readLine())) {
 					for (int i = 0; i < lineBuffer.length(); i++) {
@@ -32,17 +32,17 @@ public class Ex_2_2_numberfoundcase {
 					ages.append("\r\n");
 				}
 				br.close();
-				/* step4£º·Ö½â½á¹ûĞ´ÈëÊä³öÎÄ¼ş */
+				/* step4ï¼šåˆ†è§£ç»“æœå†™å…¥è¾“å‡ºæ–‡ä»¶ */
 				FileOutputStream fos = new FileOutputStream(outfile);
 				BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(
 						fos, "GBK"));
 				bw.write(ages.toString());
 				bw.close();
 			} catch (Exception e) {
-				System.out.println("ÎÄ¼ş´¦Àí·¢Éú´íÎó£¡£¡£¡");
-				System.out.println("ÊäÈëÎÄ¼şÃû£º" + infile);
-				System.out.println("Êä³öÎÄ¼şÃû£º" + outfile);
-				System.out.println("´íÎóĞÅÏ¢£º" + e.getMessage());
+				System.out.println("æ–‡ä»¶å¤„ç†å‘ç”Ÿé”™è¯¯ï¼ï¼ï¼");
+				System.out.println("è¾“å…¥æ–‡ä»¶åï¼š" + infile);
+				System.out.println("è¾“å‡ºæ–‡ä»¶åï¼š" + outfile);
+				System.out.println("é”™è¯¯ä¿¡æ¯ï¼š" + e.getMessage());
 			}
 		}
 	}

@@ -4,42 +4,42 @@ import javax.swing.JOptionPane;
 public class Ex6_4_StudentScore {
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
-		int classCount = 3;// Ôİ¶¨3¸ö°à
+		int classCount = 3;// æš‚å®š3ä¸ªç­
 		int[] studentCount = { 2, 3, 5 };
-// Ã¿¸ö°àµÄÑ§ÉúÊıÁ¿£¬Îª¼òµ¥£¬Ôİ¶¨Ã¿¸ö°àµÄÑ§Éú·Ö±ğÎª2¡¢3¡¢5¸öÑ§Éú
+// æ¯ä¸ªç­çš„å­¦ç”Ÿæ•°é‡ï¼Œä¸ºç®€å•ï¼Œæš‚å®šæ¯ä¸ªç­çš„å­¦ç”Ÿåˆ†åˆ«ä¸º2ã€3ã€5ä¸ªå­¦ç”Ÿ
 		double score[][] = new double[3][];
 		boolean contiGo = true;
-		for (int i=0;i<score.length;i++) //³õÊ¼»¯score
+		for (int i=0;i<score.length;i++) //åˆå§‹åŒ–score
 			score[i] = new double [studentCount[i]];
 		
-		//ÊäÈëÃ¿¸ö°àÃ¿ÃûÍ¬Ñ§µÄ³É¼¨
+		//è¾“å…¥æ¯ä¸ªç­æ¯ååŒå­¦çš„æˆç»©
 		String str;
 		BufferedReader buf = new BufferedReader(
 				new InputStreamReader(System.in));			
 		for (int i = 0; i < classCount; i++) {
 			for (int k = 0; k < studentCount[i]; k++) {
 				while (contiGo) {
-					System.out.println("ÇëÊäÈëµÚ" + (i + 1) + "¸ö°àµÚ" + (k + 1)
-							+ "¸öÑ§ÉúµÄ³É¼¨£º");
+					System.out.println("è¯·è¾“å…¥ç¬¬" + (i + 1) + "ä¸ªç­ç¬¬" + (k + 1)
+							+ "ä¸ªå­¦ç”Ÿçš„æˆç»©ï¼š");
 					str = buf.readLine();
-					try {// ´¦ÀíÊäÈë·ÇÊıÖµÊı¾İ»òÊäÈëµÄÊıÊÇ0
+					try {// å¤„ç†è¾“å…¥éæ•°å€¼æ•°æ®æˆ–è¾“å…¥çš„æ•°æ˜¯0
 						score[i][k] = Double.parseDouble(str);
 						if (0 > score[i][k] || 100 < score[i][k]) {
 							JOptionPane.showMessageDialog(null,
-									"³É¼¨²»Ó¦¸Ã<0,ÇëÖØĞÂÊäÈë¡£", "ÌáÊ¾ĞÅÏ¢",
+									"æˆç»©ä¸åº”è¯¥<0,è¯·é‡æ–°è¾“å…¥ã€‚", "æç¤ºä¿¡æ¯",
 									JOptionPane.QUESTION_MESSAGE);
 						} else
 							break;
 					} catch (Exception ne) {
 						System.out.println(ne);
-						JOptionPane.showMessageDialog(null,							                     	"ÊäÈëµÄ²»ÊÇÊı¾İ£¬²»·ûºÏ¹æ¶¨£¬ÇëÖØĞÂÊäÈë¡£", 
-"ÌáÊ¾ĞÅÏ¢",	JOptionPane.QUESTION_MESSAGE);
+						JOptionPane.showMessageDialog(null,							                     	"è¾“å…¥çš„ä¸æ˜¯æ•°æ®ï¼Œä¸ç¬¦åˆè§„å®šï¼Œè¯·é‡æ–°è¾“å…¥ã€‚", 
+"æç¤ºä¿¡æ¯",	JOptionPane.QUESTION_MESSAGE);
 					}
 				}
 			}
 		}
 		
-		//¼ÆËãÃ¿°àµÄ¾ù·Ö
+		//è®¡ç®—æ¯ç­çš„å‡åˆ†
 		double sumScore=0,avgScore=0;
 		for (int i=0;i<score.length;i++){
 			sumScore=0;
@@ -47,7 +47,7 @@ public class Ex6_4_StudentScore {
 				sumScore=sumScore+score[i][k];
 			}
 			avgScore = sumScore/studentCount[i];
-			System.out.println("µÚ" + (i + 1) + "¸ö°àµÄÆ½¾ù³É¼¨Îª"+avgScore );	
+			System.out.println("ç¬¬" + (i + 1) + "ä¸ªç­çš„å¹³å‡æˆç»©ä¸º"+avgScore );	
 		}
 	}
 }

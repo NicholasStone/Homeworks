@@ -12,13 +12,13 @@ public class KeyHandler implements KeyListener {
 	}
 	@Override
 	public void keyTyped(KeyEvent e) {
-		// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+		// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 		
 	}
 
 	@Override
 	public void keyPressed(KeyEvent e) {
-		// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+		// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 if(e.getKeyCode()==KeyEvent.VK_ENTER)
 		if(this.st.getfrm().input.getText()!=null&&! this.st.getfrm().input.getText().equals("quit"))
 		    {
@@ -33,22 +33,22 @@ if(e.getKeyCode()==KeyEvent.VK_ENTER)
 		    try {
 		    	this.st.getis().close();
 			} catch (IOException e2) {
-				// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
 				System.out.println("4");
 			}try {
 				this.st.getclient().close();
 			} catch (IOException e1) {
-				// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
 				System.out.println("3");
 			}
-		    System.out.println("ÁÄÌì½áÊø.");
+		    System.out.println("èŠå¤©ç»“æŸ.");
 		    System.exit(0);
 		}
 	}
 
 	@Override
 	public void keyReleased(KeyEvent e) {
-		// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+		// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 		
 	}
 

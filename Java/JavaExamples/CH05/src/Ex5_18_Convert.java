@@ -22,19 +22,19 @@ class Pet {
 	int name;
 
 	void enjoy() {
-		System.out.println("³èÎï¸ßĞË");
+		System.out.println("å® ç‰©é«˜å…´");
 	}
 }
 
 class Bird extends Pet {
 	void enjoy() {
-		System.out.println("ÔûÔû......");
+		System.out.println("å–³å–³......");
 	}
 }
 
 class Dog2 extends Pet {
 	void enjoy() {
-		System.out.println("ÍôÍô.....");
+		System.out.println("æ±ªæ±ª.....");
 	}
 
 }

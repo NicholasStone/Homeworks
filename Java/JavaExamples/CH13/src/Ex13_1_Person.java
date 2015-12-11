@@ -24,14 +24,14 @@ public class Ex13_1_Person{
 	}
 	
 	public void sleep(){
-		System.out.println(name + "ÔÚË¯¾õ,ºôàààà!");	
+		System.out.println(name + "åœ¨ç¡è§‰,å‘¼å™œå™œ!");	
 	} 
 	public String toString(){
-		return "ĞÕÃû£º" + this.getName() + "ÄêÁä£º" + this.getAge();
+		return "å§“åï¼š" + this.getName() + "å¹´é¾„ï¼š" + this.getAge();
 }
 
 	public static void main(String[] args){
-		Ex13_1_Person p = new Ex13_1_Person(1003,"ÕÅÈı",23);
+		Ex13_1_Person p = new Ex13_1_Person(1003,"å¼ ä¸‰",23);
 		System.out.println(p);
 	}
 }

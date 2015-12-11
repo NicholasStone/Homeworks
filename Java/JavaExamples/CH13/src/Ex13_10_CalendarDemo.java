@@ -3,16 +3,16 @@ import java.util.*;
 public class Ex13_10_CalendarDemo {
 	public static void main(String[] args) {
 		Calendar c1 = Calendar.getInstance();
-		// ÏÂÃæ´òÓ¡µ±Ç°Ê±¼ä
-		System.out.println(c1.get(c1.YEAR) + "Äê" + (c1.get(c1.MONTH) + 1) + "ÔÂ"
-				+ c1.get(c1.DAY_OF_MONTH) + "ÈÕ" + c1.get(c1.HOUR) + ":"
+		// ä¸‹é¢æ‰“å°å½“å‰æ—¶é—´
+		System.out.println(c1.get(c1.YEAR) + "å¹´" + (c1.get(c1.MONTH) + 1) + "æœˆ"
+				+ c1.get(c1.DAY_OF_MONTH) + "æ—¥" + c1.get(c1.HOUR) + ":"
 				+ c1.get(c1.MINUTE) + ":" + c1.get(c1.SECOND));
-		// Ôö¼ÓÌìÊıÎª230
+		// å¢åŠ å¤©æ•°ä¸º230
 		c1.add(c1.DAY_OF_YEAR, 230);
 
-		// ÏÂÃæ´òÓ¡µÄÊÇ230ÌìºóµÄÊ±¼ä
-		System.out.println(c1.get(c1.YEAR) + "Äê" + (c1.get(c1.MONTH) + 1) + "ÔÂ"
-				+ c1.get(c1.DAY_OF_MONTH) + "ÈÕ" + c1.get(c1.HOUR) + ":"
+		// ä¸‹é¢æ‰“å°çš„æ˜¯230å¤©åçš„æ—¶é—´
+		System.out.println(c1.get(c1.YEAR) + "å¹´" + (c1.get(c1.MONTH) + 1) + "æœˆ"
+				+ c1.get(c1.DAY_OF_MONTH) + "æ—¥" + c1.get(c1.HOUR) + ":"
 				+ c1.get(c1.MINUTE) + ":" + c1.get(c1.SECOND));
 	}
 }

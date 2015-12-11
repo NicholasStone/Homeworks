@@ -1,8 +1,8 @@
 public class Ex5_20_Static {
 
 	public static void main(String[] args) {
-		System.out.println(staticTestFunction.addUP(10, 5));// ÕıÈ·£¬Àà·½·¨¿É±»ÀàÖ±½Óµ÷ÓÃ
-		// System.out.println(staticTestFunction.sub());//´íÎó £¬ÊµÀı·½·¨²»ÄÜ±»ÀàÖ±½Óµ÷ÓÃ
+		System.out.println(staticTestFunction.addUP(10, 5));// æ­£ç¡®ï¼Œç±»æ–¹æ³•å¯è¢«ç±»ç›´æ¥è°ƒç”¨
+		// System.out.println(staticTestFunction.sub());//é”™è¯¯ ï¼Œå®ä¾‹æ–¹æ³•ä¸èƒ½è¢«ç±»ç›´æ¥è°ƒç”¨
 		staticTestFunction test = new staticTestFunction();
 		System.out.println(test.sub());
 	}
@@ -12,8 +12,8 @@ class staticTestFunction {
 	int x = 10, y = 6;
 	static int z = 9;
 
-	public static int addUP(int a, int b) { // ±»ÉùÃ÷ÎªÀà·½·¨
-		return a + b + z;// Àà·½·¨ÖĞÄÜÊ¹ÓÃÀà±äÁ¿
+	public static int addUP(int a, int b) { // è¢«å£°æ˜ä¸ºç±»æ–¹æ³•
+		return a + b + z;// ç±»æ–¹æ³•ä¸­èƒ½ä½¿ç”¨ç±»å˜é‡
 	}
 
 	public int sub() {
@@ -21,6 +21,6 @@ class staticTestFunction {
 	}
 
 	public static int addUP() {
-		return x + y;// ´íÎó,Àà·½·¨ÖĞ²»ÄÜÊ¹ÓÃÊµÀı±äÁ¿
+		return x + y;// é”™è¯¯,ç±»æ–¹æ³•ä¸­ä¸èƒ½ä½¿ç”¨å®ä¾‹å˜é‡
 	}
 }

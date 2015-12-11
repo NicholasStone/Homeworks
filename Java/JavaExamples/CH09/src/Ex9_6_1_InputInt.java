@@ -3,9 +3,9 @@ public class Ex9_6_1_InputInt {
 	public static void main(String[] args) throws IOException{
 		InputStreamReader isr = new InputStreamReader(System.in);
 		BufferedReader br = new BufferedReader(isr);
-		System.out.print("ÊäÈëÒ»¸öÕûÊı£º");
+		System.out.print("è¾“å…¥ä¸€ä¸ªæ•´æ•°ï¼š");
 		String str=br.readLine();
 		int x=Integer.parseInt(str);
-		System.out.println("ÊäÈëµÄÕûÊıÊÇ£º"+x);
+		System.out.println("è¾“å…¥çš„æ•´æ•°æ˜¯ï¼š"+x);
 	}
 }

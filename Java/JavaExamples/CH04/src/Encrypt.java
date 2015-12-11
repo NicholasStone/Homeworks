@@ -4,40 +4,40 @@ import javax.swing.JOptionPane;
 
 public class Encrypt {
 
-   // JavaÓ¦ÓÃ³ÌĞòµÄÈë¿Úmain()·½·¨
+   // Javaåº”ç”¨ç¨‹åºçš„å…¥å£main()æ–¹æ³•
    public static void main( String args[] )
    {
-      int number;          // ÓÃ»§ÊäÈëµÄËÄÎ»Êı
-      int[] digit;          // µÚ1Î»Êı
-      //int digit2;          // µÚ2Î»Êı
-      //int digit3;          // µÚ3Î»Êı
-      //int digit4;          // µÚ4Î»Êı
+      int number;          // ç”¨æˆ·è¾“å…¥çš„å››ä½æ•°
+      int[] digit;          // ç¬¬1ä½æ•°
+      //int digit2;          // ç¬¬2ä½æ•°
+      //int digit3;          // ç¬¬3ä½æ•°
+      //int digit4;          // ç¬¬4ä½æ•°
       //int c;
-      int encryptedNumber; // ¼ÓÃÜºóµÄÊı×Ö
+      int encryptedNumber; // åŠ å¯†åçš„æ•°å­—
       
 	  digit=new int[4];
 	  
-      // ÊäÈëÒ»¸öËÄÎ»Êı£¬±£´æÔÚ±äÁ¿numberÖĞ
+      // è¾“å…¥ä¸€ä¸ªå››ä½æ•°ï¼Œä¿å­˜åœ¨å˜é‡numberä¸­
       String inputNumber = 
          JOptionPane.showInputDialog( "Enter a four digit number: " );
       number = Integer.parseInt( inputNumber );
 
-      // ¼ÓÃÜ
-      /* ±àĞ´´úÂë£¬¶ÔËÄÎ»ÊıÖĞµÄÃ¿Ò»Î»Êı°´ÕÕÎÊÌâÃèÊöÖĞµÄ·½Ê½½øĞĞ¼ÓÃÜÔËËã */
+      // åŠ å¯†
+      /* ç¼–å†™ä»£ç ï¼Œå¯¹å››ä½æ•°ä¸­çš„æ¯ä¸€ä½æ•°æŒ‰ç…§é—®é¢˜æè¿°ä¸­çš„æ–¹å¼è¿›è¡ŒåŠ å¯†è¿ç®— */
       for(int i=0;i<inputNumber.length();i++){
       	digit[i]=Integer.parseInt((inputNumber.substring(i,i+1)));
       	digit[i]=(digit[i]+7)%10;
       }
 
-      /* ±àĞ´´úÂë£¬½»»»µÚ1¸öÊı×ÖºÍµÚ3¸öÊı×Ö¡¢µÚ2¸öÊı×ÖºÍµÚ4¸öÊı×Ö£¬Éú³É¼ÓÃÜºóµÄÊı×Ö */
+      /* ç¼–å†™ä»£ç ï¼Œäº¤æ¢ç¬¬1ä¸ªæ•°å­—å’Œç¬¬3ä¸ªæ•°å­—ã€ç¬¬2ä¸ªæ•°å­—å’Œç¬¬4ä¸ªæ•°å­—ï¼Œç”ŸæˆåŠ å¯†åçš„æ•°å­— */
       //c=digit[0];digit[0]=digit[2];digit[2]=c;
       //c=digit[1];digit[1]=digit[3];digit[3]=c;
       encryptedNumber=Integer.parseInt((Integer.toString(digit[2])+Integer.toString(digit[3])+
         Integer.toString(digit[0])+Integer.toString(digit[1])));
 
-      /* ±àĞ´´úÂë£¬ÓÃmessage dialogÏÔÊ¾¼ÓÃÜµÄ½á¹û */
-      JOptionPane.showMessageDialog(null,number+"¼ÓÃÜÖ®ºóÊÇ£º"+encryptedNumber,
-      "ÃÜÎÄ",JOptionPane.INFORMATION_MESSAGE);
+      /* ç¼–å†™ä»£ç ï¼Œç”¨message dialogæ˜¾ç¤ºåŠ å¯†çš„ç»“æœ */
+      JOptionPane.showMessageDialog(null,number+"åŠ å¯†ä¹‹åæ˜¯ï¼š"+encryptedNumber,
+      "å¯†æ–‡",JOptionPane.INFORMATION_MESSAGE);
 
       System.exit( 0 );
 

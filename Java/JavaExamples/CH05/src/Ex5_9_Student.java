@@ -1,7 +1,7 @@
 public class Ex5_9_Student {
 	public static void main(String[] args) {
-		Student1 zhangGang = new Student1(19, "É½Î÷Ì«Ô­", "ÕÅ¸Õ", 350);
-		Teacher missLiu = new Teacher(35, "beijing", "ÁõÀÏÊ¦", 2000, "102198");
+		Student1 zhangGang = new Student1(19, "å±±è¥¿å¤ªåŸ", "å¼ åˆš", 350);
+		Teacher missLiu = new Teacher(35, "beijing", "åˆ˜è€å¸ˆ", 2000, "102198");
 		missLiu.question(zhangGang);
 	}
 }
@@ -25,11 +25,11 @@ class Student1 {
 	}
 }
 
-class Manger extends Student1 { // °à³¤ ²âÊÔÍ¬Ò»°üÄÚ×ÓÀàµÄÈ¨ÏŞ¿ØÖÆ
+class Manger extends Student1 { // ç­é•¿ æµ‹è¯•åŒä¸€åŒ…å†…å­ç±»çš„æƒé™æ§åˆ¶
 	void getStudentInformation() {
 		System.out.println("name is " + studentName);
 		System.out.println("age is " + studentAge);
-		//System.out.println("account is "+studentAccount) ;//AĞĞ
+		//System.out.println("account is "+studentAccount) ;//Aè¡Œ
 		System.out.println("addr is " + studentAddr);
 	}
 }

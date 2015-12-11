@@ -23,17 +23,17 @@ class AClass{
 }
 
 class BClass extends AClass{
-	int a;//Óë¸¸ÀàµÄ³ÉÔ±±äÁ¿ÃûÏàÍ¬£¬ÊôÓÚ±äÁ¿Òş²ØÏÖÏó
+	int a;//ä¸çˆ¶ç±»çš„æˆå‘˜å˜é‡åç›¸åŒï¼Œå±äºå˜é‡éšè—ç°è±¡
 	
 	public BClass(){
 		a=10;
 		a1=123.6f;
 	}
 	
-	public void p1(){ //	Óë¸¸ÀàµÄ³ÉÔ±·½·¨ÏàÍ¬£¬ÊôÓÚ·½·¨¸²¸ÇÏÖÏó	
+	public void p1(){ //	ä¸çˆ¶ç±»çš„æˆå‘˜æ–¹æ³•ç›¸åŒï¼Œå±äºæ–¹æ³•è¦†ç›–ç°è±¡	
 		System.out.println("this is a method of  B ");
-		System.out.println("a="+a);//´Ë´¦µÄaÊÇBClassµÄ±äÁ¿Öµ
-		super.p1();//Í¨¹ısuper¹Ø¼ü×Öµ÷ÓÃ±»¸²¸ÇµÄ¸¸Àà³ÉÔ±·½·¨
-		System.out.println("super.a="+super.a);//Í¨¹ısuper¹Ø¼ü×Ö·ÃÎÊ±»Òş²ØµÄ¸¸Àà³ÉÔ±±äÁ¿
+		System.out.println("a="+a);//æ­¤å¤„çš„aæ˜¯BClassçš„å˜é‡å€¼
+		super.p1();//é€šè¿‡superå…³é”®å­—è°ƒç”¨è¢«è¦†ç›–çš„çˆ¶ç±»æˆå‘˜æ–¹æ³•
+		System.out.println("super.a="+super.a);//é€šè¿‡superå…³é”®å­—è®¿é—®è¢«éšè—çš„çˆ¶ç±»æˆå‘˜å˜é‡
 	}
 }

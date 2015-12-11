@@ -45,7 +45,7 @@ class DeadlockRisk {
 	public void roomOrder() {
 		synchronized (room) {
 			room.value = true;
-			System.out.println(Thread.currentThread().getName() + "Ô¤¶©ÁË½ÌÊÒ");
+			System.out.println(Thread.currentThread().getName() + "é¢„è®¢äº†æ•™å®¤");
 			try {
 				Thread.sleep(1000);
 			} catch (InterruptedException ex) {
@@ -53,7 +53,7 @@ class DeadlockRisk {
 			}
 			synchronized (pr1) {
 				pr1.value = true;
-				System.out.println(Thread.currentThread().getName() + "½èµ½ÁËÍ¶Ó°ÒÇ");
+				System.out.println(Thread.currentThread().getName() + "å€Ÿåˆ°äº†æŠ•å½±ä»ª");
 			}
 		}
 	}
@@ -61,7 +61,7 @@ class DeadlockRisk {
 	public void projectorBorrow() {
 		synchronized (pr1) {
 			pr1.value = true;
-			System.out.println(Thread.currentThread().getName() + "½èµ½ÁËÍ¶Ó°ÒÇ");
+			System.out.println(Thread.currentThread().getName() + "å€Ÿåˆ°äº†æŠ•å½±ä»ª");
 			try {
 				Thread.sleep(1000);
 			} catch (InterruptedException ex) {
@@ -69,7 +69,7 @@ class DeadlockRisk {
 			}
 			synchronized (room) {
 				room.value = true;
-				System.out.println(Thread.currentThread().getName() + "Ô¤¶©ÁË½ÌÊÒ");
+				System.out.println(Thread.currentThread().getName() + "é¢„è®¢äº†æ•™å®¤");
 			}
 		}
 	}

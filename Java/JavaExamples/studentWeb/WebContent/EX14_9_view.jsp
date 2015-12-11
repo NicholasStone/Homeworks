@@ -7,14 +7,14 @@
 %>
 <html>
 <head>
-<title>²éÑ¯Ñ§ÉúĞÅÏ¢</title>
+<title>æŸ¥è¯¢å­¦ç”Ÿä¿¡æ¯</title>
 </head>
 <body >
  
 	<table width="61%" align="center">
 	  <tr>
 <td width="3%" height="94" align="left">&nbsp;</td> 
-	<td width="95%" align="center"><h2><img src="imgs/chaxun.jpg" width="89" height="89">²éÑ¯Ñ§ÉúĞÅÏ¢</h2></td>
+	<td width="95%" align="center"><h2><img src="imgs/chaxun.jpg" width="89" height="89">æŸ¥è¯¢å­¦ç”Ÿä¿¡æ¯</h2></td>
 <td width="2%" align="right">&nbsp;</td>
 	</tr>
 	</table>
@@ -25,13 +25,13 @@
 	    java.lang.String strCon;
 		java.sql.Statement stmt = null;
 		java.sql.ResultSet rs = null;
-		//¼ÓÔØÇı¶¯³ÌĞò  
+		//åŠ è½½é©±åŠ¨ç¨‹åº  
 		try {
 			Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
 		} catch (ClassNotFoundException e) {
 		}
 
-		//½¨Á¢Êı¾İ¿âÁ¬½Ó
+		//å»ºç«‹æ•°æ®åº“è¿æ¥
 		try {
 			con = java.sql.DriverManager.getConnection("jdbc:odbc:student", "", "");
 			stmt = con.createStatement(java.sql.ResultSet.TYPE_SCROLL_INSENSITIVE,java.sql.ResultSet.CONCUR_READ_ONLY);
@@ -40,12 +40,12 @@
 	
 	<center>
 	<table width="70%" border="2">
-	<tr><th width="11%">Ñ§ºÅ</th>
-	<th width="15%">ĞÕÃû</th>
-	<th width="13%">ĞÔ±ğ</th>
-	<th width="20%">µØÖ·</th>
-	<th width="17%">µç»°</th>
-	<th width="24%">×¨Òµ</th>
+	<tr><th width="11%">å­¦å·</th>
+	<th width="15%">å§“å</th>
+	<th width="13%">æ€§åˆ«</th>
+	<th width="20%">åœ°å€</th>
+	<th width="17%">ç”µè¯</th>
+	<th width="24%">ä¸“ä¸š</th>
 	</tr>
 	<%
 	
@@ -74,7 +74,7 @@ finally{
 	%>
 	
   <form action="EX14_8_index.jsp" method="post">
-		<input type="submit" name="back" value="·µ»Ø">
+		<input type="submit" name="back" value="è¿”å›">
 	</form>	
     </center>
     	 

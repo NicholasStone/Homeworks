@@ -6,6 +6,6 @@ public class Ex7_1_ExceptionTest {
 			System.out.println(str[i]);
 			i++;
 		}
-		System.out.println("程序正常结束");
+		System.out.println("绋嬪簭姝ｅ父缁撴潫");
 	}
 }

@@ -3,7 +3,7 @@ import java.util.Arrays;
 public class Ex6_5_Arrays {
 	public static void main(String[] args) {		
 		 int k,baka[]=new int[11],a[]={19,22,15,13,1,0,10,8,2,4,36};
-		    System.out.println("\t\tÅÅĞòÇ°aÊı×é¸÷ÔªËØÎª£º");
+		    System.out.println("\t\tæ’åºå‰aæ•°ç»„å„å…ƒç´ ä¸ºï¼š");
 		    for(k=0;k<a.length;k++)    {
 		      System.out.print(a[k]+"\t");
 		      baka[k]=a[k];
@@ -12,20 +12,20 @@ public class Ex6_5_Arrays {
 		    
 		    System.out.println();
 		    Arrays.sort(a);
-		    System.out.println("\t\tÍêÈ«ÅÅĞòºóaÊı×é¸÷ÔªËØÎª£º");
+		    System.out.println("\t\tå®Œå…¨æ’åºåaæ•°ç»„å„å…ƒç´ ä¸ºï¼š");
 		    for(k=0;k<a.length;k++)
 		      System.out.print(a[k]+"\t");
 		    System.out.println();
 		    
 		    int key=Arrays.binarySearch(a,10);
-		    System.out.println("ÅÅĞòÇ°£¬10Î»ÓÚaÊı×éµÄ"+key+"¸öÔªËØ");
+		    System.out.println("æ’åºå‰ï¼Œ10ä½äºaæ•°ç»„çš„"+key+"ä¸ªå…ƒç´ ");
 		    
 		    for(k=0;k<baka.length;k++)    {
 		      a[k]=baka[k];
 		    }
 		    
 		    Arrays.sort(a,3,8);
-		    System.out.println("²¿·Ö(µÚ3¸öÖÁµÚ7¸öÔªËØ)ÅÅĞòºóaÊı×é¸÷ÔªËØÎª£º");
+		    System.out.println("éƒ¨åˆ†(ç¬¬3ä¸ªè‡³ç¬¬7ä¸ªå…ƒç´ )æ’åºåaæ•°ç»„å„å…ƒç´ ä¸ºï¼š");
 		    for(k=0;k<a.length;k++)
 		      System.out.print(a[k]+"\t");
 		    System.out.println();

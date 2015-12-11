@@ -5,41 +5,41 @@ import java.util.*;
 public class StudentManager {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		String[] name = { "Íõ¸Õ", "Áõºé", "ÕÅÉ½", "¶­Òå·²", "Àî¿Ë", "ºéÌÎ", "Áõ½­ÌÎ", "¶Î¿µÄş",
-				"Éò´óÀö", "ºÍÆ½" }; // ´æ´¢Ñ§ÉúµÄÃû×Ö
-		String [] course={"C³ÌĞòÉè¼Æ","ÎïÀí","Ó¢Óï","¸ßÊı" ,"ÌåÓı","ÕşÖÎ" };
+		String[] name = { "ç‹åˆš", "åˆ˜æ´ª", "å¼ å±±", "è‘£ä¹‰å‡¡", "æå…‹", "æ´ªæ¶›", "åˆ˜æ±Ÿæ¶›", "æ®µåº·å®",
+				"æ²ˆå¤§ä¸½", "å’Œå¹³" }; // å­˜å‚¨å­¦ç”Ÿçš„åå­—
+		String [] course={"Cç¨‹åºè®¾è®¡","ç‰©ç†","è‹±è¯­","é«˜æ•°" ,"ä½“è‚²","æ”¿æ²»" };
 		double[][] grade = { { 50, 60, 70, 80, 90, 10 },
 				{ 40, 90, 80, 60, 40, 70 }, { 60, 80, 70, 60, 40, 90 },
 				{ 50, 60, 70, 80, 90, 10 }, { 60, 80, 70, 60, 40, 90 },
 				{ 60, 70, 80, 90, 70, 70 }, { 60, 80, 70, 60, 40, 90 },
 				{ 60, 80, 70, 60, 40, 90 }, { 60, 80, 70, 60, 40, 90 },
-				{ 60, 45.5, 70, 60, 40, 10 } };// ´æ´¢Ñ§Éú¸÷¿Æ³É¼¨
-		System.out.println("ÊäÈëÒª²éÑ¯³É¼¨µÄÑ§ÉúÃû×Ö£º");
+				{ 60, 45.5, 70, 60, 40, 10 } };// å­˜å‚¨å­¦ç”Ÿå„ç§‘æˆç»©
+		System.out.println("è¾“å…¥è¦æŸ¥è¯¢æˆç»©çš„å­¦ç”Ÿåå­—ï¼š");
 		String chioce = input.nextLine();
 		
 		for (int i = 0; i < 10; i++) {
 			if (name[i].equals(chioce)) {
-				System.out.println("Ñ§Éú£º" + name[i] + "µÄ³É¼¨ÈçÏÂ£º");
+				System.out.println("å­¦ç”Ÿï¼š" + name[i] + "çš„æˆç»©å¦‚ä¸‹ï¼š");
 				for (int j=0;j<course.length;j++)
-				System.out.print(course[j]+"£º" + grade[i][j] + "  " );
+				System.out.print(course[j]+"ï¼š" + grade[i][j] + "  " );
 				System.out.println();
 				break;
 			} else if (i==9)
-				System.out.println("ÄúËù²éÕÒµÄÑ§Éú²»´æÔÚ");
+				System.out.println("æ‚¨æ‰€æŸ¥æ‰¾çš„å­¦ç”Ÿä¸å­˜åœ¨");
 		}
 		System.out.println("===============================");
-		System.out.println("ÊäÈë²éÑ¯²»¼°¸ñÈËÊıµÄ¿ÆÄ¿ĞòºÅ/n");
-		System.out.println("1¡¢C³ÌĞòÉè¼Æ 2¡¢ÎïÀí 3¡¢Ó¢Óï 4¡¢¸ßÊı 5¡¢ÌåÓı 6¡¢ÕşÖÎ");
+		System.out.println("è¾“å…¥æŸ¥è¯¢ä¸åŠæ ¼äººæ•°çš„ç§‘ç›®åºå·/n");
+		System.out.println("1ã€Cç¨‹åºè®¾è®¡ 2ã€ç‰©ç† 3ã€è‹±è¯­ 4ã€é«˜æ•° 5ã€ä½“è‚² 6ã€æ”¿æ²»");
 		int ch = input.nextInt();
 		input.close();
 		int time = 0;
-		System.out.println("²»¼°¸ñµÄÃûµ¥Îª£º");
+		System.out.println("ä¸åŠæ ¼çš„åå•ä¸ºï¼š");
 		for (int i = 0; i < 10; i++) {
 			if (grade[i][ch - 1] < 60) {
 				time++;
 				System.out.println(name[i]);
 			}
 		}
-		System.out.println("¸Ã¿ÆÄ¿²»¼°¸ñÈËÊıÎª£º" + time);
+		System.out.println("è¯¥ç§‘ç›®ä¸åŠæ ¼äººæ•°ä¸ºï¼š" + time);
 	}
 }

@@ -1,34 +1,34 @@
 public class Ex10_4_seatorderedCase {
-	private int seatResource;                     // ¹²Ïí»º³åÇø
-	private boolean empty = true;         // seatResourceÊÇ·ñÎª¿ÕµÄĞÅºÅÁ¿
+	private int seatResource;                     // å…±äº«ç¼“å†²åŒº
+	private boolean empty = true;         // seatResourceæ˜¯å¦ä¸ºç©ºçš„ä¿¡å·é‡
     public void setEmpty(){
     	empty=true;
     }
 	public synchronized void push(int pubResource) {
-		while (!empty) {                   // µ±»º³åÇøÂúµÄÊ±ºò£¬µÈ´ı
-			try {                             // ×èÈû×Ô¼º
+		while (!empty) {                   // å½“ç¼“å†²åŒºæ»¡çš„æ—¶å€™ï¼Œç­‰å¾…
+			try {                             // é˜»å¡è‡ªå·±
 				wait();
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
 		}
-		seatResource = pubResource;        // ½«Éú³ÉµÄ×ùÎ»ºÅ·Åµ½»º³åÇø
-		empty = false;                      // ÉèÖÃ»º³åÇøÂú×´Ì¬
-		notify();                           // »½ĞÑÆäËûµÈ´ıÏß³Ì
+		seatResource = pubResource;        // å°†ç”Ÿæˆçš„åº§ä½å·æ”¾åˆ°ç¼“å†²åŒº
+		empty = false;                      // è®¾ç½®ç¼“å†²åŒºæ»¡çŠ¶æ€
+		notify();                           // å”¤é†’å…¶ä»–ç­‰å¾…çº¿ç¨‹
 	}
-	public synchronized int pop() {       // ´Ó»º³åÇø¶©×ùÎ»
+	public synchronized int pop() {       // ä»ç¼“å†²åŒºè®¢åº§ä½
 		while (empty) {
 			try {
-				wait();                    // µ±»º³åÇø¿ÕµÄÊ±ºò£¬µÈ´ı
+				wait();                    // å½“ç¼“å†²åŒºç©ºçš„æ—¶å€™ï¼Œç­‰å¾…
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
 		}
 		int popResource = seatResource;
 		seatResource = 0;
-		empty = true;                    // ÉèÖÃ»º³åÇø¿Õ×´Ì¬
+		empty = true;                    // è®¾ç½®ç¼“å†²åŒºç©ºçŠ¶æ€
 		notify();
-		return popResource;            // ·µ»ØËù¶©×ùÎ»ºÅ
+		return popResource;            // è¿”å›æ‰€è®¢åº§ä½å·
 	}
 	public static void main(String[] args) {
 		Ex10_4_seatorderedCase so = new Ex10_4_seatorderedCase();
@@ -40,16 +40,16 @@ public class Ex10_4_seatorderedCase {
 		sr.start();
 	}
 }
-class SeatProcedure extends Thread { //Éú³É¿Õ×ùÎ»Ïß³Ì            
+class SeatProcedure extends Thread { //ç”Ÿæˆç©ºåº§ä½çº¿ç¨‹            
 	private Ex10_4_seatorderedCase so;          
 	public SeatProcedure(Ex10_4_seatorderedCase so) {   
 		this.so = so;
 	}
 	public void run() {
-		for (int i = 1; i <= 30; i++) {     //Á¬ĞøÏò»º³åÇøÉú³É¿Õ×ùÎ»ºÅ
+		for (int i = 1; i <= 30; i++) {     //è¿ç»­å‘ç¼“å†²åŒºç”Ÿæˆç©ºåº§ä½å·
 			int pubResource = i;
 			so.push(pubResource);
-			System.out.println("µÚ" + pubResource + "ºÅ×ùÎ»Îª¿Õ");
+			System.out.println("ç¬¬" + pubResource + "å·åº§ä½ä¸ºç©º");
 			try {
 				sleep(100);
 			} catch (InterruptedException e) {
@@ -58,19 +58,19 @@ class SeatProcedure extends Thread { //Éú³É¿Õ×ùÎ»Ïß³Ì
 		}
 	}
 }//class end
-class SeatConsumer extends Thread{	//Ô¤¶©×ùÎ»Ïß³Ì
+class SeatConsumer extends Thread{	//é¢„è®¢åº§ä½çº¿ç¨‹
 	private Ex10_4_seatorderedCase so;          
 	public SeatConsumer(Ex10_4_seatorderedCase so) {         
 		this.so= so;  
 	}
 		public void run() {
-			for (int i = 1; i <= 50; i++) {//50¸öÑ§ÉúÁ¬Ğø´Ó»º³åÇøÈ¡³ö×ùÎ»ºÅ 
+			for (int i = 1; i <= 50; i++) {//50ä¸ªå­¦ç”Ÿè¿ç»­ä»ç¼“å†²åŒºå–å‡ºåº§ä½å· 
 				synchronized (so) {
 					int sh = so.pop();
 					if (sh != 0) {
-						System.out.println("Ñ§Éú" + i + " "+"Õ¼ÁËµÚ" + sh+"ºÅ×ùÎ»");
+						System.out.println("å­¦ç”Ÿ" + i + " "+"å äº†ç¬¬" + sh+"å·åº§ä½");
 					} else {
-						System.out.println("Ã»ÓĞ¿Õ×ù£¬ÇëµÈ´ı£¡");
+						System.out.println("æ²¡æœ‰ç©ºåº§ï¼Œè¯·ç­‰å¾…ï¼");
 					}
 				}
 				try {
@@ -81,22 +81,22 @@ class SeatConsumer extends Thread{	//Ô¤¶©×ùÎ»Ïß³Ì
 			}
 		}
 	}//class end
-class SeatRelease  extends Thread {  //ÊÍ·Å×ùÎ»Ïß³Ì                     
+class SeatRelease  extends Thread {  //é‡Šæ”¾åº§ä½çº¿ç¨‹                     
 	private Ex10_4_seatorderedCase so;                         
 	public SeatRelease(Ex10_4_seatorderedCase so) {        
 		this.so = so;
 	}
 	public void run() {
 		try {
-			sleep(20000);//20Ãëºó
+			sleep(20000);//20ç§’å
              this.so.setEmpty();
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		for (int i = 1; i <= 30; i++) {      //´ÓµÚÒ»¸ö¿ªÊ¼,Á¬ĞøÊÍ·ÅÒÑÔ¤¶©µÄ×ùÎ»
+		for (int i = 1; i <= 30; i++) {      //ä»ç¬¬ä¸€ä¸ªå¼€å§‹,è¿ç»­é‡Šæ”¾å·²é¢„è®¢çš„åº§ä½
 			int pubResource = i;
 			so.push(pubResource);
-			System.out.println("µÚ" + pubResource + "ºÅ×ùÎ»È¡ÏûÔ¤¶©");
+			System.out.println("ç¬¬" + pubResource + "å·åº§ä½å–æ¶ˆé¢„è®¢");
 			try {
 				sleep(100);
 			} catch (InterruptedException e) {

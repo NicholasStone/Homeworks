@@ -1,20 +1,20 @@
 // Ex11_1_ParseURL.java
-import java.net.URL; //ÒıÈëURLÀà
-import java.net.MalformedURLException; //ÒıÈëjava.net°üÖĞµÄÒì³£Àà
+import java.net.URL; //å¼•å…¥URLç±»
+import java.net.MalformedURLException; //å¼•å…¥java.netåŒ…ä¸­çš„å¼‚å¸¸ç±»
 
 class Ex11_1_ParseURL {
 	public static void main(String args[]) {
 		URL sampleURL = null;
 		try {
-			sampleURL = new URL("http://www.sina.com.cn:80/index.html");// ´´½¨URL¶ÔÏó
-		} catch (MalformedURLException e) { // Òì³£´¦Àí
+			sampleURL = new URL("http://www.sina.com.cn:80/index.html");// åˆ›å»ºURLå¯¹è±¡
+		} catch (MalformedURLException e) { // å¼‚å¸¸å¤„ç†
 			e.printStackTrace();
 		}
-		// ÏÔÊ¾sampleURL¶ÔÏóµÄ¸÷ÊôĞÔÖµ
-		System.out.println("Ğ­Òé:" + sampleURL.getProtocol());
-		System.out.println("Ö÷»úÃû:" + sampleURL.getHost());
-		System.out.println("¶Ë¿ÚºÅ:" + sampleURL.getPort());
-		System.out.println("ÎÄ¼şÃû:" + sampleURL.getFile());
-		System.out.println("Ãªµã:" + sampleURL.getRef());
+		// æ˜¾ç¤ºsampleURLå¯¹è±¡çš„å„å±æ€§å€¼
+		System.out.println("åè®®:" + sampleURL.getProtocol());
+		System.out.println("ä¸»æœºå:" + sampleURL.getHost());
+		System.out.println("ç«¯å£å·:" + sampleURL.getPort());
+		System.out.println("æ–‡ä»¶å:" + sampleURL.getFile());
+		System.out.println("é”šç‚¹:" + sampleURL.getRef());
 	}
 }

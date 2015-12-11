@@ -8,56 +8,56 @@ import javax.swing.JCheckBox;
 
 public class Ex8_13_UseButton {
 	public static void main(String[] args) {
-		JFrame frm = new JFrame("Ê¹ÓÃ4ÖÖ°´Å¥");
+		JFrame frm = new JFrame("ä½¿ç”¨4ç§æŒ‰é’®");
 		frm.setLayout(null);
 
-		// ´´½¨ ÆÕÍ¨°´Å¥²¢ÉèÖÃÎ»ÖÃ¼°´óĞ¡
-		JButton btn = new JButton("ÆÕÍ¨°´Å¥");
+		// åˆ›å»º æ™®é€šæŒ‰é’®å¹¶è®¾ç½®ä½ç½®åŠå¤§å°
+		JButton btn = new JButton("æ™®é€šæŒ‰é’®");
 		btn.setBounds(50, 20, 120, 25);
 		frm.add(btn);
-		// ´´½¨ ÇĞ»»°´Å¥²¢ÉèÖÃÎ»ÖÃ¼°´óĞ¡
-		JToggleButton tbtn = new JToggleButton("ÇĞ»»°´Å¥");
+		// åˆ›å»º åˆ‡æ¢æŒ‰é’®å¹¶è®¾ç½®ä½ç½®åŠå¤§å°
+		JToggleButton tbtn = new JToggleButton("åˆ‡æ¢æŒ‰é’®");
 		tbtn.setBounds(210, 20, 120, 25);
 		frm.add(tbtn);
 
-		// ´´½¨ ÌáĞÑ±êÇ©²¢ÉèÖÃÎ»ÖÃ¼°´óĞ¡
-		JLabel slabel = new JLabel("ĞÔ   ±ğ:");
+		// åˆ›å»º æé†’æ ‡ç­¾å¹¶è®¾ç½®ä½ç½®åŠå¤§å°
+		JLabel slabel = new JLabel("æ€§   åˆ«:");
 		slabel.setBounds(50, 60, 120, 25);
 		frm.add(slabel);
 
-		// ´´½¨µ¥Ñ¡°´Å¥¹ÜÀí×é¼ş
+		// åˆ›å»ºå•é€‰æŒ‰é’®ç®¡ç†ç»„ä»¶
 		ButtonGroup btnGroup = new ButtonGroup();
 
-		// ´´½¨2¸öµ¥Ñ¡°´Å¥,²¢ÉèÖÃÎ»ÖÃ¼°´óĞ¡,ÆäÖĞµÚÒ»¸ö±»Ñ¡ÖĞ
-		JRadioButton manRadioButton = new JRadioButton("ÄĞÈË");
+		// åˆ›å»º2ä¸ªå•é€‰æŒ‰é’®,å¹¶è®¾ç½®ä½ç½®åŠå¤§å°,å…¶ä¸­ç¬¬ä¸€ä¸ªè¢«é€‰ä¸­
+		JRadioButton manRadioButton = new JRadioButton("ç”·äºº");
 		manRadioButton.setBounds(110, 60, 80, 25);
 		manRadioButton.setSelected(true);
-		JRadioButton womanRadioButton = new JRadioButton("Å®ÈË");
+		JRadioButton womanRadioButton = new JRadioButton("å¥³äºº");
 		womanRadioButton.setBounds(210, 60, 80, 25);
 
-		// Ìí¼Óµ¥Ñ¡°´Å¥µ½¹ÜÀí×é¼şÖĞÒÔ¼°´°ÌåÖĞ
+		// æ·»åŠ å•é€‰æŒ‰é’®åˆ°ç®¡ç†ç»„ä»¶ä¸­ä»¥åŠçª—ä½“ä¸­
 		btnGroup.add(manRadioButton);
 		btnGroup.add(womanRadioButton);
 		frm.add(manRadioButton);
 		frm.add(womanRadioButton);
 
-		// ´´½¨ ÌáĞÑ±êÇ©²¢ÉèÖÃÎ»ÖÃ¼°´óĞ¡
-		JLabel clabel = new JLabel("¿ÎÄ¿:");
+		// åˆ›å»º æé†’æ ‡ç­¾å¹¶è®¾ç½®ä½ç½®åŠå¤§å°
+		JLabel clabel = new JLabel("è¯¾ç›®:");
 		clabel.setBounds(50, 90, 120, 25);
 		frm.add(clabel);
 
-		// ´´½¨4¸ö¸´Ñ¡°´Å¥,²¢ÉèÖÃÎ»ÖÃ¼°´óĞ¡,ÆäÖĞµÚ1,4¸ö±»Ñ¡ÖĞ
-		JCheckBox mCheckBox = new JCheckBox("¸ßµÈÊıÑ§");
+		// åˆ›å»º4ä¸ªå¤é€‰æŒ‰é’®,å¹¶è®¾ç½®ä½ç½®åŠå¤§å°,å…¶ä¸­ç¬¬1,4ä¸ªè¢«é€‰ä¸­
+		JCheckBox mCheckBox = new JCheckBox("é«˜ç­‰æ•°å­¦");
 		mCheckBox.setBounds(110, 90, 80, 25);
 		mCheckBox.setSelected(true);
 		frm.add(mCheckBox);
-		JCheckBox eCheckBox = new JCheckBox("´óÑ§Ó¢Óï");
+		JCheckBox eCheckBox = new JCheckBox("å¤§å­¦è‹±è¯­");
 		eCheckBox.setBounds(210, 90, 80, 25);
 		frm.add(eCheckBox);
-		JCheckBox pCheckBox = new JCheckBox("´óÑ§ÎïÀí");
+		JCheckBox pCheckBox = new JCheckBox("å¤§å­¦ç‰©ç†");
 		pCheckBox.setBounds(110, 120, 80, 25);
 		frm.add(pCheckBox);
-		JCheckBox dCheckBox = new JCheckBox("³ÌĞòÉè¼Æ");
+		JCheckBox dCheckBox = new JCheckBox("ç¨‹åºè®¾è®¡");
 		dCheckBox.setBounds(210, 120, 80, 25);
 		dCheckBox.setSelected(true);
 		frm.add(dCheckBox);

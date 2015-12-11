@@ -5,23 +5,23 @@ public class Ex2_4_Circle {
     	
     	double r = 1.5;
     	
-    	System.out.println("Ô²ĞÄµÄ×ø±ê£º" + p.toString());
+    	System.out.println("åœ†å¿ƒçš„åæ ‡ï¼š" + p.toString());
     	
     	Circle c = new Circle(p,r);
     	
-    	System.out.println("Ô²µÄÖÜ³¤£º" + c.getPerimeter());
-    	System.out.println("Ô²µÄÃæ»ı£º" + c.getArea());
+    	System.out.println("åœ†çš„å‘¨é•¿ï¼š" + c.getPerimeter());
+    	System.out.println("åœ†çš„é¢ç§¯ï¼š" + c.getArea());
     	
     	if(c.isInner(Point1.origin)) {
-    		System.out.println("Ô­µãÔÚÔ²ÖĞ");
+    		System.out.println("åŸç‚¹åœ¨åœ†ä¸­");
     		}
     	
     	Point1 p2 = new Point1(-0.5, -0.5);
     	
     	if(c.isInner(p2)) {
-    		System.out.println(p2.toString() + "ÔÚÔ²ÖĞ");
+    		System.out.println(p2.toString() + "åœ¨åœ†ä¸­");
     		} else {
-    			System.out.println(p2.toString() + "²»ÔÚÔ²ÖĞ");
+    			System.out.println(p2.toString() + "ä¸åœ¨åœ†ä¸­");
     			}
     	}
     
@@ -30,11 +30,11 @@ public class Ex2_4_Circle {
 
 /**
  * 
- * @ÀàÃû£ºCircle
- * @Àà¼ò½é£ºÔ²Àà£¬¿ÉÒÔ³õÊ¼»¯ÆäÔ­µã×ø±êºÍ°ë¾¶¡£
- * @±à³ÌÈÕÆÚ£º2012-8-10
- * @ĞŞ¸ÄÈÕÆÚ£º2013-9-11
- * ×¢Òâ´Ë³ÌĞòÔÚDOSÓëEclipseÖĞµÄĞ§¹û²»Í¬,DOS»·¾³ÏÂÕı³£ÔËĞĞ
+ * @ç±»åï¼šCircle
+ * @ç±»ç®€ä»‹ï¼šåœ†ç±»ï¼Œå¯ä»¥åˆå§‹åŒ–å…¶åŸç‚¹åæ ‡å’ŒåŠå¾„ã€‚
+ * @ç¼–ç¨‹æ—¥æœŸï¼š2012-8-10
+ * @ä¿®æ”¹æ—¥æœŸï¼š2013-9-11
+ * æ³¨æ„æ­¤ç¨‹åºåœ¨DOSä¸Eclipseä¸­çš„æ•ˆæœä¸åŒ,DOSç¯å¢ƒä¸‹æ­£å¸¸è¿è¡Œ
  *
  */
 
@@ -42,24 +42,24 @@ class Circle {
 	Point1 center;
 	double radius;
     
-    /* ¹¹Ôìº¯Êı£ºÓÃÔ²ĞÄ×ø±êºÍ°ë¾¶³õÊ¼»¯ */
+    /* æ„é€ å‡½æ•°ï¼šç”¨åœ†å¿ƒåæ ‡å’ŒåŠå¾„åˆå§‹åŒ– */
 	public Circle(Point1 p, double r) {
 		this.center = new Point1(p.getX(), p.getY());
 		this.radius = r;
 		}
 	
 	
-    /* ¼ÆËãÔ²µÄÖÜ³¤ */
+    /* è®¡ç®—åœ†çš„å‘¨é•¿ */
     public double getPerimeter() {
     	return 2 * Math.PI * radius;
     	}
     
-    /* ¼ÆËãÔ²µÄÃæ»ı */
+    /* è®¡ç®—åœ†çš„é¢ç§¯ */
     public double getArea() {
     	return Math.PI * radius * radius;
     	}
     
-    /* ÅĞ¶¨Ò»¸ö×ø±êµãÊÇ·ñÔÚÔ²Ö®ÄÚ */
+    /* åˆ¤å®šä¸€ä¸ªåæ ‡ç‚¹æ˜¯å¦åœ¨åœ†ä¹‹å†… */
     public Boolean isInner(Point1 p) {
         double deltaX = Math.abs(center.getX()-p.getX());
         double deltaY = Math.abs(center.getY()-p.getY());
@@ -75,10 +75,10 @@ class Circle {
 
 /**
  * 
- * @ÀàÃû£ºPoint
- * @Àà¼ò½é£º×ø±êµãÀà£¬¿ÉÒÔ³õÊ¼»¯Æä×ø±êxºÍy¡£
- * @±à³ÌÈÕÆÚ£º2012-8-9
- * @ĞŞ¸ÄÈÕÆÚ£º2012-9-11
+ * @ç±»åï¼šPoint
+ * @ç±»ç®€ä»‹ï¼šåæ ‡ç‚¹ç±»ï¼Œå¯ä»¥åˆå§‹åŒ–å…¶åæ ‡xå’Œyã€‚
+ * @ç¼–ç¨‹æ—¥æœŸï¼š2012-8-9
+ * @ä¿®æ”¹æ—¥æœŸï¼š2012-9-11
  *
  */
 
@@ -90,20 +90,20 @@ class Point1 {
 		this.y = y; 
 		}
 	
-	/* Àà³õÊ¼»¯Ê±£¬´´½¨Ò»¸öÔ­µãÊµÀı */
+	/* ç±»åˆå§‹åŒ–æ—¶ï¼Œåˆ›å»ºä¸€ä¸ªåŸç‚¹å®ä¾‹ */
 	public static Point1 origin = new Point1(0, 0);
 	
-	/* ÓÃ+ÔËËã·ûµÃµ½×ø±êµãµÄ×Ö·û´® */
+	/* ç”¨+è¿ç®—ç¬¦å¾—åˆ°åæ ‡ç‚¹çš„å­—ç¬¦ä¸² */
 	public String toString(){
         	return "(" + x + "," + y + ")"; 
         	}
 	
-	/* »ñµÃ×ø±êµÄXÖµ */
+	/* è·å¾—åæ ‡çš„Xå€¼ */
 	public double getX() {
 		return x;
 	}
 
-	/* »ñµÃ×ø±êµÄYÖµ */
+	/* è·å¾—åæ ‡çš„Yå€¼ */
 	public double getY() {
 		return y;
 	}

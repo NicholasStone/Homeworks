@@ -2,16 +2,16 @@ import java.io.*;
 public class Ex9_1_FileInputOutputStream {
 	public static void main(String[] args)throws IOException {
 		FileOutputStream fos;
-		fos=new FileOutputStream(".\\filestream.dat"); //´ò¿ªÎÄ¼şÊä³öÁ÷
+		fos=new FileOutputStream(".\\filestream.dat"); //æ‰“å¼€æ–‡ä»¶è¾“å‡ºæµ
 		byte[] array={1,3,5,7,9,11,13,15,17,19};
 		for(int i=0;i<array.length ;i++)
-			fos.write(array[i]); //Ğ´Êı¾İµ½ÎÄ¼şÊä³öÁ÷£¬Ò²¾ÍÊÇĞ´ÈëÎÄ¼ş
-		fos.close(); //¹Ø±ÕÎÄ¼şÊä³öÁ÷£¬¼´¹Ø±ÕÎÄ¼ş
+			fos.write(array[i]); //å†™æ•°æ®åˆ°æ–‡ä»¶è¾“å‡ºæµï¼Œä¹Ÿå°±æ˜¯å†™å…¥æ–‡ä»¶
+		fos.close(); //å…³é—­æ–‡ä»¶è¾“å‡ºæµï¼Œå³å…³é—­æ–‡ä»¶
 		FileInputStream fis;
-		fis=new FileInputStream(".\\filestream.dat"); //´ò¿ªÎÄ¼şÊäÈëÁ÷
+		fis=new FileInputStream(".\\filestream.dat"); //æ‰“å¼€æ–‡ä»¶è¾“å…¥æµ
 		int value;
-		while((value=fis.read())!=-1)  //´ÓÎÄ¼şÊäÈëÁ÷¶ÁÊı¾İ£¬Ò²¾ÍÊÇ´ÓÎÄ¼ş¶ÁÊı¾İ
+		while((value=fis.read())!=-1)  //ä»æ–‡ä»¶è¾“å…¥æµè¯»æ•°æ®ï¼Œä¹Ÿå°±æ˜¯ä»æ–‡ä»¶è¯»æ•°æ®
 			System.out.print(value+" ");  
-		fis.close(); //¹Ø±ÕÎÄ¼şÊäÈëÁ÷£¬¼´¹Ø±ÕÎÄ¼ş
+		fis.close(); //å…³é—­æ–‡ä»¶è¾“å…¥æµï¼Œå³å…³é—­æ–‡ä»¶
 	}
 }

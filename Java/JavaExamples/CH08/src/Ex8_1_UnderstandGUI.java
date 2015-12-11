@@ -4,24 +4,24 @@ import java.awt.*;
 public class Ex8_1_UnderstandGUI {
 
 	public static void main(String[] args) {
-		// ´´½¨ÈİÆ÷
+		// åˆ›å»ºå®¹å™¨
 		JFrame frm = new JFrame();		
-		// ÉèÖÃ±êÌâ
-		frm.setTitle("Àí½âGUI±à³Ì");
-		// ÉèÖÃ²¼¾Ö
+		// è®¾ç½®æ ‡é¢˜
+		frm.setTitle("ç†è§£GUIç¼–ç¨‹");
+		// è®¾ç½®å¸ƒå±€
 		frm.setLayout(new BorderLayout());
-		// ´´½¨°´Å¥×é¼ş
-		JButton myBtn = new JButton("°´Å¥");
-        // ½«°´Å¥×é¼ş¶ÔÏóÌí¼Óµ½ÈİÆ÷ÖĞ
+		// åˆ›å»ºæŒ‰é’®ç»„ä»¶
+		JButton myBtn = new JButton("æŒ‰é’®");
+        // å°†æŒ‰é’®ç»„ä»¶å¯¹è±¡æ·»åŠ åˆ°å®¹å™¨ä¸­
 		frm.add(myBtn);
 		
-		// ¸ÃÊ¾ÀıÎ´Ìí¼ÓÊÂ¼ş
+		// è¯¥ç¤ºä¾‹æœªæ·»åŠ äº‹ä»¶
 		
-		// ÉèÖÃ´°¿Ú³õÊ¼Î»ÖÃÓë´óĞ¡²¢ÏÔÊ¾
+		// è®¾ç½®çª—å£åˆå§‹ä½ç½®ä¸å¤§å°å¹¶æ˜¾ç¤º
 		frm.setBounds(500, 200, 200, 100);
-		// ÉèÖÃ´°Ìå¹Ø±Õ·½Ê½
+		// è®¾ç½®çª—ä½“å…³é—­æ–¹å¼
 		frm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		// ÈÃ´°ÌåÏÔÊ¾
+		// è®©çª—ä½“æ˜¾ç¤º
 		frm.setVisible(true);
 	}
 }

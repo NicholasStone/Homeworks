@@ -4,32 +4,32 @@ import java.awt.event.MouseListener;
 
 public class Ex8_15_UseTextComponents {
 	public static void main(String[] args) {
-		JFrame frm = new JFrame("Ê¹ÓÃÎÄ±¾×é¼ş");
+		JFrame frm = new JFrame("ä½¿ç”¨æ–‡æœ¬ç»„ä»¶");
 		frm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frm.setLayout(null);// ÉèÖÃÎª²»Ê¹ÓÃ²¼¾Ö¹ÜÀíÆ÷
+		frm.setLayout(null);// è®¾ç½®ä¸ºä¸ä½¿ç”¨å¸ƒå±€ç®¡ç†å™¨
 
-		// ´´½¨ÎÄ±¾¿ò,ÉèÖÃÎ»ÖÃ¡¢´óĞ¡¡¢Ä¬ÈÏÎÄ×ÖµÈÊôĞÔ
-		JTextField text = new JTextField("ÊäÈëµãÊ²Ã´ÄØ£¿");
+		// åˆ›å»ºæ–‡æœ¬æ¡†,è®¾ç½®ä½ç½®ã€å¤§å°ã€é»˜è®¤æ–‡å­—ç­‰å±æ€§
+		JTextField text = new JTextField("è¾“å…¥ç‚¹ä»€ä¹ˆå‘¢ï¼Ÿ");
 		text.setBounds(10, 10, 200, 25);
 		frm.add(text);
 
-		// ´´½¨ÃÜÂë¿ò,ÉèÖÃÎ»ÖÃ¡¢´óĞ¡¡¢Ä¬ÈÏÎÄ×ÖµÈÊôĞÔ
-		JPasswordField password = new JPasswordField("ÎÒµÄÃÜÂë");
+		// åˆ›å»ºå¯†ç æ¡†,è®¾ç½®ä½ç½®ã€å¤§å°ã€é»˜è®¤æ–‡å­—ç­‰å±æ€§
+		JPasswordField password = new JPasswordField("æˆ‘çš„å¯†ç ");
 		password.setBounds(10, 35, 200, 25);
 		frm.add(password);
 
-		// ´´½¨ÃÜÂë¿ò,ÉèÖÃÎ»ÖÃ¡¢´óĞ¡¡¢Ä¬ÈÏÎÄ×ÖµÈÊôĞÔ
-		final JTextArea textarea = new JTextArea("ÎÒÏ²»¶±à³Ì£¬\n\rÎÒÏ²»¶Java¡£");
+		// åˆ›å»ºå¯†ç æ¡†,è®¾ç½®ä½ç½®ã€å¤§å°ã€é»˜è®¤æ–‡å­—ç­‰å±æ€§
+		final JTextArea textarea = new JTextArea("æˆ‘å–œæ¬¢ç¼–ç¨‹ï¼Œ\n\ræˆ‘å–œæ¬¢Javaã€‚");
 		textarea.setBounds(10, 65, 200, 75);
 		textarea.setEditable(true);
 		textarea.setColumns(80);
-		textarea.append("\n\r¿í¶ÈÎª" + textarea.getWidth() + "ÏñËØ¡£\n\r");
+		textarea.append("\n\rå®½åº¦ä¸º" + textarea.getWidth() + "åƒç´ ã€‚\n\r");
 		frm.add(textarea);
 		textarea.addMouseListener(new MouseListener() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				// Èç¹ûÇ°Ãæ²»ÉèÖÃÁĞÊı£¬ÏÔÊ¾Îª0
-				textarea.append("ÁĞÊı:" + textarea.getColumns() + "ĞĞÊı:"
+				// å¦‚æœå‰é¢ä¸è®¾ç½®åˆ—æ•°ï¼Œæ˜¾ç¤ºä¸º0
+				textarea.append("åˆ—æ•°:" + textarea.getColumns() + "è¡Œæ•°:"
 						+ textarea.getRows() + ";");
 			}
 

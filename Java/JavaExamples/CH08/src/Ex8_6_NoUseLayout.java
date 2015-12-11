@@ -3,34 +3,34 @@ import javax.swing.*;
 public class Ex8_6_NoUseLayout {
 
 	public static void main(String[] args) {
-		// ´´½¨´°Ìå²¢ÉèÖÃ´°Ìå±êÌâ¼°¹Ø±Õ·½Ê½
-		JFrame frm = new JFrame("Î´Ê¹ÓÃ²¼¾Ö¹ÜÀí");
+		// åˆ›å»ºçª—ä½“å¹¶è®¾ç½®çª—ä½“æ ‡é¢˜åŠå…³é—­æ–¹å¼
+		JFrame frm = new JFrame("æœªä½¿ç”¨å¸ƒå±€ç®¡ç†");
 		frm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		// ÉèÖÃ²»Ê¹ÓÃ²¼¾Ö¹ÜÀíÆ÷
+		// è®¾ç½®ä¸ä½¿ç”¨å¸ƒå±€ç®¡ç†å™¨
 		frm.setLayout(null);
 
-		// ´´½¨ÓÃ»§±êÇ©²¢ÉèÖÃÏÔÊ¾ĞÅÏ¢¼°ÆğÊ¼Î»ÖÃÓë´óĞ¡
+		// åˆ›å»ºç”¨æˆ·æ ‡ç­¾å¹¶è®¾ç½®æ˜¾ç¤ºä¿¡æ¯åŠèµ·å§‹ä½ç½®ä¸å¤§å°
 		JLabel userLabel = new JLabel();
-		userLabel.setText("ÓÃ»§Ãû:");
+		userLabel.setText("ç”¨æˆ·å:");
 		userLabel.setBounds(40, 20, 80, 30);
 
-		// ´´½¨ÓÃ»§ÃûÊäÈë¿ò,ÉèÖÃÎª¿É±à¼­,×ó²àÊäÈë,20ÁĞ,²¢ÉèÖÃÆğÊ¼Î»ÖÃÓë´óĞ¡
+		// åˆ›å»ºç”¨æˆ·åè¾“å…¥æ¡†,è®¾ç½®ä¸ºå¯ç¼–è¾‘,å·¦ä¾§è¾“å…¥,20åˆ—,å¹¶è®¾ç½®èµ·å§‹ä½ç½®ä¸å¤§å°
 		JTextField userText = new JTextField();
 		userText.setEditable(true);
 		userText.setHorizontalAlignment(SwingConstants.LEFT);
 		userText.setColumns(20);
 		userText.setBounds(100, 20, 120, 30);
 
-		// ´´½¨µÇÂ½°´Å¥,²¢ÉèÖÃÆğÊ¼Î»ÖÃÓë´óĞ¡
-		JButton loginBtn = new JButton("µÇÂ½");
+		// åˆ›å»ºç™»é™†æŒ‰é’®,å¹¶è®¾ç½®èµ·å§‹ä½ç½®ä¸å¤§å°
+		JButton loginBtn = new JButton("ç™»é™†");
 		loginBtn.setBounds(130, 60, 60, 30);
 
-		// ½«±êÇ©¡¢ÊäÈë¿òºÍ°´Å¥¼ÓÈëµ½´°ÌåµÄÈİÆ÷ÖĞ
+		// å°†æ ‡ç­¾ã€è¾“å…¥æ¡†å’ŒæŒ‰é’®åŠ å…¥åˆ°çª—ä½“çš„å®¹å™¨ä¸­
 		frm.add(userLabel);
 		frm.add(userText);
 		frm.add(loginBtn);
 
-		// ÉèÖÃ´°ÌåÎ»ÖÃÓë´óĞ¡²¢ÏÔÊ¾
+		// è®¾ç½®çª—ä½“ä½ç½®ä¸å¤§å°å¹¶æ˜¾ç¤º
 		frm.setBounds(400, 200, 300, 160);
 		frm.setVisible(true);
 	}

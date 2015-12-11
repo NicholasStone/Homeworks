@@ -3,19 +3,19 @@ public class Ex9_7_ObjectStream{
 	public static void main(String arg[])throws Exception{
 		Employee e1 = new Employee(1001,"Wang",5678.50);
 		FileOutputStream fos = new FileOutputStream(".\\object.dat");
-		ObjectOutputStream out = new ObjectOutputStream(fos); //´´½¨Êä³ö¶ÔÏóÁ÷
-		out.writeObject(e1); //Ğ´Èë¶ÔÏó
+		ObjectOutputStream out = new ObjectOutputStream(fos); //åˆ›å»ºè¾“å‡ºå¯¹è±¡æµ
+		out.writeObject(e1); //å†™å…¥å¯¹è±¡
 		out.close();
 		FileInputStream fis = new FileInputStream(".\\object.dat");
-		ObjectInputStream in = new ObjectInputStream(fis);  //´´½¨ÊäÈë¶ÔÏóÁ÷
-		Employee e2 = (Employee)in.readObject(); //¶ÁÈ¡¶ÔÏó
+		ObjectInputStream in = new ObjectInputStream(fis);  //åˆ›å»ºè¾“å…¥å¯¹è±¡æµ
+		Employee e2 = (Employee)in.readObject(); //è¯»å–å¯¹è±¡
 		System.out.println("Id: "+e2.id);
 		System.out.println("Name: "+e2.name);
 		System.out.println("Salary: "+e2.salary);
 		in.close();
 	}
 }
-class Employee  implements Serializable{ //±ØĞëÊµÏÖSerializable½Ó¿Ú
+class Employee  implements Serializable{ //å¿…é¡»å®ç°Serializableæ¥å£
 	int id;
 	String name;
 	double salary;

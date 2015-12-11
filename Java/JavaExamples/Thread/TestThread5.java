@@ -10,7 +10,7 @@ public class TestThread5 {
         }
         
         for(int i=0;i<50;i++){
-        	System.out.println("Ö÷Ïß³Ì:" + i);
+        	System.out.println("ä¸»çº¿ç¨‹:" + i);
         }
     }
 }

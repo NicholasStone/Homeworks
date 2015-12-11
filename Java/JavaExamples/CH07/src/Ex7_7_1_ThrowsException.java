@@ -3,14 +3,14 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 public class Ex7_7_1_ThrowsException {
 	public static void main(String args[]){
-		System.out.println("ÊäÈëÒ»ĞĞÎÄ±¾:");
+		System.out.println("è¾“å…¥ä¸€è¡Œæ–‡æœ¬:");
 		InputStreamReader isr = new InputStreamReader(System.in);
 		BufferedReader inputReader = new BufferedReader(isr);
 		try{
 			String inputLine = inputReader.readLine();
-			System.out.println("ÊäÈëµÄÎÄ±¾ÊÇ:" + inputLine);
+			System.out.println("è¾“å…¥çš„æ–‡æœ¬æ˜¯:" + inputLine);
 		}catch(IOException e){
-			System.out.println("·¢ÉúÒì³£:" + e);
+			System.out.println("å‘ç”Ÿå¼‚å¸¸:" + e);
 		}
 	}
 }

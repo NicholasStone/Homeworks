@@ -5,18 +5,18 @@ import java.awt.Font;
 
 public class Ex8_14_UseLabel {
 	public static void main(String[] args) {
-		JFrame frm = new JFrame("ÏÔÊ¾´øÍ¼ÏñµÄ±êÇ©");
-		frm.setLayout(null);// ÉèÖÃÎª²»Ê¹ÓÃ²¼¾Ö¹ÜÀíÆ÷
+		JFrame frm = new JFrame("æ˜¾ç¤ºå¸¦å›¾åƒçš„æ ‡ç­¾");
+		frm.setLayout(null);// è®¾ç½®ä¸ºä¸ä½¿ç”¨å¸ƒå±€ç®¡ç†å™¨
 
-		// ´´½¨±êÇ©×é¼ş,ÉèÖÃÎ»ÖÃ¼°´óĞ¡¡¢ÏÔÊ¾×ÖÌå¡¢¼ÓÔØÍ¼Æ¬
-		JLabel label = new JLabel("ÏÔÊ¾22ºÅ´ÖÌå×Ö");
+		// åˆ›å»ºæ ‡ç­¾ç»„ä»¶,è®¾ç½®ä½ç½®åŠå¤§å°ã€æ˜¾ç¤ºå­—ä½“ã€åŠ è½½å›¾ç‰‡
+		JLabel label = new JLabel("æ˜¾ç¤º22å·ç²—ä½“å­—");
 		label.setBounds(5, 5, 220, 100);
 		label.setFont(new Font("", Font.BOLD, 22));
 		label.setIcon(new ImageIcon("label.jpg"));
-		// ÉèÖÃÎÄ×Ö×ó¶ÔÆë
+		// è®¾ç½®æ–‡å­—å·¦å¯¹é½
 		label.setHorizontalAlignment(JLabel.LEFT);
 
-		// ÉèÖÃ±êÇ©Ïà¶ÔÍ¼Æ¬µÄÎ»ÖÃ,ÔÚ¸ßJDK¸ß°æ±¾ÖĞÔö¼ÓÁËĞÂµÄ¾²Ì¬³£Á¿
+		// è®¾ç½®æ ‡ç­¾ç›¸å¯¹å›¾ç‰‡çš„ä½ç½®,åœ¨é«˜JDKé«˜ç‰ˆæœ¬ä¸­å¢åŠ äº†æ–°çš„é™æ€å¸¸é‡
 		label.setHorizontalTextPosition(JLabel.CENTER);
 		label.setVerticalTextPosition(JLabel.TOP);
 		frm.add(label);

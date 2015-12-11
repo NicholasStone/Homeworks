@@ -1,8 +1,8 @@
 public class Ex2_1_Classmate {
 	public static void main(String args[]) {
-		int num; // ÉùÃ÷Ò»¸öÕûĞÍ±äÁ¿num
-		num = 30; // ½«ÕûĞÍ±äÁ¿¸³ÖµÎª3
-		// Êä³ö×Ö·û´®£¬ÕâÀïÓÃ"+" ºÅÁ¬½Ó±äÁ¿
-		System.out.println("ÎÒÃÇ°àÓĞ " + num + " Î»Í¬Ñ§£¡");
+		int num; // å£°æ˜ä¸€ä¸ªæ•´å‹å˜é‡num
+		num = 30; // å°†æ•´å‹å˜é‡èµ‹å€¼ä¸º3
+		// è¾“å‡ºå­—ç¬¦ä¸²ï¼Œè¿™é‡Œç”¨"+" å·è¿æ¥å˜é‡
+		System.out.println("æˆ‘ä»¬ç­æœ‰ " + num + " ä½åŒå­¦ï¼");
 	}
 }

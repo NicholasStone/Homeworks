@@ -4,20 +4,20 @@ public class Ex7_8_DefineException {
 		final int MIN=25,MAX=40;
 		Scanner scan=new Scanner(System.in);
 		OutOfRangException problem=new OutOfRangException();
-		System.out.print("ÊäÈë"+MIN+"ÖÁ"+MAX+"Ö®¼äµÄÕûÊı£º");
+		System.out.print("è¾“å…¥"+MIN+"è‡³"+MAX+"ä¹‹é—´çš„æ•´æ•°ï¼š");
 		try{
 			int value=scan.nextInt();
 			if(value<MIN||value>MAX)
-				throw problem;                  //Å×³ö×Ô¶¨ÒåÒì³£
+				throw problem;                  //æŠ›å‡ºè‡ªå®šä¹‰å¼‚å¸¸
 		}catch(OutOfRangException e){
 			System.out.println(e.toString());
 		}
-		System.out.println("Ö÷·½·¨½áÊø.");
+		System.out.println("ä¸»æ–¹æ³•ç»“æŸ.");
 	}
 }
-//×Ô¶¨ÒåÒ»¸öÒì³£Àà£¬ÀàÃûÎª£ºOutOfRangException
+//è‡ªå®šä¹‰ä¸€ä¸ªå¼‚å¸¸ç±»ï¼Œç±»åä¸ºï¼šOutOfRangException
 class OutOfRangException extends Exception{
 	OutOfRangException(){
-		super("ÊäÈëÊı¾İ³¬³ö·¶Î§£¡");
+		super("è¾“å…¥æ•°æ®è¶…å‡ºèŒƒå›´ï¼");
 	}
 }

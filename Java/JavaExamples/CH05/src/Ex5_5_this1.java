@@ -1,6 +1,6 @@
 public class Ex5_5_this1 {
 	public static void main(String[] args) {
-		Cat garfield = new Cat("»Æ", 12);
+		Cat garfield = new Cat("é»„", 12);
 		garfield.grow();
 		garfield.grow();
 	}
@@ -11,23 +11,23 @@ class Cat {
 	int height;
 
 	public Cat(String color) {
-		this.furColor = color;// Í¨¹ıthis·ÃÎÊ³ÉÔ±±äÁ¿£¬ÕâÀïthis¿ÉÒÔÊ¡ÂÔ
-		this.cry();// Í¨¹ıthisµ÷ÓÃ³ÉÔ±·½·¨£¬ÕâÀïthis¿ÉÒÔÊ¡ÂÔ
+		this.furColor = color;// é€šè¿‡thisè®¿é—®æˆå‘˜å˜é‡ï¼Œè¿™é‡Œthiså¯ä»¥çœç•¥
+		this.cry();// é€šè¿‡thisè°ƒç”¨æˆå‘˜æ–¹æ³•ï¼Œè¿™é‡Œthiså¯ä»¥çœç•¥
 
 	}
 
 	public Cat(String color, int height) {
-		this(color);// //Í¨¹ıthisµ÷ÓÃÆäËû¹¹Ôì·½·¨
-		this.height = height;// Í¨¹ıthisÒıÓÃ³ÉÔ±±äÁ¿£¬ÕâÀïthis¿ÉÒÔÊ¡ÂÔ
+		this(color);// //é€šè¿‡thisè°ƒç”¨å…¶ä»–æ„é€ æ–¹æ³•
+		this.height = height;// é€šè¿‡thiså¼•ç”¨æˆå‘˜å˜é‡ï¼Œè¿™é‡Œthiså¯ä»¥çœç•¥
 	}
 
 	public void cry() {
-		System.out.println(" ÎÒÊÇÒ»Ö»" + this.furColor + "ÑÕÉ«µÄÃ¨");
+		System.out.println(" æˆ‘æ˜¯ä¸€åª" + this.furColor + "é¢œè‰²çš„çŒ«");
 	}
 
 	public void grow() {
-		this.height++;// Í¨¹ıthis·ÃÎÊ³ÉÔ±±äÁ¿£¬ÕâÀïthis¿ÉÒÔÊ¡ÂÔ
-		System.out.println(" ÎÒ³¤¸ßÁË£¬Éí¸ßÎª" + this.height);
+		this.height++;// é€šè¿‡thisè®¿é—®æˆå‘˜å˜é‡ï¼Œè¿™é‡Œthiså¯ä»¥çœç•¥
+		System.out.println(" æˆ‘é•¿é«˜äº†ï¼Œèº«é«˜ä¸º" + this.height);
 	}
 
 }

@@ -1,5 +1,5 @@
 /*
- * ÉùÒô²âÊÔ³ÌĞò
+ * å£°éŸ³æµ‹è¯•ç¨‹åº
  */
 
 import java.io.File;
@@ -59,7 +59,7 @@ public class Ex15_TestSound implements Runnable{
     public void run(){
         while(true){
             try {
-                System.out.println("»»ÎÄ¼şÁË."+(++i));
+                System.out.println("æ¢æ–‡ä»¶äº†."+(++i));
                 String name=names[(int)(Math.random()*names.length)];
                 createPlayer(name);
                 Thread.sleep(10000);

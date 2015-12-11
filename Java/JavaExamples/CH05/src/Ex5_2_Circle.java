@@ -3,15 +3,15 @@ public class Ex5_2_Circle {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Circle c1,c2;           //ÉùÃ÷c1ºÍc2ÎªCircle¶ÔÏó
-		c1 = new Circle(10);   //´´½¨c1
+		Circle c1,c2;           //å£°æ˜c1å’Œc2ä¸ºCircleå¯¹è±¡
+		c1 = new Circle(10);   //åˆ›å»ºc1
 		Point p=new Point(9,8);
-		c2 = new Circle(10,p);   //´´½¨c2
-		c2.setRadius(40);     //µ÷ÓÃc2µÄĞŞ¸Ä°ë¾¶·½·¨£¬²¢²»Ó°Ïìc1µÄ³ÉÔ±±äÁ¿×´Ì¬
+		c2 = new Circle(10,p);   //åˆ›å»ºc2
+		c2.setRadius(40);     //è°ƒç”¨c2çš„ä¿®æ”¹åŠå¾„æ–¹æ³•ï¼Œå¹¶ä¸å½±å“c1çš„æˆå‘˜å˜é‡çŠ¶æ€
 	    DecimalFormat   df   =   new   DecimalFormat("###,##0.00");   
 
-		System.out.println("c1Ãæ»ı="+c1.getArea()+"\tc2Ãæ»ı="+c2.getArea());
-		System.out.println("c1ÖÜ³¤="+df.format(c1.getCircumference())+"\tc2ÖÜ³¤="+df.format(c2.getCircumference()));
+		System.out.println("c1é¢ç§¯="+c1.getArea()+"\tc2é¢ç§¯="+c2.getArea());
+		System.out.println("c1å‘¨é•¿="+df.format(c1.getCircumference())+"\tc2å‘¨é•¿="+df.format(c2.getCircumference()));
 		
 	}
 
@@ -21,31 +21,31 @@ class Circle {
 	private Point p;
 	private float radius = 0.0f;
 
-	public Circle(float r) { // ¹¹Ôì·½·¨
+	public Circle(float r) { // æ„é€ æ–¹æ³•
 		radius = r;
 	}
 
-	public Circle(float r, Point p) { // ¹¹Ôì·½·¨
+	public Circle(float r, Point p) { // æ„é€ æ–¹æ³•
 		this.p = p;
 		radius = r;
 	}
 
-	public void setRadius(float r) { // Éè¶¨°ë¾¶
+	public void setRadius(float r) { // è®¾å®šåŠå¾„
 		radius = r;
 	}
 
-	public double getRadius() { // ĞŞ¸Ä°ë¾¶
+	public double getRadius() { // ä¿®æ”¹åŠå¾„
 		return radius;
 	}
 
-	public double getArea() { // ¼ÆËãÃæ»ı
+	public double getArea() { // è®¡ç®—é¢ç§¯
 		final float PI = 3.14f;
 		float area;
 		area = PI * radius * radius;
 		return area;
 	}
 
-	public double getCircumference() { // ¼ÆËãÃæ»ı
+	public double getCircumference() { // è®¡ç®—é¢ç§¯
 		final float PI = 3.14f;
 		float circumference;
 		circumference = 2 * PI * radius;

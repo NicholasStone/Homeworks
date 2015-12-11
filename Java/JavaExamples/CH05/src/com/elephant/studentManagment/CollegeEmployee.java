@@ -10,14 +10,14 @@ public class CollegeEmployee extends Person {
 	public void setData() {
 		String temp;
 		super.setData();
-		ssn = JOptionPane.showInputDialog(null, "ÇëÊäÈëÔ±¹¤µÄÉç»á±£ÏÕºÅ");
+		ssn = JOptionPane.showInputDialog(null, "è¯·è¾“å…¥å‘˜å·¥çš„ç¤¾ä¼šä¿é™©å·");
 		while (true) {
 			try {
-				temp = JOptionPane.showInputDialog(null, "ÇëÊäÈëÔ±¹¤µÄÄêĞ½");
+				temp = JOptionPane.showInputDialog(null, "è¯·è¾“å…¥å‘˜å·¥çš„å¹´è–ª");
 				annualSalary = Double.parseDouble(temp);
 				break;
 			} catch (Exception e) {
-				JOptionPane.showMessageDialog(null, "ÇëÊäÈëºÏ·¨µÄĞ½Ë®");
+				JOptionPane.showMessageDialog(null, "è¯·è¾“å…¥åˆæ³•çš„è–ªæ°´");
 			}
 
 		}
@@ -25,7 +25,7 @@ public class CollegeEmployee extends Person {
 
 	public void display() {
 		super.display();
-		System.out.println("\tSSN: " + ssn + " \tÄêĞ½£º" + annualSalary);
+		System.out.println("\tSSN: " + ssn + " \tå¹´è–ªï¼š" + annualSalary);
 	}
 
 	public double getAnnualSalary() {

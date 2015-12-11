@@ -5,7 +5,7 @@
 %>
 <html>
 <head>
-<title>Ìí¼ÓÑ§ÉúĞÅÏ¢</title>
+<title>æ·»åŠ å­¦ç”Ÿä¿¡æ¯</title>
 </head>
 <body>
 
@@ -14,13 +14,13 @@
 		Statement stmt = null;
 		ResultSet rs = null;
 		
-		//¼ÓÔØÇı¶¯³ÌĞò  
+		//åŠ è½½é©±åŠ¨ç¨‹åº  
 		try {
 			Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
 		} catch (ClassNotFoundException e) {
 		}
 
-		//½¨Á¢Êı¾İ¿âÁ¬½Ó
+		//å»ºç«‹æ•°æ®åº“è¿æ¥
 		try {
 			con = DriverManager.getConnection("jdbc:odbc:student", "", "");
 			stmt = con.createStatement();
@@ -49,7 +49,7 @@
 	
 	<table width="100%"><tr>
 	<td align="left"><img src="imgs/left.gif" /></td>
-	<td align="center"><h2>Ìí¼ÓÑ§ÉúĞÅÏ¢</h2></td>
+	<td align="center"><h2>æ·»åŠ å­¦ç”Ÿä¿¡æ¯</h2></td>
 	<td align="right"><img src="imgs/right.gif" /></td>
 	</tr>
 	</table>
@@ -57,9 +57,9 @@
 	<br>
 	
 	<center>
-		<br> <font color="blue"><%=name%></font>µÄĞÅÏ¢ÒÑÌí¼Óµ½Êı¾İ¿â!
+		<br> <font color="blue"><%=name%></font>çš„ä¿¡æ¯å·²æ·»åŠ åˆ°æ•°æ®åº“!
 		<form action="EX14_8_index.jsp" method="post">
-			<input type="submit" id="back" name="back" value="·µ»Ø">
+			<input type="submit" id="back" name="back" value="è¿”å›">
 		</form>
 	 </center>
 

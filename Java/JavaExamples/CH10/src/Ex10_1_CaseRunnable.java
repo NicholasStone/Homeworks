@@ -1,14 +1,14 @@
-public class Ex10_1_CaseRunnable implements Runnable {// ´´½¨Ò»¸öÀàÊµÏÖ£¨implements£©Runnable½Ó¿Ú
+public class Ex10_1_CaseRunnable implements Runnable {// åˆ›å»ºä¸€ä¸ªç±»å®ç°ï¼ˆimplementsï¼‰Runnableæ¥å£
 	String studentName;
 
-	public Ex10_1_CaseRunnable(String studentName) {// ¶¨ÒåÀàµÄ¹¹Ôìº¯Êı,´«µİ²ÎÊı
-		System.out.println(studentName + "ÉêÇë·ÃÎÊ·şÎñÆ÷");
+	public Ex10_1_CaseRunnable(String studentName) {// å®šä¹‰ç±»çš„æ„é€ å‡½æ•°,ä¼ é€’å‚æ•°
+		System.out.println(studentName + "ç”³è¯·è®¿é—®æœåŠ¡å™¨");
 		this.studentName = studentName;
 	}
 
-	public void run() {// ÓÃĞèÔÚ´ËÏß³ÌÖĞÖ´ĞĞµÄ´úÂë¸²¸ÇThreadÀàµÄrun()·½·¨
+	public void run() {// ç”¨éœ€åœ¨æ­¤çº¿ç¨‹ä¸­æ‰§è¡Œçš„ä»£ç è¦†ç›–Threadç±»çš„run()æ–¹æ³•
 		for (int i = 0; i < 5; i++) {
-			System.out.println("µ±Ç°µÄ·şÎñ¶ÔÏóÊÇ" + studentName + "Í¬Ñ§");
+			System.out.println("å½“å‰çš„æœåŠ¡å¯¹è±¡æ˜¯" + studentName + "åŒå­¦");
 			try {
 				Thread.sleep((int) (Math.random() * 2000));
 			} catch (InterruptedException ex) {
@@ -18,9 +18,9 @@ public class Ex10_1_CaseRunnable implements Runnable {// ´´½¨Ò»¸öÀàÊµÏÖ£¨impleme
 	}// run
 
 	public static void main(String[] args) {
-		Thread t1 = new Thread(new Ex10_1_CaseRunnable("ÕÅÈı")); // ÓÃnewÊµÀı»¯¶ÔÏó
-		Thread t2 = new Thread(new Ex10_1_CaseRunnable("ÀîËÄ"));
-		t1.start(); // µ÷ÓÃ¸Ã¶ÔÏóµÄstart()·½·¨Æô¶¯Ïß³Ì¡£
+		Thread t1 = new Thread(new Ex10_1_CaseRunnable("å¼ ä¸‰")); // ç”¨newå®ä¾‹åŒ–å¯¹è±¡
+		Thread t2 = new Thread(new Ex10_1_CaseRunnable("æå››"));
+		t1.start(); // è°ƒç”¨è¯¥å¯¹è±¡çš„start()æ–¹æ³•å¯åŠ¨çº¿ç¨‹ã€‚
 		t2.start();
 	} // main
 }

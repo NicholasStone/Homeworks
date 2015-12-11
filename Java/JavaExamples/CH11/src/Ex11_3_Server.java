@@ -1,4 +1,4 @@
-//·şÎñ¶Ë³ÌĞò£¬Ex11_3_Server.java
+//æœåŠ¡ç«¯ç¨‹åºï¼ŒEx11_3_Server.java
 import java.io.*;
 import java.net.*;
 
@@ -7,44 +7,44 @@ public class Ex11_3_Server {
 		try {
 			ServerSocket server = null;
 			try {
-				server = new ServerSocket(4444); // ´´½¨Ò»¸öServerSocketÔÚ¶Ë¿Ú4444¼àÌı¿Í»§ÇëÇó
+				server = new ServerSocket(4444); // åˆ›å»ºä¸€ä¸ªServerSocketåœ¨ç«¯å£4444ç›‘å¬å®¢æˆ·è¯·æ±‚
 			} catch (Exception e) {
-				System.out.println("Error:" + e);// ÆÁÄ»´òÓ¡³ö´íĞÅÏ¢
+				System.out.println("Error:" + e);// å±å¹•æ‰“å°å‡ºé”™ä¿¡æ¯
 				System.exit(-1);
 			}
 			Socket client = null;
 			try {
-				client = server.accept(); // Ê¹ÓÃaccept()×èÈûµÈ´ı¿Í»§ÇëÇó£¬ÓĞ¿Í»§ÇëÇó
-				// µ½À´Ôò²úÉúÒ»¸öSocket¶ÔÏó
+				client = server.accept(); // ä½¿ç”¨accept()é˜»å¡ç­‰å¾…å®¢æˆ·è¯·æ±‚ï¼Œæœ‰å®¢æˆ·è¯·æ±‚
+				// åˆ°æ¥åˆ™äº§ç”Ÿä¸€ä¸ªSocketå¯¹è±¡
 			} catch (Exception e) {
-				System.out.println("½ÓÊÜÇëÇóÊ§°Ü!");
+				System.out.println("æ¥å—è¯·æ±‚å¤±è´¥!");
 				System.exit(-1);
 			}
 			String inputString;
 			BufferedReader is = new BufferedReader(new InputStreamReader(
 					client.getInputStream()));
-			// ÓÉSocket¶ÔÏóµÃµ½ÊäÈëÁ÷£¬²¢¹¹ÔìÏàÓ¦µÄBufferedReader¶ÔÏó
+			// ç”±Socketå¯¹è±¡å¾—åˆ°è¾“å…¥æµï¼Œå¹¶æ„é€ ç›¸åº”çš„BufferedReaderå¯¹è±¡
 			PrintWriter os = new PrintWriter(client.getOutputStream());
-			// ÓÉSocket¶ÔÏóµÃµ½Êä³öÁ÷£¬²¢¹¹ÔìPrintWriter¶ÔÏó
+			// ç”±Socketå¯¹è±¡å¾—åˆ°è¾“å‡ºæµï¼Œå¹¶æ„é€ PrintWriterå¯¹è±¡
 			BufferedReader sin = new BufferedReader(new InputStreamReader(
 					System.in));
-			// ÓÉÏµÍ³±ê×¼ÊäÈëÉè±¸¹¹ÔìBufferedReader¶ÔÏó
-			System.out.println("Client·¢ËÍµÄÏûÏ¢Îª:" + is.readLine()); // ÔÚ±ê×¼Êä³öÉÏ´òÓ¡´Ó¿Í»§¶Ë¶ÁÈëµÄ×Ö·û´®
-			inputString = sin.readLine(); // ´Ó±ê×¼ÊäÈë¶ÁÈëÒ»×Ö·û´®
-			while (inputString != null && !inputString.trim().equals("quit")) {// Èç¹û¸Ã×Ö·û´®Îª"quit",ÔòÍ£Ö¹Ñ­»·
-				os.println(inputString); // Ïò¿Í»§¶ËÊä³ö¸Ã×Ö·û´®
-				os.flush(); // Ë¢ĞÂÊä³öÁ÷£¬Ê¹ClientÂíÉÏÊÕµ½¸Ã×Ö·û´®
-				System.out.println("Server·¢ËÍµÄÏûÏ¢Îª:" + inputString); // ÔÚÆÁÄ»ÉÏÏÔÊ¾¶ÁÈëµÄ×Ö·û´®
-				System.out.println("Client·¢ËÍµÄÏûÏ¢Îª:" + is.readLine()); // ´ÓClient¶ÁÈëÒ»×Ö·û´®£¬²¢´òÓ¡µ½±ê×¼Êä³öÉÏ
-				inputString = sin.readLine(); // ´ÓÏµÍ³±ê×¼ÊäÈë¶ÁÈëÒ»×Ö·û´®
-			} // ¼ÌĞøÑ­»·
-			os.close(); // ¹Ø±ÕSocketÊä³öÁ÷
-			is.close(); // ¹Ø±ÕSocketÊäÈëÁ÷
-			client.close(); // ¹Ø±ÕSocket
-			server.close(); // ¹Ø±ÕServerSocket
-			System.out.println("ÁÄÌì½áÊø!");
+			// ç”±ç³»ç»Ÿæ ‡å‡†è¾“å…¥è®¾å¤‡æ„é€ BufferedReaderå¯¹è±¡
+			System.out.println("Clientå‘é€çš„æ¶ˆæ¯ä¸º:" + is.readLine()); // åœ¨æ ‡å‡†è¾“å‡ºä¸Šæ‰“å°ä»å®¢æˆ·ç«¯è¯»å…¥çš„å­—ç¬¦ä¸²
+			inputString = sin.readLine(); // ä»æ ‡å‡†è¾“å…¥è¯»å…¥ä¸€å­—ç¬¦ä¸²
+			while (inputString != null && !inputString.trim().equals("quit")) {// å¦‚æœè¯¥å­—ç¬¦ä¸²ä¸º"quit",åˆ™åœæ­¢å¾ªç¯
+				os.println(inputString); // å‘å®¢æˆ·ç«¯è¾“å‡ºè¯¥å­—ç¬¦ä¸²
+				os.flush(); // åˆ·æ–°è¾“å‡ºæµï¼Œä½¿Clienté©¬ä¸Šæ”¶åˆ°è¯¥å­—ç¬¦ä¸²
+				System.out.println("Serverå‘é€çš„æ¶ˆæ¯ä¸º:" + inputString); // åœ¨å±å¹•ä¸Šæ˜¾ç¤ºè¯»å…¥çš„å­—ç¬¦ä¸²
+				System.out.println("Clientå‘é€çš„æ¶ˆæ¯ä¸º:" + is.readLine()); // ä»Clientè¯»å…¥ä¸€å­—ç¬¦ä¸²ï¼Œå¹¶æ‰“å°åˆ°æ ‡å‡†è¾“å‡ºä¸Š
+				inputString = sin.readLine(); // ä»ç³»ç»Ÿæ ‡å‡†è¾“å…¥è¯»å…¥ä¸€å­—ç¬¦ä¸²
+			} // ç»§ç»­å¾ªç¯
+			os.close(); // å…³é—­Socketè¾“å‡ºæµ
+			is.close(); // å…³é—­Socketè¾“å…¥æµ
+			client.close(); // å…³é—­Socket
+			server.close(); // å…³é—­ServerSocket
+			System.out.println("èŠå¤©ç»“æŸ!");
 		} catch (Exception e) {
 			System.out.println("Error:" + e);
 		}
 	}
-}// ·şÎñÆ÷¶Ë³ÌĞò½áÊø
+}// æœåŠ¡å™¨ç«¯ç¨‹åºç»“æŸ

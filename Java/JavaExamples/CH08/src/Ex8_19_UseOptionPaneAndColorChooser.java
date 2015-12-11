@@ -5,21 +5,21 @@ import javax.swing.JOptionPane;
 
 public class Ex8_19_UseOptionPaneAndColorChooser {
 	public static void main(String[] args) {
-		final JFrame frm = new JFrame("Ê¹ÓÃËÄÖÖ±ê×¼¶Ô»°¿ò");
+		final JFrame frm = new JFrame("ä½¿ç”¨å››ç§æ ‡å‡†å¯¹è¯æ¡†");
 		frm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frm.setLayout(null);// ÉèÖÃÎª²»Ê¹ÓÃ²¼¾Ö¹ÜÀíÆ÷
+		frm.setLayout(null);// è®¾ç½®ä¸ºä¸ä½¿ç”¨å¸ƒå±€ç®¡ç†å™¨
 
-		String str = JOptionPane.showInputDialog(frm, "ÄãºÃ£¡ÕâÊÇÊäÈë¶Ô»°¿ò£¬ÇëÊäÈë£º",
-				"ÊäÈë¶Ô»°¿ò", JOptionPane.PLAIN_MESSAGE);
-		JOptionPane.showMessageDialog(frm, "ÄãÊäÈëµÄÊÇ£º" + str, "ÏûÏ¢¶Ô»°¿ò",
+		String str = JOptionPane.showInputDialog(frm, "ä½ å¥½ï¼è¿™æ˜¯è¾“å…¥å¯¹è¯æ¡†ï¼Œè¯·è¾“å…¥ï¼š",
+				"è¾“å…¥å¯¹è¯æ¡†", JOptionPane.PLAIN_MESSAGE);
+		JOptionPane.showMessageDialog(frm, "ä½ è¾“å…¥çš„æ˜¯ï¼š" + str, "æ¶ˆæ¯å¯¹è¯æ¡†",
 				JOptionPane.PLAIN_MESSAGE);
-		int t = JOptionPane.showConfirmDialog(frm, "ÇëÑ¡Ôñ·ñÍË³ö£¬Ñ¡ÔñÑÕÉ«¡£", "È·ÈÏ¶Ô»°¿ò",
+		int t = JOptionPane.showConfirmDialog(frm, "è¯·é€‰æ‹©å¦é€€å‡ºï¼Œé€‰æ‹©é¢œè‰²ã€‚", "ç¡®è®¤å¯¹è¯æ¡†",
 				JOptionPane.YES_NO_OPTION);
 		Color c;
 		if (t == JOptionPane.NO_OPTION)
-			c = JColorChooser.showDialog(frm, "ÑÕÉ«Ñ¡Ôñ¶Ô»°¿ò", Color.blue);
+			c = JColorChooser.showDialog(frm, "é¢œè‰²é€‰æ‹©å¯¹è¯æ¡†", Color.blue);
 		else
-			JOptionPane.showMessageDialog(frm, "Î´ÏÔÊ¾ÑÕÉ«Ñ¡Ôñ¶Ô»°¿ò£¡", "ÏûÏ¢¶Ô»°¿ò",
+			JOptionPane.showMessageDialog(frm, "æœªæ˜¾ç¤ºé¢œè‰²é€‰æ‹©å¯¹è¯æ¡†ï¼", "æ¶ˆæ¯å¯¹è¯æ¡†",
 					JOptionPane.WARNING_MESSAGE);
 
 		frm.setBounds(400, 200, 450, 300);

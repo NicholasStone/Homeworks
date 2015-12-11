@@ -1,13 +1,13 @@
 import java.io.*;
 public class Ex9_8_RandomAccess {
-	final static int DoubleSize=8; //¶¨Òå³£Á¿
+	final static int DoubleSize=8; //å®šä¹‰å¸¸é‡
 	void randomFileTest(String filename)throws IOException{
-		RandomAccessFile rf=new RandomAccessFile(filename,"rw"); //´ò¿ªËæ»úÎÄ¼ş
+		RandomAccessFile rf=new RandomAccessFile(filename,"rw"); //æ‰“å¼€éšæœºæ–‡ä»¶
 		for(int i=0;i<5;i++)
-			rf.writeDouble(i*10.0);  //Ğ´Èë5¸öÊı¾İ
-		rf.seek(2*DoubleSize); //ÎÄ¼şÎ»ÖÃÖ¸Õë¶¨Î»ÖÁ¾àÎÄ¼ş¿ªÊ¼16×Ö½Ú´¦,¼´µÚ3¸öÊı¾İ¿ªÊ¼´¦
-		rf.writeDouble(110.0001); //ÔÚÎÄ¼şÎ»ÖÃÖ¸Õë´¦Ğ´ÈëĞÂµÄÊı¾İ
-		rf.seek(0); //ÒÆ¶¯ÎÄ¼şÎ»ÖÃÖ¸ÕëÖÁÎÄ¼ş¿ªÊ¼
+			rf.writeDouble(i*10.0);  //å†™å…¥5ä¸ªæ•°æ®
+		rf.seek(2*DoubleSize); //æ–‡ä»¶ä½ç½®æŒ‡é’ˆå®šä½è‡³è·æ–‡ä»¶å¼€å§‹16å­—èŠ‚å¤„,å³ç¬¬3ä¸ªæ•°æ®å¼€å§‹å¤„
+		rf.writeDouble(110.0001); //åœ¨æ–‡ä»¶ä½ç½®æŒ‡é’ˆå¤„å†™å…¥æ–°çš„æ•°æ®
+		rf.seek(0); //ç§»åŠ¨æ–‡ä»¶ä½ç½®æŒ‡é’ˆè‡³æ–‡ä»¶å¼€å§‹
 		for(int i=0;i<5;i++)
 			System.out.println("Value "+i+": "+rf.readDouble());
 		rf.close();
@@ -17,12 +17,12 @@ public class Ex9_8_RandomAccess {
 		String fileName=null;
 		Ex9_8_RandomAccess obj=null;
 		try{
-			System.out.print("ÊäÈëÒ»¸öÎÄ¼şÃû£º");
-			fileName=stdin.readLine(); //´Ó¼üÅÌÊäÈëÎÄ¼şÃû
+			System.out.print("è¾“å…¥ä¸€ä¸ªæ–‡ä»¶åï¼š");
+			fileName=stdin.readLine(); //ä»é”®ç›˜è¾“å…¥æ–‡ä»¶å
 			obj=new Ex9_8_RandomAccess();
 			obj.randomFileTest(fileName);
 		}catch(IOException e){
-			System.out.println("ÎÄ¼şÕÒ²»µ½£º"+e);
+			System.out.println("æ–‡ä»¶æ‰¾ä¸åˆ°ï¼š"+e);
 			e.printStackTrace();
 		}
 	}

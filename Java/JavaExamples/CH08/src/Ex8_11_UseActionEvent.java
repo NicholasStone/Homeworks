@@ -3,27 +3,27 @@ import javax.swing.*;
 
 public class Ex8_11_UseActionEvent {
 	public static void main(String[] args) {
-		JFrame frm = new JFrame("Àí½âÊÂ¼ş´¦Àí");
+		JFrame frm = new JFrame("ç†è§£äº‹ä»¶å¤„ç†");
 		frm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frm.setLayout(null);
 
-		// ´´½¨°´Å¥¶ÔÏó
-		JButton btn = new JButton("Çëµ¥»÷±¾°´Å¥");
+		// åˆ›å»ºæŒ‰é’®å¯¹è±¡
+		JButton btn = new JButton("è¯·å•å‡»æœ¬æŒ‰é’®");
 		btn.setBounds(120, 60, 120, 30);
 		frm.add(btn);
 
-		// ´´½¨°´Å¥µÄ¼àÌıÆ÷,²¢×¢²á,²ÎÊıÎªÊÂ¼ş´¦ÀíÕß¶ÔÏó
+		// åˆ›å»ºæŒ‰é’®çš„ç›‘å¬å™¨,å¹¶æ³¨å†Œ,å‚æ•°ä¸ºäº‹ä»¶å¤„ç†è€…å¯¹è±¡
 		ButtonHandler btnHandler = new ButtonHandler();
-		btn.addActionListener(btnHandler); // Óëµã»÷ÊÂ¼şÏà¹ØµÄÊÚÈ¨´¦ÀíµÄ·½·¨
+		btn.addActionListener(btnHandler); // ä¸ç‚¹å‡»äº‹ä»¶ç›¸å…³çš„æˆæƒå¤„ç†çš„æ–¹æ³•
 
 		frm.setBounds(400, 200, 400, 200);
 		frm.setVisible(true);
 	}
 }
 
-// ±àĞ´°´Å¥µÄÊÂ¼ş´¦ÀíÕß,¼´ÊµÏÖActionListner½Ó¿Ú
+// ç¼–å†™æŒ‰é’®çš„äº‹ä»¶å¤„ç†è€…,å³å®ç°ActionListneræ¥å£
 class ButtonHandler implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
-		System.out.println("µ¥»÷Ò»´Î°´Å¥");
+		System.out.println("å•å‡»ä¸€æ¬¡æŒ‰é’®");
 	}
 }

@@ -10,7 +10,7 @@ public class copy {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		if(args.length != 2)
-		       System.out.println("ÇëÊäÈëÁ½¸öÎÄ¼şÃû£¡£¡");
+		       System.out.println("è¯·è¾“å…¥ä¸¤ä¸ªæ–‡ä»¶åï¼ï¼");
 		     else
 		     {
 		    	 String infile  = args[0];
@@ -30,10 +30,10 @@ public class copy {
 		    		 bw.write(words.toString());
 		    		 bw.close();
 		    	   } catch (Exception e){
-		    		   System.out.println("ÎÄ¼ş´¦Àí·¢Éú´íÎó£¡£¡£¡");
-		    		   System.out.println("ÊäÈëÎÄ¼şÃû£º"+infile);
-		    		   System.out.println("ÊäÈëÎÄ¼şÃû£º"+outfile);
-		    		   System.out.println("´íÎóĞÅÏ¢£º"+e.getMessage());
+		    		   System.out.println("æ–‡ä»¶å¤„ç†å‘ç”Ÿé”™è¯¯ï¼ï¼ï¼");
+		    		   System.out.println("è¾“å…¥æ–‡ä»¶åï¼š"+infile);
+		    		   System.out.println("è¾“å…¥æ–‡ä»¶åï¼š"+outfile);
+		    		   System.out.println("é”™è¯¯ä¿¡æ¯ï¼š"+e.getMessage());
 		    		   
 		    	   }
 	}

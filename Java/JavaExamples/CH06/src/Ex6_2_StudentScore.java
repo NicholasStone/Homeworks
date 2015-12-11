@@ -3,44 +3,44 @@ import java.io.*;
 public class Ex6_2_StudentScore {
 
 	public static void main(String[] args) throws IOException {
-		int k, count = 5;// countÎªÑ§ÉúµÄ¸öÊı
-		double score[] = new double[count];// Ñ§ÉúµÄ³É¼¨Êı×é
+		int k, count = 5;// countä¸ºå­¦ç”Ÿçš„ä¸ªæ•°
+		double score[] = new double[count];// å­¦ç”Ÿçš„æˆç»©æ•°ç»„
 		boolean contiGo = true;
 		String str;
 		BufferedReader buf = new BufferedReader(
 				new InputStreamReader(System.in));
 		for (k = 0; k < count; k++) {
 			while (contiGo) {
-				System.out.print("ÇëÊäÈëµÚ" + (k + 1) + "¸öÑ§ÉúµÄ³É¼¨£º");
+				System.out.print("è¯·è¾“å…¥ç¬¬" + (k + 1) + "ä¸ªå­¦ç”Ÿçš„æˆç»©ï¼š");
 				str = buf.readLine();
 
 				score[k] = Double.parseDouble(str);
 				if (0 > score[k] || 100 < score[k]) {
-					System.out.println("³É¼¨Ó¦¸Ã½éÓÚ0µ½100Ö®¼ä,ÇëÖØĞÂÊäÈë¡£");
+					System.out.println("æˆç»©åº”è¯¥ä»‹äº0åˆ°100ä¹‹é—´,è¯·é‡æ–°è¾“å…¥ã€‚");
 				} else
 					break;
 			}
 		}
 
-		// ²ÉÓÃÃ°Åİ·¨£¬¶Ô³É¼¨ÅÅĞò
+		// é‡‡ç”¨å†’æ³¡æ³•ï¼Œå¯¹æˆç»©æ’åº
 		double[] scoreCopy = new double[count + 1];
 		double temp = 0;
 		System.arraycopy(score, 0, scoreCopy, 1, score.length);
 
 		for (k = 1; k < count; k++)
-			// Ê¹ÓÃÃ°Åİ·¨½øĞĞÅÅĞò
+			// ä½¿ç”¨å†’æ³¡æ³•è¿›è¡Œæ’åº
 			for (int m = 1; m <= count - k; m++)
 				if (scoreCopy[m] > scoreCopy[m + 1]) {
 					temp = scoreCopy[m];
 					scoreCopy[m] = scoreCopy[m + 1];
 					scoreCopy[m + 1] = temp;
 				}
-		System.out.println("Õâ" + score.length + "¸öÍ¬Ñ§µÄ³É¼¨ÈçÏÂ£º");
+		System.out.println("è¿™" + score.length + "ä¸ªåŒå­¦çš„æˆç»©å¦‚ä¸‹ï¼š");
 
 		for (int j = 0; j < score.length; j++) {
 			System.out.print(score[j] + "\t");
 		}
-		System.out.println("\n Õâ" + score.length + "¸öÍ¬Ñ§µÄ³É¼¨´ÓµÍµ½¸ßÅÅĞòÈçÏÂ£º");
+		System.out.println("\n è¿™" + score.length + "ä¸ªåŒå­¦çš„æˆç»©ä»ä½åˆ°é«˜æ’åºå¦‚ä¸‹ï¼š");
 		for (int j = 1; j < scoreCopy.length; j++) {
 			System.out.print(scoreCopy[j] + "\t");
 			

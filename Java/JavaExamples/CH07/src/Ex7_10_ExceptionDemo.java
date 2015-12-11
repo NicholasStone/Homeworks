@@ -1,41 +1,41 @@
 public class Ex7_10_ExceptionDemo {
 	public static void main(String args[]){
 		try{
-			Bank ba=new Bank(50);  //ÐÂ½¨ÒøÐÐ¶ÔÏóba²¢´æÈë50
-			ba.withdrawal(100);    //ÒøÐÐ¶ÔÏóbaÈ¡¿î100
-			System.out.println("È¡¿î³É¹¦!");
+			Bank ba=new Bank(50);  //æ–°å»ºé“¶è¡Œå¯¹è±¡baå¹¶å­˜å…¥50
+			ba.withdrawal(100);    //é“¶è¡Œå¯¹è±¡baå–æ¬¾100
+			System.out.println("å–æ¬¾æˆåŠŸ!");
 		}catch(InsufficientFundsException e){ 
 			System.out.println(e.toString());
 			System.out.println(e.excepMessage());
 		}
 	}
-}   //Ö÷Àà
+}   //ä¸»ç±»
 class Bank{
-	double balance;    // ´æ¿îÊý
-	Bank(double  balance){this.balance=balance;}  //¹¹Ôì·½·¨
+	double balance;    // å­˜æ¬¾æ•°
+	Bank(double  balance){this.balance=balance;}  //æž„é€ æ–¹æ³•
 	public void deposite(double dAmount){        
 		if(dAmount>0.0) balance+=dAmount;
-	}       //´æ¿î·½·¨
+	}       //å­˜æ¬¾æ–¹æ³•
 	public void withdrawal(double dAmount) throws InsufficientFundsException{
 		if (balance<dAmount)
 			throw new InsufficientFundsException(this, dAmount);
 		balance=balance-dAmount;
-	}       //È¡¿î·½·¨
+	}       //å–æ¬¾æ–¹æ³•
 	public void showBalance(){
 		System.out.println("The balance is "+(int)balance);
-	}       //ÏÔÊ¾ÒøÐÐ´æ¿îÓà¶î
-}   //ÒøÐÐÀà
+	}       //æ˜¾ç¤ºé“¶è¡Œå­˜æ¬¾ä½™é¢
+}   //é“¶è¡Œç±»
 class InsufficientFundsException extends Exception{
-	private Bank  excepbank;      // ÒøÐÐ¶ÔÏó
-	private double excepAmount;   // ÒªÈ¡µÄÇ®
+	private Bank  excepbank;      // é“¶è¡Œå¯¹è±¡
+	private double excepAmount;   // è¦å–çš„é’±
 	InsufficientFundsException(Bank ba, double  dAmount){
-		super("È¡¿îÒì³££¡");
+		super("å–æ¬¾å¼‚å¸¸ï¼");
 		excepbank=ba;
 		excepAmount=dAmount;
-	}  //Òì³£Àà¹¹Ôì·½·¨
+	}  //å¼‚å¸¸ç±»æž„é€ æ–¹æ³•
 	public String excepMessage(){
-		String  str="ÒøÐÐ´æ¿îÊÇ£º"+excepbank.balance
-			+ "\n"+"ÒªÈ¡µÄÇ®ÊÇ£º"+excepAmount;
+		String  str="é“¶è¡Œå­˜æ¬¾æ˜¯ï¼š"+excepbank.balance
+			+ "\n"+"è¦å–çš„é’±æ˜¯ï¼š"+excepAmount;
 		return str; 
-	}  //È¡¿îÒì³£Ê±ÏÔÊ¾µÄÐÅÏ¢
-}   //Òì³£Àà
+	}  //å–æ¬¾å¼‚å¸¸æ—¶æ˜¾ç¤ºçš„ä¿¡æ¯
+}   //å¼‚å¸¸ç±»

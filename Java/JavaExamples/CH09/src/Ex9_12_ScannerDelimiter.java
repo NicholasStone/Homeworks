@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class Ex9_12_ScannerDelimiter {
 	public static void main(String[] args){ 
         Scanner s = new Scanner("abcd efghijkl..mnop,qrst uvwxyz"); 
-        //s.useDelimiter(" |,|\\.");  //ÉèÖÃ·Ö¸ô·ûÎª¿Õ¸ñ»ò¶ººÅ»ò¾äµã
+        //s.useDelimiter(" |,|\\.");  //è®¾ç½®åˆ†éš”ç¬¦ä¸ºç©ºæ ¼æˆ–é€—å·æˆ–å¥ç‚¹
         while (s.hasNext()) { 
                 System.out.println(s.next()); 
         } 

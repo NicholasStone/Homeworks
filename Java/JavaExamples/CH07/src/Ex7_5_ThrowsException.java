@@ -11,7 +11,7 @@ public class Ex7_5_ThrowsException {
 			a=calc(0);
 			System.out.println("a="+a);
 		}catch(ArithmeticException e){
-			System.out.println("µ÷ÓÃ·½·¨calcÊ±·¢ÉúÒì³£"+e.getMessage());
+			System.out.println("è°ƒç”¨æ–¹æ³•calcæ—¶å‘ç”Ÿå¼‚å¸¸"+e.getMessage());
 			e.printStackTrace();
 		}
 	}

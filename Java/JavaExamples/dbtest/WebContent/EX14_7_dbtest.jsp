@@ -13,19 +13,19 @@ Statement stmt=null;
 ResultSet rs = null;
 String str = "";
 
-//¼ÓÔØÇý¶¯³ÌÐò  
+//åŠ è½½é©±åŠ¨ç¨‹åº  
 try{
 	    Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
 	    }
 catch(ClassNotFoundException e){}
 
-//½¨Á¢Êý¾Ý¿âÁ¬½Ó
+//å»ºç«‹æ•°æ®åº“è¿žæŽ¥
 try{
 	     con=DriverManager.getConnection("jdbc:odbc:student","","");
 	     stmt=con.createStatement();
 }catch(SQLException ee){}
 
-//½¨Á¢±í
+//å»ºç«‹è¡¨
 str = "create table student2(id varchar(20),name varchar(20),gender varchar(2),address varchar(50),phone varchar(20),major varchar(30))";
 try {
 	stmt.executeUpdate(str);
@@ -33,19 +33,19 @@ try {
 	e.printStackTrace();
 }		
 
-//Ìí¼ÓÊý¾Ý
-str = "insert into student2 values('2013001','ÀîËÄ','ÄÐ','Ì«Ô­ÊÐÓ­ÔóÎ÷´ó½Ö79ºÅ','13800000000','¼ÆËã»ú')";
+//æ·»åŠ æ•°æ®
+str = "insert into student2 values('2013001','æŽå››','ç”·','å¤ªåŽŸå¸‚è¿Žæ³½è¥¿å¤§è¡—79å·','13800000000','è®¡ç®—æœº')";
 try {
 	stmt.executeUpdate(str);
 } catch (SQLException e) {
 	e.printStackTrace();
 }		%>
-<center>»ù±¾ÐÅÏ¢</center>
+<center>åŸºæœ¬ä¿¡æ¯</center>
 <table border="1" width="100%"   bordercolorlight="#CC99FF"  cellpadding="2" bordercolordark="#FFFFFF"  
  cellpadding="0">
-	<tr><th>Ñ§ºÅ</th><th>ÐÕÃû</th><th>ÐÔ±ð</th><th>µØÖ·</th><th>µç»°</th><th>×¨Òµ</th></tr>
+	<tr><th>å­¦å·</th><th>å§“å</th><th>æ€§åˆ«</th><th>åœ°å€</th><th>ç”µè¯</th><th>ä¸“ä¸š</th></tr>
 <% 
-//»ñÈ¡²¢ä¯ÀÀÊý¾Ý
+//èŽ·å–å¹¶æµè§ˆæ•°æ®
 str = "select * from student2";		
 try {
 	rs = stmt.executeQuery(str);
@@ -64,7 +64,7 @@ catch (SQLException e) {
 	e.printStackTrace();
 }	
 
-//ÊÍ·Å×ÊÔ´
+//é‡Šæ”¾èµ„æº
 try {
 	rs.close();
 	stmt.close();

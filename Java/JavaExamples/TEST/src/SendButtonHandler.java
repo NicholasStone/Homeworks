@@ -15,7 +15,7 @@ public class SendButtonHandler implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 	//	System.out.println("dfdfdfdfdfdx");
 
-		// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+		// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 		
 				if(this.st.getfrm().input.getText()!=null&&! this.st.getfrm().input.getText().equals("quit"))
 				    {
@@ -30,18 +30,18 @@ public class SendButtonHandler implements ActionListener {
 				    try {
 				    	this.st.getis().close();
 					} catch (IOException e2) {
-						// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+						// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
 						System.out.println("4");
 					}try {
 						this.st.getclient().close();
 					} catch (IOException e1) {
-						// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+						// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
 						System.out.println("3");
 					}
-				    System.out.println("ÁÄÌì½áÊø.");
+				    System.out.println("èŠå¤©ç»“æŸ.");
 				    System.exit(0);
 				}
-		// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù	
+		// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹	
 	}
 
 }

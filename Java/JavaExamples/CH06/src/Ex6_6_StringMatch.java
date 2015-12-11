@@ -2,15 +2,15 @@
 public class Ex6_6_StringMatch {
 		public static void main(String[] args) {
 		 String regex = "\\p{Upper}\\p{Lower}\\p{Lower}\\p{Lower}\\d\\d\\d";
-	     String message1 = "ABCd001"; 			// ĞèÒª½øĞĞÅĞ¶ÏµÄ×Ö·û´®
-	        String message2 = "Abcd001";		// ĞèÒª½øĞĞÅĞ¶ÏµÄ×Ö·û´®
+	     String message1 = "ABCd001"; 			// éœ€è¦è¿›è¡Œåˆ¤æ–­çš„å­—ç¬¦ä¸²
+	        String message2 = "Abcd001";		// éœ€è¦è¿›è¡Œåˆ¤æ–­çš„å­—ç¬¦ä¸²
 	        boolean result1 = message1.matches(regex);
 	        boolean result2 = message2.matches(regex);
 	        if ( result1 )
-System.out.println(message1 + "ÊÇºÏ·¨µÄÊı¾İ" );
-	        else System.out.println(message1 + "²»ÊÇºÏ·¨µÄÊı¾İ" );
+System.out.println(message1 + "æ˜¯åˆæ³•çš„æ•°æ®" );
+	        else System.out.println(message1 + "ä¸æ˜¯åˆæ³•çš„æ•°æ®" );
 	        if ( result2 )
-System.out.println(message2 + "ÊÇºÏ·¨µÄÊı¾İ" );
-	        else System.out.println(message2 + "²»ÊÇºÏ·¨µÄÊı¾İ" );
+System.out.println(message2 + "æ˜¯åˆæ³•çš„æ•°æ®" );
+	        else System.out.println(message2 + "ä¸æ˜¯åˆæ³•çš„æ•°æ®" );
 	}
 }

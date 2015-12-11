@@ -4,18 +4,18 @@ import javax.swing.filechooser.FileFilter;
 
 public class Ex8_20_UseFileChooser {
 	public static void main(String[] args) {
-		final JFrame frm = new JFrame("Ê¹ÓÃÎÄ¼ş¶Ô»°¿ò");
+		final JFrame frm = new JFrame("ä½¿ç”¨æ–‡ä»¶å¯¹è¯æ¡†");
 		frm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frm.setLayout(null);// ÉèÖÃÎª²»Ê¹ÓÃ²¼¾Ö¹ÜÀíÆ÷
+		frm.setLayout(null);// è®¾ç½®ä¸ºä¸ä½¿ç”¨å¸ƒå±€ç®¡ç†å™¨
 
-		// ´´½¨ÎÄ¼ş¶Ô»°¿ò£¬²¢ÉèÖÃÎÄ¼ş¹ıÂËÆ÷£¬Ö»Ñ¡Ôñ.txtÎÄ¼ş
+		// åˆ›å»ºæ–‡ä»¶å¯¹è¯æ¡†ï¼Œå¹¶è®¾ç½®æ–‡ä»¶è¿‡æ»¤å™¨ï¼Œåªé€‰æ‹©.txtæ–‡ä»¶
 		JFileChooser fc = new JFileChooser();
 		TxtFileFilter myff = new TxtFileFilter(".txt");
 		fc.setFileFilter(myff);
 		fc.showOpenDialog(frm);
-		System.out.println("Ñ¡ÖĞµÄÎÄ¼şÎª£º" + fc.getSelectedFile().getName());
+		System.out.println("é€‰ä¸­çš„æ–‡ä»¶ä¸ºï¼š" + fc.getSelectedFile().getName());
 		// fc.setDialogType(JFileChooser.SAVE_DIALOG);
-		// fc.showDialog(frm, "±£´ætxtÎÄ¼ş");
+		// fc.showDialog(frm, "ä¿å­˜txtæ–‡ä»¶");
 		// fc.showSaveDialog(frm);
 
 		frm.setBounds(400, 200, 450, 300);
@@ -23,7 +23,7 @@ public class Ex8_20_UseFileChooser {
 	}
 }
 
-// ¼Ì³Ğ³éÏóÀàFileFilter,¶¨Òå¹ıÂËÎÄ±¾ÎÄ¼şµÄÎÄ¼ş¹ıÂËÆ÷Àà
+// ç»§æ‰¿æŠ½è±¡ç±»FileFilter,å®šä¹‰è¿‡æ»¤æ–‡æœ¬æ–‡ä»¶çš„æ–‡ä»¶è¿‡æ»¤å™¨ç±»
 class TxtFileFilter extends FileFilter {
 	String condition = "";
 

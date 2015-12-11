@@ -3,7 +3,7 @@ public class Ex5_25_AnonymousClass {
 		A a = new A();
 		a.f(new Show() {
 			public void show() {
-				System.out.println("ÊµÏÖÁË½Ó¿ÚµÄÄäÃûÀà");
+				System.out.println("å®ç°äº†æ¥å£çš„åŒ¿åç±»");
 			}
 		});
 	}

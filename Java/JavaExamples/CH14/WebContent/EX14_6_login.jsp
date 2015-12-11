@@ -6,11 +6,11 @@
 <body>
 <center>
 <form method="get" action="EX14_6_test.jsp">
-�û�����<input type="text" name="UserName">
+用户名：<input type="text" name="UserName">
 <br><br>
-���룺<input type="password" name="PW">
+密码：<input type="password" name="PW">
 <br><br>
-<input type="submit" value="ȷ��">
+<input type="submit" value="确定">
 </form>
 </center>
 </body>

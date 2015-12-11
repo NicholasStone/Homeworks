@@ -5,18 +5,18 @@ public class Ex6_7_PhoneValidation {
 		boolean contiGo = true;
 		BufferedReader buf = new BufferedReader(
 				new InputStreamReader(System.in));
-		// ¶¨Òå±íÊ¾ÊÖ»úºÅÂëµÄÕıÔò±í´ïÊ½
+		// å®šä¹‰è¡¨ç¤ºæ‰‹æœºå·ç çš„æ­£åˆ™è¡¨è¾¾å¼
 		String regex = "(13\\d|15[036-9]|18[689])\\d{8}";
 		String phoneNumber = "";
 		while (contiGo) {
-			System.out.println("ÇëÊäÈëÊÖ»úºÅÂë");
+			System.out.println("è¯·è¾“å…¥æ‰‹æœºå·ç ");
 			phoneNumber = buf.readLine();
 			boolean match = phoneNumber.matches(regex);
 			if (match) {
-				System.out.println(phoneNumber + "ÊÇºÏ·¨ÊÖ»úºÅÂë");
+				System.out.println(phoneNumber + "æ˜¯åˆæ³•æ‰‹æœºå·ç ");
 				break;
 			} else
-				System.out.println(phoneNumber + "²»ÊÇºÏ·¨ÊÖ»úºÅÂë");
+				System.out.println(phoneNumber + "ä¸æ˜¯åˆæ³•æ‰‹æœºå·ç ");
 		}
 	}
 }

@@ -6,22 +6,22 @@ import java.util.Iterator;
 public class Ex13_8_TestHashMap{
 	public static void main(String[] args) {
 		HashMap<Integer, Ex13_1_Person> hm = new HashMap<Integer, Ex13_1_Person> ();
-		hm.put(new Integer(1003),new Ex13_1_Person(1003,"ÕÅÈı",15));
-		hm.put(new Integer(1008),new Ex13_1_Person(1008,"ÀîËÄ",25));
-		hm.put(1015,new Ex13_1_Person(1015,"ÍõÎå",73));   //×Ô¶¯·â×°
-		hm.put(1001,new Ex13_1_Person(1001,"ÕÔÁù",49));
+		hm.put(new Integer(1003),new Ex13_1_Person(1003,"å¼ ä¸‰",15));
+		hm.put(new Integer(1008),new Ex13_1_Person(1008,"æå››",25));
+		hm.put(1015,new Ex13_1_Person(1015,"ç‹äº”",73));   //è‡ªåŠ¨å°è£…
+		hm.put(1001,new Ex13_1_Person(1001,"èµµå…­",49));
 
-		System.out.println("----¼ìË÷µ¥¸öÔªËØ----");
+		System.out.println("----æ£€ç´¢å•ä¸ªå…ƒç´ ----");
 		Ex13_1_Person p = (Ex13_1_Person)hm.get(1008);
 		System.out.println(p);
 		
-		System.out.println("----±éÀúËùÓĞ\"¼ü\"£¨ÔªËØÃû£©----");
+		System.out.println("----éå†æ‰€æœ‰\"é”®\"ï¼ˆå…ƒç´ åï¼‰----");
 		Set names = hm.keySet();
 		for(Object o : names){
 			System.out.println(o);
 		}
 		
-		System.out.println("----±éÀúËùÓĞ\"Öµ\"£¨ÔªËØÖµ£©----");
+		System.out.println("----éå†æ‰€æœ‰\"å€¼\"ï¼ˆå…ƒç´ å€¼ï¼‰----");
 		Collection values = hm.values();
 		for(Object o : values){
 			System.out.println(o);

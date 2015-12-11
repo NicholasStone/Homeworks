@@ -3,6 +3,6 @@ import java.applet.Applet;
 
 public class Ex15_2_Applet extends Applet {
 	public void paint(Graphics g) {
-		g.drawString("太原理工大学", 30, 50); // 在绘图区内写上字符串
+		g.drawString("澶師鐞嗗伐澶у", 30, 50); // 鍦ㄧ粯鍥惧尯鍐呭啓涓婂瓧绗︿覆
 	}
 }

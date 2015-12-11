@@ -12,7 +12,7 @@ public class Ex12_4_ExecuteSQL {
 	ResultSet rs;
 
 	public void initParam(String paramFile)throws Exception	{
-		//Ê¹ÓÃPropertiesÀàÀ´¼ÓÔØÊôĞÔÎÄ¼ş
+		//ä½¿ç”¨Propertiesç±»æ¥åŠ è½½å±æ€§æ–‡ä»¶
 		Properties props = new Properties();
 		props.load(new FileInputStream(paramFile));
 		driver = props.getProperty("driver");
@@ -23,24 +23,24 @@ public class Ex12_4_ExecuteSQL {
 
 	public void executeSql(String sql)throws Exception{
 		try{
-			//¼ÓÔØÇı¶¯
+			//åŠ è½½é©±åŠ¨
 			Class.forName(driver);
-			//»ñÈ¡Êı¾İ¿âÁ¬½Ó
+			//è·å–æ•°æ®åº“è¿æ¥
 			conn = DriverManager.getConnection(url , user , pass);
-			//Ê¹ÓÃConnectionÀ´´´½¨Ò»¸öStatment¶ÔÏó
+			//ä½¿ç”¨Connectionæ¥åˆ›å»ºä¸€ä¸ªStatmentå¯¹è±¡
 			stmt = conn.createStatement();
-			//Ö´ĞĞSQL,·µ»ØbooleanÖµ±íÊ¾ÊÇ·ñ°üº¬ResultSet
+			//æ‰§è¡ŒSQL,è¿”å›booleanå€¼è¡¨ç¤ºæ˜¯å¦åŒ…å«ResultSet
 			boolean hasResultSet = stmt.execute(sql);
-			//Èç¹ûÖ´ĞĞºóÓĞResultSet½á¹û¼¯
+			//å¦‚æœæ‰§è¡Œåæœ‰ResultSetç»“æœé›†
 			if (hasResultSet){
-				//»ñÈ¡½á¹û¼¯
+				//è·å–ç»“æœé›†
 				rs = stmt.getResultSet();
-				//ResultSetMetaDataÊÇÓÃÓÚ·ÖÎö½á¹û¼¯µÄÔªÊı¾İ½Ó¿Ú
+				//ResultSetMetaDataæ˜¯ç”¨äºåˆ†æç»“æœé›†çš„å…ƒæ•°æ®æ¥å£
 				ResultSetMetaData rsmd = rs.getMetaData();
 				int columnCount = rsmd.getColumnCount();
-				//µü´úÊä³öResultSet¶ÔÏó
+				//è¿­ä»£è¾“å‡ºResultSetå¯¹è±¡
 				while (rs.next( )){
-					//ÒÀ´ÎÊä³öÃ¿ÁĞµÄÖµ
+					//ä¾æ¬¡è¾“å‡ºæ¯åˆ—çš„å€¼
 					for (int i = 0 ; i < columnCount ; i++ )	{
 						System.out.print(rs.getString(i + 1) + "\t");
 					}
@@ -48,9 +48,9 @@ public class Ex12_4_ExecuteSQL {
 				}
 			}
 			else	{
-	    	System.out.println("¸ÃSQLÓï¾äÓ°ÏìµÄ¼ÇÂ¼ÓĞ" + stmt.getUpdateCount() + "Ìõ");			}
+	    	System.out.println("è¯¥SQLè¯­å¥å½±å“çš„è®°å½•æœ‰" + stmt.getUpdateCount() + "æ¡");			}
 		}
-		//Ê¹ÓÃfinally¿éÀ´¹Ø±ÕÊı¾İ¿â×ÊÔ´
+		//ä½¿ç”¨finallyå—æ¥å…³é—­æ•°æ®åº“èµ„æº
 		finally{
 			if (rs != null){
 				rs.close();
@@ -67,15 +67,15 @@ public class Ex12_4_ExecuteSQL {
 	public static void main(String[] args) throws Exception{
 		Ex12_4_ExecuteSQL es = new Ex12_4_ExecuteSQL();
 		es.initParam("mysql.ini");
-		System.out.println("------Ö´ĞĞÉ¾³ı±íµÄDDLÓï¾ä-----");
+		System.out.println("------æ‰§è¡Œåˆ é™¤è¡¨çš„DDLè¯­å¥-----");
 		es.executeSql("drop table if exists my_test");
-		System.out.println("------Ö´ĞĞ½¨±íµÄDDLÓï¾ä-----");
+		System.out.println("------æ‰§è¡Œå»ºè¡¨çš„DDLè¯­å¥-----");
 		es.executeSql("create table my_test" 
 			+ "(test_id int auto_increment primary key, " + "test_name varchar(255))");
-		System.out.println("------Ö´ĞĞ²åÈëÊı¾İµÄDMLÓï¾ä-----");
+		System.out.println("------æ‰§è¡Œæ’å…¥æ•°æ®çš„DMLè¯­å¥-----");
 		es.executeSql("insert into my_test(test_name) "
 			+ "select student_name from student_table");
-		System.out.println("------Ö´ĞĞ²éÑ¯Êı¾İµÄ²éÑ¯Óï¾ä-----");
+		System.out.println("------æ‰§è¡ŒæŸ¥è¯¢æ•°æ®çš„æŸ¥è¯¢è¯­å¥-----");
 		es.executeSql("select * from my_test");
 
 	}

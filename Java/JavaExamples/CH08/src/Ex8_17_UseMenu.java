@@ -3,76 +3,76 @@ import java.awt.event.*;
 
 public class Ex8_17_UseMenu {
 	public static void main(String[] args) {
-		final JFrame frm = new JFrame("Ê¹ÓÃ²Ëµ¥");
+		final JFrame frm = new JFrame("ä½¿ç”¨èœå•");
 		frm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frm.setLayout(null);// ÉèÖÃÎª²»Ê¹ÓÃ²¼¾Ö¹ÜÀíÆ÷
+		frm.setLayout(null);// è®¾ç½®ä¸ºä¸ä½¿ç”¨å¸ƒå±€ç®¡ç†å™¨
 
-		// ´´½¨ÌáÊ¾±êÇ©ÓÃÓÚÏÔÊ¾µã»÷²Ëµ¥µÄ±êÌâ
-		final JLabel lbl = new JLabel("ÏÔÊ¾²Ëµ¥±êÌâ");
+		// åˆ›å»ºæç¤ºæ ‡ç­¾ç”¨äºæ˜¾ç¤ºç‚¹å‡»èœå•çš„æ ‡é¢˜
+		final JLabel lbl = new JLabel("æ˜¾ç¤ºèœå•æ ‡é¢˜");
 		lbl.setBounds(150, 100, 300, 30);
 		frm.add(lbl);
 
-		// ´´½¨²Ëµ¥À¸²¢Ìí¼Óµ½´°Ìå¶¥²¿
+		// åˆ›å»ºèœå•æ å¹¶æ·»åŠ åˆ°çª—ä½“é¡¶éƒ¨
 		JMenuBar mbar = new JMenuBar();
 		frm.setJMenuBar(mbar);
 
-		// ´´½¨3¸öÏÂÀ­Ê½²Ëµ¥,²¢Ìí¼Óµ½²Ëµ¥À¸
-		JMenu m1 = new JMenu("ÓÃ»§¹ÜÀí");
-		JMenu m2 = new JMenu("³É¼¨¹ÜÀí");
-		JMenu m3 = new JMenu("ÏµÍ³×´Ì¬");
+		// åˆ›å»º3ä¸ªä¸‹æ‹‰å¼èœå•,å¹¶æ·»åŠ åˆ°èœå•æ 
+		JMenu m1 = new JMenu("ç”¨æˆ·ç®¡ç†");
+		JMenu m2 = new JMenu("æˆç»©ç®¡ç†");
+		JMenu m3 = new JMenu("ç³»ç»ŸçŠ¶æ€");
 		mbar.add(m1);
 		mbar.add(m2);
 		mbar.add(m3);
 
-		// ´´½¨²Ëµ¥Ïî,²¢Ìí¼Óµ½ÏàÓ¦µÄ²Ëµ¥ÏÂ
-		JMenuItem mi11 = new JMenuItem("»ù±¾ĞÅÏ¢¹ÜÀí");
-		JMenuItem mi12 = new JMenuItem("ĞŞ¸ÄÃÜÂë");
-		// JMenuItem mi13=new JMenuItem("ÏµÍ³ÍË³ö");
+		// åˆ›å»ºèœå•é¡¹,å¹¶æ·»åŠ åˆ°ç›¸åº”çš„èœå•ä¸‹
+		JMenuItem mi11 = new JMenuItem("åŸºæœ¬ä¿¡æ¯ç®¡ç†");
+		JMenuItem mi12 = new JMenuItem("ä¿®æ”¹å¯†ç ");
+		// JMenuItem mi13=new JMenuItem("ç³»ç»Ÿé€€å‡º");
 		m1.add(mi11);
 		m1.add(mi12);
-		m1.add("ÏµÍ³ÍË³ö"); // Ö±½ÓÌí¼Ó²Ëµ¥Ïî
-		// »ñÈ¡µ½Ö±½ÓÌí¼ÓµÄ²Ëµ¥Ïî,²¢×¢²áÊó±ê¶¯×÷,Êä³ö²Ëµ¥Ïî±êÌâ
+		m1.add("ç³»ç»Ÿé€€å‡º"); // ç›´æ¥æ·»åŠ èœå•é¡¹
+		// è·å–åˆ°ç›´æ¥æ·»åŠ çš„èœå•é¡¹,å¹¶æ³¨å†Œé¼ æ ‡åŠ¨ä½œ,è¾“å‡ºèœå•é¡¹æ ‡é¢˜
 		final JMenuItem mi13 = m1.getItem(2);
 		mi13.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				lbl.setText(mi13.getText());
-				mi13.setText("ÍË³ö");
+				mi13.setText("é€€å‡º");
 			}
 		});
 
-		JMenuItem mi21 = new JMenuItem("Ñ§Éú»ù±¾ĞÅÏ¢Â¼Èë");
-		JMenuItem mi22 = new JMenuItem("³É¼¨Â¼Èë");
-		JMenuItem mi23 = new JMenuItem("³É¼¨²éÑ¯");
+		JMenuItem mi21 = new JMenuItem("å­¦ç”ŸåŸºæœ¬ä¿¡æ¯å½•å…¥");
+		JMenuItem mi22 = new JMenuItem("æˆç»©å½•å…¥");
+		JMenuItem mi23 = new JMenuItem("æˆç»©æŸ¥è¯¢");
 		mi23.setEnabled(false);
 		m2.add(mi21);
 		m2.add(mi22);
 		m2.add(mi23);
 
-		// µ¥Ñ¡²Ëµ¥Ïî×é³ÉÒ»×é
+		// å•é€‰èœå•é¡¹ç»„æˆä¸€ç»„
 		ButtonGroup btnGroup = new ButtonGroup();
-		JRadioButtonMenuItem mi31 = new JRadioButtonMenuItem("ÏÔÊ¾±³¾°");
-		JRadioButtonMenuItem mi32 = new JRadioButtonMenuItem("ÏÔÊ¾Â¼Èë½çÃæ");
+		JRadioButtonMenuItem mi31 = new JRadioButtonMenuItem("æ˜¾ç¤ºèƒŒæ™¯");
+		JRadioButtonMenuItem mi32 = new JRadioButtonMenuItem("æ˜¾ç¤ºå½•å…¥ç•Œé¢");
 		btnGroup.add(mi31);
 		btnGroup.add(mi32);
-		mi32.setSelected(true); // ÉèÖÃ±»Ñ¡ÖĞ
-		JCheckBoxMenuItem mi33 = new JCheckBoxMenuItem("ÏÔÊ¾×´Ì¬À¸");
-		final JCheckBoxMenuItem mi34 = new JCheckBoxMenuItem("ÏÔÊ¾µÇÂ½ĞÅÏ¢");
-		mi33.setSelected(true); // ÉèÖÃ±»Ñ¡ÖĞ
+		mi32.setSelected(true); // è®¾ç½®è¢«é€‰ä¸­
+		JCheckBoxMenuItem mi33 = new JCheckBoxMenuItem("æ˜¾ç¤ºçŠ¶æ€æ ");
+		final JCheckBoxMenuItem mi34 = new JCheckBoxMenuItem("æ˜¾ç¤ºç™»é™†ä¿¡æ¯");
+		mi33.setSelected(true); // è®¾ç½®è¢«é€‰ä¸­
 		m3.add(mi31);
 		m3.add(mi32);
 		m3.addSeparator();
 		m3.add(mi33);
 		m3.add(mi34);
-		// m3.add(m1); //¿ÉÒÔ¼ÓÈëm1£¬¿´¿´Ğ§¹û
+		// m3.add(m1); //å¯ä»¥åŠ å…¥m1ï¼Œçœ‹çœ‹æ•ˆæœ
 
-		// ´´½¨1¸öÏÂµ¯³öÊ½²Ëµ¥,²¢×¢²áÊó±êÊÂ¼ş,¼´ÓÒµã»÷´°ÌåÏÔÊ¾
-		final JPopupMenu pm = new JPopupMenu("»æÍ¼");
-		pm.add("»­µã");
-		pm.add("»­Ïß");
-		// pm.add(m2); //¿ÉÒÔ¼ÓÈëm2£¬¿´¿´Ğ§¹û
+		// åˆ›å»º1ä¸ªä¸‹å¼¹å‡ºå¼èœå•,å¹¶æ³¨å†Œé¼ æ ‡äº‹ä»¶,å³å³ç‚¹å‡»çª—ä½“æ˜¾ç¤º
+		final JPopupMenu pm = new JPopupMenu("ç»˜å›¾");
+		pm.add("ç”»ç‚¹");
+		pm.add("ç”»çº¿");
+		// pm.add(m2); //å¯ä»¥åŠ å…¥m2ï¼Œçœ‹çœ‹æ•ˆæœ
 
-		// Îª×îºóÒ»¸ö²Ëµ¥Ïî¶¨Òåµã»÷¶¯×÷
+		// ä¸ºæœ€åä¸€ä¸ªèœå•é¡¹å®šä¹‰ç‚¹å‡»åŠ¨ä½œ
 		mi34.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -80,8 +80,8 @@ public class Ex8_17_UseMenu {
 			}
 		});
 
-		// Îªµ¯³öÊ½²Ëµ¥¶¨ÒåÏÔÊ¾Î»ÖÃ
-		frm.addMouseListener(new MouseAdapter() {// ÓÃÊó±êÊÊÅäÆ÷
+		// ä¸ºå¼¹å‡ºå¼èœå•å®šä¹‰æ˜¾ç¤ºä½ç½®
+		frm.addMouseListener(new MouseAdapter() {// ç”¨é¼ æ ‡é€‚é…å™¨
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				int mods = e.getModifiers();

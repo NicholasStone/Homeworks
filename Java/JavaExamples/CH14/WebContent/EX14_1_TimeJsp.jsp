@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=GB2312">
-<title>JSP 表达式</title>
+<title>JSP 琛ㄨ揪寮�</title>
 </head>
 <body>
-  <H3>当前时间: 
+  <H3>褰撳墠鏃堕棿: 
   <%= new java.util.Date()%> 
   </H3> 
 </body>

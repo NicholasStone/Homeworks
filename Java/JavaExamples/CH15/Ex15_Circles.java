@@ -1,8 +1,8 @@
 /** 
- *³ÌĞòÒªÇó£ºĞÂ½¨Ò»¸ö600*600ÏñËØµÄÓ¦ÓÃ³ÌĞò´°¿Ú£¬²¢ÔÚ´°¿ÚÖĞ»æÖÆ5¸ö²»Í¬ÑÕÉ«µÄÍ¬ĞÄÔ²£¬ 
- *ËùÓĞÔ²ĞÄ¶¼ÊÇÆÁÄ»µÄÖĞĞÄµã£¬ÏàÁÚÁ½¸öÔ²Ö±½ÓµÄ°ë¾¶Ïà²î50ÏñËØ 
- *Ğ§¹ûÍ¼ÈçÏÂÍ¼ËùÊ¾£¨ÑÕÉ«Ëæ»úÉèÖÃ£©£¬Ô´³ÌĞò±£´æÎªEx15_Circles.java¡£ 
- *¹¦ÄÜ£ºÏÔÊ¾Ò»¸öÓĞ5¸ö²»Í¬ÑÕÉ«µÄÍ¬ĞÄÔ² 
+ *ç¨‹åºè¦æ±‚ï¼šæ–°å»ºä¸€ä¸ª600*600åƒç´ çš„åº”ç”¨ç¨‹åºçª—å£ï¼Œå¹¶åœ¨çª—å£ä¸­ç»˜åˆ¶5ä¸ªä¸åŒé¢œè‰²çš„åŒå¿ƒåœ†ï¼Œ 
+ *æ‰€æœ‰åœ†å¿ƒéƒ½æ˜¯å±å¹•çš„ä¸­å¿ƒç‚¹ï¼Œç›¸é‚»ä¸¤ä¸ªåœ†ç›´æ¥çš„åŠå¾„ç›¸å·®50åƒç´  
+ *æ•ˆæœå›¾å¦‚ä¸‹å›¾æ‰€ç¤ºï¼ˆé¢œè‰²éšæœºè®¾ç½®ï¼‰ï¼Œæºç¨‹åºä¿å­˜ä¸ºEx15_Circles.javaã€‚ 
+ *åŠŸèƒ½ï¼šæ˜¾ç¤ºä¸€ä¸ªæœ‰5ä¸ªä¸åŒé¢œè‰²çš„åŒå¿ƒåœ† 
  **/  
   
  import javax.swing.*;  
@@ -15,45 +15,45 @@
   
      public Ex15_Circles()  
      {  
-         super("Ò»¸öÓĞ5¸ö²»Í¬ÑÕÉ«µÄÍ¬ĞÄÔ²");    //ÏÔÊ¾´°¿ÚÃû³Æ   
-         setSize(600,600);                      //ÉèÖÃ´°¿Ú´óĞ¡   
-         setVisible(true);                      //ÉèÖÃÎª¿É¼û   
-         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//ÉèÖÃ´°¿Ú¹Ø±Õ¶¯×÷   
+         super("ä¸€ä¸ªæœ‰5ä¸ªä¸åŒé¢œè‰²çš„åŒå¿ƒåœ†");    //æ˜¾ç¤ºçª—å£åç§°   
+         setSize(600,600);                      //è®¾ç½®çª—å£å¤§å°   
+         setVisible(true);                      //è®¾ç½®ä¸ºå¯è§   
+         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//è®¾ç½®çª—å£å…³é—­åŠ¨ä½œ   
       
      }  
   
       
      public void paint(Graphics g)  
      {  
-         //µÚÒ»¸öÔ²   
+         //ç¬¬ä¸€ä¸ªåœ†   
         red=(int)(Math.random()*255);  
         green=(int)(Math.random()*255);  
         blue=(int)(Math.random()*255);  
         color=new Color(red,green,blue);  
         g.setColor(color);  
         g.fillOval(175,175,250,250);  
-        //µÚ¶ş¸öÔ²   
+        //ç¬¬äºŒä¸ªåœ†   
         red=(int)(Math.random()*255);  
         green=(int)(Math.random()*255);  
         blue=(int)(Math.random()*255);  
         color=new Color(red,green,blue);  
         g.setColor(color);  
         g.fillOval(200,200,200,200);  
-        //µÚÈı¸öÔ²   
+        //ç¬¬ä¸‰ä¸ªåœ†   
         red=(int)(Math.random()*255);  
         green=(int)(Math.random()*255);  
         blue=(int)(Math.random()*255);  
         color=new Color(red,green,blue);  
         g.setColor(color);  
         g.fillOval(225,225,150,150);  
-        //µÚËÄ¸öÔ²   
+        //ç¬¬å››ä¸ªåœ†   
         red=(int)(Math.random()*255);  
         green=(int)(Math.random()*255);  
         blue=(int)(Math.random()*255);  
         color=new Color(red,green,blue);  
         g.setColor(color);  
         g.fillOval(250,250,100,100);  
-        //µÚÎå¸öÔ²   
+        //ç¬¬äº”ä¸ªåœ†   
         red=(int)(Math.random()*255);  
         green=(int)(Math.random()*255);  
         blue=(int)(Math.random()*255);  

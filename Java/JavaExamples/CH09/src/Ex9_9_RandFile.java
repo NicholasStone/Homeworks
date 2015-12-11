@@ -3,29 +3,29 @@ class EmployeeRecord {
 	int id;
 	String name;
 	double salary;
-	EmployeeRecord(int i,String n,double s){  //¹¹Ôì·½·¨
+	EmployeeRecord(int i,String n,double s){  //æ„é€ æ–¹æ³•
 		id=i;
 		name=n;
 		salary=s;
 	}
-	public void read(RandomAccessFile file)throws IOException { //¶ÁÒ»Ìõ¼ÇÂ¼
-		id=file.readInt();        //¶ÁÒ»¸öintÊı¾İ
-		byte[] b=new byte[10];    //¶¨Òå³¤¶ÈÎª10µÄ×Ö½ÚÊı×éb
-		file.readFully(b);        //´ÓÎÄ¼ş¶Á10¸ö×Ö½Úµ½Êı×ébÖĞ
-		name=new String(b);       //½«bÊı×éÖĞµÄ×Ö½ÚÊı¾İ±àÂëÎª×Ö·û´®
-		salary=file.readDouble(); //¶ÁÒ»¸ödoubleÊı¾İ
+	public void read(RandomAccessFile file)throws IOException { //è¯»ä¸€æ¡è®°å½•
+		id=file.readInt();        //è¯»ä¸€ä¸ªintæ•°æ®
+		byte[] b=new byte[10];    //å®šä¹‰é•¿åº¦ä¸º10çš„å­—èŠ‚æ•°ç»„b
+		file.readFully(b);        //ä»æ–‡ä»¶è¯»10ä¸ªå­—èŠ‚åˆ°æ•°ç»„bä¸­
+		name=new String(b);       //å°†bæ•°ç»„ä¸­çš„å­—èŠ‚æ•°æ®ç¼–ç ä¸ºå­—ç¬¦ä¸²
+		salary=file.readDouble(); //è¯»ä¸€ä¸ªdoubleæ•°æ®
 	}
-	public void write(RandomAccessFile file)throws IOException { //Ğ´Ò»Ìõ¼ÇÂ¼
-		file.writeInt(id);        //Ğ´Ò»¸öintÊı¾İ
-		byte[] b=new byte[10];    //¶¨Òå³¤¶ÈÎª10µÄ×Ö½ÚÊı×éb
+	public void write(RandomAccessFile file)throws IOException { //å†™ä¸€æ¡è®°å½•
+		file.writeInt(id);        //å†™ä¸€ä¸ªintæ•°æ®
+		byte[] b=new byte[10];    //å®šä¹‰é•¿åº¦ä¸º10çš„å­—èŠ‚æ•°ç»„b
 		if(name!=null){
-			byte[] temp=name.getBytes();  //½«×Ö·û´®×ª»»Îª×Ö½ÚÊı¾İ´æ´¢ÔÚtempÊı×éÖĞ
-			System.arraycopy(temp, 0, b, 0, temp.length);//tempÊı×é¸´ÖÆµ½bÊı×é
+			byte[] temp=name.getBytes();  //å°†å­—ç¬¦ä¸²è½¬æ¢ä¸ºå­—èŠ‚æ•°æ®å­˜å‚¨åœ¨tempæ•°ç»„ä¸­
+			System.arraycopy(temp, 0, b, 0, temp.length);//tempæ•°ç»„å¤åˆ¶åˆ°bæ•°ç»„
 		}
-		file.write(b);            //½«bÊı×éÖĞµÄ×Ö½ÚÊı¾İĞ´ÈëÎÄ¼ş
-		file.writeDouble(salary); //Ğ´Ò»¸ödoubleÊı¾İ
+		file.write(b);            //å°†bæ•°ç»„ä¸­çš„å­—èŠ‚æ•°æ®å†™å…¥æ–‡ä»¶
+		file.writeDouble(salary); //å†™ä¸€ä¸ªdoubleæ•°æ®
 	}
-	public int size(){return 22;} //·µ»ØÒ»¸öÖ°¹¤¼ÇÂ¼µÄ³¤¶È(4+10+8=22Byte)
+	public int size(){return 22;} //è¿”å›ä¸€ä¸ªèŒå·¥è®°å½•çš„é•¿åº¦(4+10+8=22Byte)
 	public void setId(int i){id=i;}
 	public void setName(String n){name=n;}
 	public void setSalary(double s){salary=s;}
@@ -37,31 +37,31 @@ class EmployeeRecord {
 public class Ex9_9_RandFile {
 	public static void main(String arg[]){
 		RandomAccessFile file;
-		EmployeeRecord e1 = new EmployeeRecord(1001,"ÕÅÈı",5678.50);
-		EmployeeRecord e2 = new EmployeeRecord(1002,"ÀîËÄ",6758.60);		
-		EmployeeRecord e3 = new EmployeeRecord(1003,"ÍõÎå",5867.70);
-		EmployeeRecord e4 = new EmployeeRecord(1004,"ÕÔÁù",7865.80);		
+		EmployeeRecord e1 = new EmployeeRecord(1001,"å¼ ä¸‰",5678.50);
+		EmployeeRecord e2 = new EmployeeRecord(1002,"æå››",6758.60);		
+		EmployeeRecord e3 = new EmployeeRecord(1003,"ç‹äº”",5867.70);
+		EmployeeRecord e4 = new EmployeeRecord(1004,"èµµå…­",7865.80);		
 		EmployeeRecord emp = new EmployeeRecord(0,"",0.0);
 		try{
-			file=new RandomAccessFile("Employee.dat","rw");  //´ò¿ªËæ»úÎÄ¼ş
-			e1.write(file);   //Ö°¹¤¶ÔÏóe1µÄÊı¾İ¼ÇÂ¼Ğ´ÈëÎÄ¼ş
-			e2.write(file);   //Ö°¹¤¶ÔÏóe2µÄÊı¾İ¼ÇÂ¼Ğ´ÈëÎÄ¼ş
-			e3.write(file);   //Ö°¹¤¶ÔÏóe3µÄÊı¾İ¼ÇÂ¼Ğ´ÈëÎÄ¼ş
-			file.seek(1*emp.size());  //ÒÆ¶¯ÎÄ¼ş¶ÁĞ´Ö¸Õëµ½µÚ2¸ö¼ÇÂ¼
-			emp.read(file);   //¶ÁµÚ2¸ö¼ÇÂ¼µ½¶ÔÏóempÖĞ£¬Ö¸ÏòµÚ3¸ö¼ÇÂ¼
-			emp.setName("ÀîÄş");  //ĞŞ¸Ä¶ÔÏóempµÄĞÕÃû
-			file.seek(1*emp.size());  //ÒÆ¶¯ÎÄ¼ş¶ÁĞ´Ö¸ÕëÔÙ´Îµ½µÚ2¸ö¼ÇÂ¼
-			emp.write(file); //¶ÔÏóempÖĞµÄÊı¾İÔÙ´ÎĞ´ÈëÎÄ¼ş£¬µÚ2Ìõ¼ÇÂ¼ĞÕÃû±»ĞŞ¸Ä
-			file.seek(file.length()); //ÒÆ¶¯ÎÄ¼ş¶ÁĞ´Ö¸ÕëÖÁÎÄ¼şÎ²
-			e4.write(file); //ÔÚÎÄ¼şÎ²Ğ´ÈëÖ°¹¤¶ÔÏóe4µÄÊı¾İ¼ÇÂ¼
-			file.seek(0); //ÒÆ¶¯ÎÄ¼ş¶ÁĞ´Ö¸ÕëÖÁÎÄ¼ş¿ªÊ¼
-			while(file.getFilePointer()<file.length()){ //Êä³öÎÄ¼şÖĞµÄËùÓĞÊı¾İ
+			file=new RandomAccessFile("Employee.dat","rw");  //æ‰“å¼€éšæœºæ–‡ä»¶
+			e1.write(file);   //èŒå·¥å¯¹è±¡e1çš„æ•°æ®è®°å½•å†™å…¥æ–‡ä»¶
+			e2.write(file);   //èŒå·¥å¯¹è±¡e2çš„æ•°æ®è®°å½•å†™å…¥æ–‡ä»¶
+			e3.write(file);   //èŒå·¥å¯¹è±¡e3çš„æ•°æ®è®°å½•å†™å…¥æ–‡ä»¶
+			file.seek(1*emp.size());  //ç§»åŠ¨æ–‡ä»¶è¯»å†™æŒ‡é’ˆåˆ°ç¬¬2ä¸ªè®°å½•
+			emp.read(file);   //è¯»ç¬¬2ä¸ªè®°å½•åˆ°å¯¹è±¡empä¸­ï¼ŒæŒ‡å‘ç¬¬3ä¸ªè®°å½•
+			emp.setName("æå®");  //ä¿®æ”¹å¯¹è±¡empçš„å§“å
+			file.seek(1*emp.size());  //ç§»åŠ¨æ–‡ä»¶è¯»å†™æŒ‡é’ˆå†æ¬¡åˆ°ç¬¬2ä¸ªè®°å½•
+			emp.write(file); //å¯¹è±¡empä¸­çš„æ•°æ®å†æ¬¡å†™å…¥æ–‡ä»¶ï¼Œç¬¬2æ¡è®°å½•å§“åè¢«ä¿®æ”¹
+			file.seek(file.length()); //ç§»åŠ¨æ–‡ä»¶è¯»å†™æŒ‡é’ˆè‡³æ–‡ä»¶å°¾
+			e4.write(file); //åœ¨æ–‡ä»¶å°¾å†™å…¥èŒå·¥å¯¹è±¡e4çš„æ•°æ®è®°å½•
+			file.seek(0); //ç§»åŠ¨æ–‡ä»¶è¯»å†™æŒ‡é’ˆè‡³æ–‡ä»¶å¼€å§‹
+			while(file.getFilePointer()<file.length()){ //è¾“å‡ºæ–‡ä»¶ä¸­çš„æ‰€æœ‰æ•°æ®
 				emp.read(file);
 				System.out.println(emp.getId()+" "+emp.getName()+" "+emp.getSalary());
 			}
-			file.close(); //¹Ø±ÕÎÄ¼ş
+			file.close(); //å…³é—­æ–‡ä»¶
 		}catch(IOException e){
-			System.out.println("ÎÄ¼ş´ò¿ª»òĞ´ÎÄ¼ş»ò¶ÁÎÄ¼şÊ§°Ü£º"+e.toString());
+			System.out.println("æ–‡ä»¶æ‰“å¼€æˆ–å†™æ–‡ä»¶æˆ–è¯»æ–‡ä»¶å¤±è´¥ï¼š"+e.toString());
 			System.exit(1);
 		}
 	}

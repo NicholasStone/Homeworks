@@ -3,51 +3,51 @@ import java.awt.*;
 
 public class Ex8_2_UsePanel {
 	public static void main(String[] args) {
-		// ´´½¨´°Ìå²¢ÉèÖÃ´°Ìå±êÌâ
-		JFrame frm = new JFrame("Ê¹ÓÃJPanel");
-		// ÉèÖÃ´°Ìå¹Ø±Õ·½Ê½
+		// åˆ›å»ºçª—ä½“å¹¶è®¾ç½®çª—ä½“æ ‡é¢˜
+		JFrame frm = new JFrame("ä½¿ç”¨JPanel");
+		// è®¾ç½®çª—ä½“å…³é—­æ–¹å¼
 		frm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		// ´´½¨Ãæ°å²¢·ÅÔÚ´°ÌåÉÏ°ë²¿·Ö
+		// åˆ›å»ºé¢æ¿å¹¶æ”¾åœ¨çª—ä½“ä¸ŠåŠéƒ¨åˆ†
 		JPanel topPanel = new JPanel();
 		frm.add(topPanel, BorderLayout.NORTH);
 
-		// ´´½¨ÌáÊ¾±êÇ©²¢ÉèÖÃÏÔÊ¾ĞÅÏ¢
+		// åˆ›å»ºæç¤ºæ ‡ç­¾å¹¶è®¾ç½®æ˜¾ç¤ºä¿¡æ¯
 		JLabel show = new JLabel();
-		show.setText("ÇëÊäÈëĞÕÃû:");
+		show.setText("è¯·è¾“å…¥å§“å:");
 
-		// ´´½¨ÊäÈë¿ò,ÉèÖÃÎª¿É±à¼­,×ó²àÊäÈë,20ÁĞ
+		// åˆ›å»ºè¾“å…¥æ¡†,è®¾ç½®ä¸ºå¯ç¼–è¾‘,å·¦ä¾§è¾“å…¥,20åˆ—
 		JTextField input = new JTextField();
 		input.setEditable(true);
 		input.setHorizontalAlignment(SwingConstants.LEFT);
 		input.setColumns(20);
 
-		// ´´½¨Ìá½»°´Å¥
-		JButton myBtn = new JButton("Ìá½»");
+		// åˆ›å»ºæäº¤æŒ‰é’®
+		JButton myBtn = new JButton("æäº¤");
 
-		// Ìí¼ÓÏÔÊ¾±êÇ©¡¢ÊäÈë¿òºÍ°´Å¥
+		// æ·»åŠ æ˜¾ç¤ºæ ‡ç­¾ã€è¾“å…¥æ¡†å’ŒæŒ‰é’®
 		topPanel.add(show);
 		topPanel.add(input);
 		topPanel.add(myBtn);
 
-		// ´´½¨Ãæ°å²¢·ÅÔÚ´°ÌåÏÂ°ë²¿·Ö
+		// åˆ›å»ºé¢æ¿å¹¶æ”¾åœ¨çª—ä½“ä¸‹åŠéƒ¨åˆ†
 		JPanel bottomPanel = new JPanel();
 		frm.add(bottomPanel, BorderLayout.CENTER);
 
-		// ´´½¨ÌáÊ¾±êÇ©²¢ÉèÖÃÏÔÊ¾ĞÅÏ¢
+		// åˆ›å»ºæç¤ºæ ‡ç­¾å¹¶è®¾ç½®æ˜¾ç¤ºä¿¡æ¯
 		JLabel againshow = new JLabel();
-		againshow.setText("ÏÔÊ¾ËùÓĞÊäÈëµÄĞÕÃû:");
-		// ´´½¨Êä³ö¿ò,5ĞĞ32ÁĞ,²»¿É±à¼­
+		againshow.setText("æ˜¾ç¤ºæ‰€æœ‰è¾“å…¥çš„å§“å:");
+		// åˆ›å»ºè¾“å‡ºæ¡†,5è¡Œ32åˆ—,ä¸å¯ç¼–è¾‘
 		JTextArea output = new JTextArea();
 		output.setRows(5);
 		output.setColumns(32);
 		output.setEditable(false);
 
-		// Ìí¼ÓÌáÊ¾±êÇ©ºÍÊä³ö¿ò
+		// æ·»åŠ æç¤ºæ ‡ç­¾å’Œè¾“å‡ºæ¡†
 		bottomPanel.add(againshow);
 		bottomPanel.add(output);
 
-		// ÉèÖÃ´°ÌåÎ»ÖÃÓë´óĞ¡²¢ÏÔÊ¾
+		// è®¾ç½®çª—ä½“ä½ç½®ä¸å¤§å°å¹¶æ˜¾ç¤º
 		frm.setBounds(400, 200, 400, 200);
 		frm.setVisible(true);
 	}

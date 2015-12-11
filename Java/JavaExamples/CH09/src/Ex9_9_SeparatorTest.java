@@ -1,9 +1,9 @@
 import java.io.File;
 public class Ex9_9_SeparatorTest {
 	public static void main(String[] args) {
-		System.out.println("ÏµÍ³Â·¾¶·Ö¸ô·û(String)ÊÇ£º"+File.pathSeparator);
-		System.out.println("ÏµÍ³Â·¾¶·Ö¸ô·û(char)ÊÇ£º"+File.pathSeparatorChar);
-		System.out.println("ÏµÍ³Ãû³Æ·Ö¸ô·û(String)ÊÇ£º"+File.separator);
-		System.out.println("ÏµÍ³Ãû³Æ·Ö¸ô·û(char)ÊÇ£º"+File.separatorChar);
+		System.out.println("ç³»ç»Ÿè·¯å¾„åˆ†éš”ç¬¦(String)æ˜¯ï¼š"+File.pathSeparator);
+		System.out.println("ç³»ç»Ÿè·¯å¾„åˆ†éš”ç¬¦(char)æ˜¯ï¼š"+File.pathSeparatorChar);
+		System.out.println("ç³»ç»Ÿåç§°åˆ†éš”ç¬¦(String)æ˜¯ï¼š"+File.separator);
+		System.out.println("ç³»ç»Ÿåç§°åˆ†éš”ç¬¦(char)æ˜¯ï¼š"+File.separatorChar);
 	}
 }

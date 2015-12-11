@@ -3,22 +3,22 @@ import java.awt.event.*;
 
 public class Ex8_12_UseMouseEvent {
 	public static void main(String[] args) {
-		JFrame frm = new JFrame("ÉîÈëÕÆÎÕÊÂ¼ş´¦Àí");
+		JFrame frm = new JFrame("æ·±å…¥æŒæ¡äº‹ä»¶å¤„ç†");
 		frm.setLayout(null);
 
-		JLabel label1 = new JLabel("ÇëÔÚ´°ÌåÄÚÒÆ¶¯Êó±ê,");
+		JLabel label1 = new JLabel("è¯·åœ¨çª—ä½“å†…ç§»åŠ¨é¼ æ ‡,");
 		label1.setBounds(15, 5, 200, 25);
 		frm.add(label1);
-		JLabel label2 = new JLabel("»ò°´×¡Êó±ê×ó¼üÍÏ¶¯Êó±ê!");
+		JLabel label2 = new JLabel("æˆ–æŒ‰ä½é¼ æ ‡å·¦é”®æ‹–åŠ¨é¼ æ ‡!");
 		label2.setBounds(15, 30, 200, 25);
 		frm.add(label2);
 		
-		// ´´½¨ÎÄ±¾¿ò¶ÔÏó
+		// åˆ›å»ºæ–‡æœ¬æ¡†å¯¹è±¡
 		JTextField text = new JTextField(30);
 		text.setBounds(15, 55, 200, 30);
 		frm.getContentPane().add(text);
 
-		// ×¢²á¼àÌıÆ÷,²ÎÊıÎªÊÂ¼ş´¦ÀíÕß¶ÔÏó
+		// æ³¨å†Œç›‘å¬å™¨,å‚æ•°ä¸ºäº‹ä»¶å¤„ç†è€…å¯¹è±¡
 		MouseListenerImp mouse = new MouseListenerImp(text);
 		frm.addMouseListener(mouse);
 		frm.addMouseMotionListener(mouse);
@@ -29,7 +29,7 @@ public class Ex8_12_UseMouseEvent {
 	}
 }
 
-// ÊµÏÖÊó±ê¡¢´°ÌåÏà¹ØµÄ½Ó¿Ú
+// å®ç°é¼ æ ‡ã€çª—ä½“ç›¸å…³çš„æ¥å£
 class MouseListenerImp implements MouseMotionListener, MouseListener,
 		WindowListener {
 	JTextField text;
@@ -39,26 +39,26 @@ class MouseListenerImp implements MouseMotionListener, MouseListener,
 	}
 
 	public void mouseDragged(MouseEvent e) {
-		String s = "ÍÏÒ·Êó±ê£¬×ø±ê£ºX=" + e.getX() + ",Y=" + e.getY();
+		String s = "æ‹–æ›³é¼ æ ‡ï¼Œåæ ‡ï¼šX=" + e.getX() + ",Y=" + e.getY();
 		text.setText(s);
 	}
 
 	public void mouseEntered(MouseEvent e) {
-		String s = "Êó±ê½øÈëÁË´°Ìå";
+		String s = "é¼ æ ‡è¿›å…¥äº†çª—ä½“";
 		text.setText(s);
 	}
 
 	public void mouseExited(MouseEvent e) {
-		String s = "Êó±êÀë¿ªÁË´°Ìå";
+		String s = "é¼ æ ‡ç¦»å¼€äº†çª—ä½“";
 		text.setText(s);
 	}
 
 	public void windowClosing(WindowEvent e) {
-		// ÎªÁËÊ¹´°¿ÚÄÜÕı³£¹Ø±Õ£¬³ÌĞòÕı³£ÍË³ö
+		// ä¸ºäº†ä½¿çª—å£èƒ½æ­£å¸¸å…³é—­ï¼Œç¨‹åºæ­£å¸¸é€€å‡º
 		System.exit(1);
 	}
 
-	// ²»´òËãÊµÏÖĞÂ¹¦ÄÜµÄ·½·¨£¬ÈÃ·½·¨ÌåÎª¿Õ¼´¿É£¬µ«²»ÄÜÃ»ÓĞÕâĞ©¿Õ·½·¨
+	// ä¸æ‰“ç®—å®ç°æ–°åŠŸèƒ½çš„æ–¹æ³•ï¼Œè®©æ–¹æ³•ä½“ä¸ºç©ºå³å¯ï¼Œä½†ä¸èƒ½æ²¡æœ‰è¿™äº›ç©ºæ–¹æ³•
 	public void mouseMoved(MouseEvent e) {
 	}
 

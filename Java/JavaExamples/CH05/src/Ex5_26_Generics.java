@@ -14,7 +14,7 @@ class Chorous<E, F> {
 
 class Singer {
 	public String toString() {
-		System.out.println("ºÃÒ»¶äÃÀÀöµÄÜÔÀò»¨");
+		System.out.println("å¥½ä¸€æœµç¾ä¸½çš„èŒ‰è‰èŠ±");
 		return "";
 	}
 }

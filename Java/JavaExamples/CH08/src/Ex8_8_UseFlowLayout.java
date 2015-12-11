@@ -4,19 +4,19 @@ import javax.swing.JLabel;
 
 public class Ex8_8_UseFlowLayout {
 	public static void main(String[] args) {
-		// ´´½¨´°Ìå²¢ÉèÖÃ±êÌâ
-		JFrame frm = new JFrame("Ê¹ÓÃË³Ğò²¼¾Ö¹ÜÀíÆ÷");
+		// åˆ›å»ºçª—ä½“å¹¶è®¾ç½®æ ‡é¢˜
+		JFrame frm = new JFrame("ä½¿ç”¨é¡ºåºå¸ƒå±€ç®¡ç†å™¨");
 		frm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		// ´´½¨Ë³Ğò²¼¾Ö¹ÜÀíÆ÷²¢ÉèÖÃ
+		// åˆ›å»ºé¡ºåºå¸ƒå±€ç®¡ç†å™¨å¹¶è®¾ç½®
 		FlowLayout flowlayout = new FlowLayout();
 		frm.setLayout(flowlayout);
 
-		// ´´½¨4¸ö×é¼ş ²¢Ìí¼Óµ½´°ÌåÖĞ
-		JLabel label1 = new JLabel("×é¼ş1");
-		JLabel label2 = new JLabel("×é¼ş2");
-		JLabel label3 = new JLabel("×é¼ş3");
-		JLabel label4 = new JLabel("×é¼ş4");
+		// åˆ›å»º4ä¸ªç»„ä»¶ å¹¶æ·»åŠ åˆ°çª—ä½“ä¸­
+		JLabel label1 = new JLabel("ç»„ä»¶1");
+		JLabel label2 = new JLabel("ç»„ä»¶2");
+		JLabel label3 = new JLabel("ç»„ä»¶3");
+		JLabel label4 = new JLabel("ç»„ä»¶4");
 		frm.add(label1);
 		frm.add(label2);
 		frm.add(label3);

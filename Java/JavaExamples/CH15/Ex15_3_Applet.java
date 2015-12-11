@@ -2,7 +2,7 @@ import java.awt.*;
 import java.applet.*;
 
 public class Ex15_3_Applet extends Applet{
-	private String paramName; //±£´æ·µ»Ø¶ÔÓ¦²ÎÊıÖµµÄ×Ö·û´®
+	private String paramName; //ä¿å­˜è¿”å›å¯¹åº”å‚æ•°å€¼çš„å­—ç¬¦ä¸²
 	public void init() {
 		paramName=getParameter("who");
 		if (paramName==null)

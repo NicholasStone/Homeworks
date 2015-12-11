@@ -3,11 +3,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-<title>表达式测试</title>
+<title>琛ㄨ揪寮忔祴璇�</title>
 </head>
 <body>
 	<%
-		String value= "欢迎本网页！";
+		String value= "娆㈣繋鏈綉椤碉紒";
 	%>
 	<br>
 	<%=value%>

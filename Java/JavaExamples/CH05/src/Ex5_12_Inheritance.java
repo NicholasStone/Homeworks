@@ -1,12 +1,12 @@
 public class Ex5_12_Inheritance {
 	public static void main(String[] args) {
 		Manager mrZhang = new Manager();
-		mrZhang.setName("ÕÅ¸Õ");
-		mrZhang.setDepartment("½ÌÎñ´¦");
+		mrZhang.setName("å¼ åˆš");
+		mrZhang.setDepartment("æ•™åŠ¡å¤„");
 		mrZhang.setSalary(2500);
-		mrZhang.setSpecial("½ÌÎñ´¦´¦³¤");
+		mrZhang.setSpecial("æ•™åŠ¡å¤„å¤„é•¿");
 		mrZhang.setSubsidy(500);
-		System.out.println("*******************Ô±¹¤ĞÅÏ¢*****************");
+		System.out.println("*******************å‘˜å·¥ä¿¡æ¯*****************");
 		System.out.println();
 		System.out.print(mrZhang.toString());
 	}
@@ -41,7 +41,7 @@ class Employee {
 	}
 	
 	public String toString() {
-		return "ĞÕÃû:"+name+"\t²¿ÃÅ:"+department+"\t»ù±¾¹¤×Ê:"+salary;	
+		return "å§“å:"+name+"\téƒ¨é—¨:"+department+"\tåŸºæœ¬å·¥èµ„:"+salary;	
 	}
 }
 
@@ -61,7 +61,7 @@ class Manager extends Employee {
 		return subsidy;	
 	}	
 	public String toString() {
-		return "ĞÕÃû:"+name+"\t²¿ÃÅ:"+department+"\tÖ°Îñ:"+special+
-		"\t»ù±¾¹¤×Ê:"+salary+"\t½òÌù:"+subsidy;	
+		return "å§“å:"+name+"\téƒ¨é—¨:"+department+"\tèŒåŠ¡:"+special+
+		"\tåŸºæœ¬å·¥èµ„:"+salary+"\tæ´¥è´´:"+subsidy;	
 	}
 }
