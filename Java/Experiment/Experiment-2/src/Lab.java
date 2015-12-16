@@ -3,6 +3,7 @@
  */
 import MatrixSum.MatrixSum;
 import Sort.Sort;
+import CountingWords.CountingWords;
 
 public class Lab{
 	public static void main(String args[]){
@@ -21,5 +22,9 @@ public class Lab{
 			System.out.println();
 		}
 		System.out.println("Result = " + MatrixSum.MatrixSum(Matrix));
+		System.out.println("3.Counting words");
+		String sentence = "Sentence:To be, or not to be: that is the question: Whether 'tis nobler in the mind to suffer.";
+		System.out.println(sentence);
+		System.out.println("The count of words of the sentence above is : " + CountingWords.CountingWords(sentence));
 	}
 }
