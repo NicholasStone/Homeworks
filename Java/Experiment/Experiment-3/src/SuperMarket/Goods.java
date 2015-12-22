@@ -33,16 +33,32 @@ public class Goods{
 	}
 
 
-	public void Sale(){
-
+	public boolean Sale(double money){
+		if(Price > money){
+			return false;
+		}else{
+			Count--;
+			return true;
+		}
 	}
 
-	public void add(int number){
-
+	public boolean add(int number){
+        if(number < 0){
+            return false;
+        }else{
+            Count += number;
+            return true;
+        }
 	}
 
 	public void showMe(){
-
-	}
+        System.out.println(
+                "===================\nName:"+Name
+                +"\nPrice:"+Price
+                +"\nProducer:"+Producer
+                +"\nRemaining:"+Count
+                +"\n==================="
+        );
+    }
 
 }
