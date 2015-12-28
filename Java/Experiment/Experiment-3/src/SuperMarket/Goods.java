@@ -61,4 +61,8 @@ public class Goods{
         );
     }
 
+    @Override
+    public String toString() {
+        return Name;
+    }
 }

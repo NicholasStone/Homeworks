@@ -31,5 +31,8 @@ public class Lab{
 		int Count[] = {100000, 100000, 50000, 50000, 30000, 30000, 20000, 50000, 10000, 70000, 60000};
 		SuperMarket superMarket  = new SuperMarket(GoodsName, Count, Price, Producers);
 		superMarket.Check();
-	}
+        System.out.println(superMarket.Query(360));
+        System.out.println(superMarket.Query("EA",true));
+        System.out.println(superMarket.Query("Crysis"));
+    }
 }
