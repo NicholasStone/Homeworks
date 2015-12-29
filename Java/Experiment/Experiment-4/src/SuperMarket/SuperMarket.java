@@ -103,6 +103,15 @@ public class SuperMarket{
         System.out.println(superMarket.Query("EA",true));
         System.out.println(superMarket.Query("CS:GO","Valve"));
         superMarket.Query("CS:GO","Valve").add(300);
-        superMarket.Query("Call of Duty").sale(466);
+        try {
+            superMarket.Query("Call of Duty").sale(466);
+        }catch (InsufficientFundsException e){
+            System.out.println(e.getMessage());
+        }
+        try {
+            superMarket.Query("Call of Duty").sale(5);
+        }catch (InsufficientFundsException e){
+            System.out.println(e.getMessage());
+        }
     }
 }

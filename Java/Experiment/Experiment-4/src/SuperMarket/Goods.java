@@ -33,9 +33,9 @@ public class Goods{
 	}
 
 
-	public void sale(double money){
+	public void sale(double money) throws InsufficientFundsException{
 		if(Price > money){
-			System.out.println("金额不足");
+			throw new InsufficientFundsException();
 		}else{
 			Count--;
 			System.out.println("已售出，现余货 "+Count+" 件");

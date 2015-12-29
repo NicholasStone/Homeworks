@@ -25,14 +25,18 @@ public class Lab{
 		System.out.println("Withdraw 1000,Bank account has $" + bankAccount.getBalance());
 		System.out.println("3.Get max and min form an array:\n\tCannot show-how");
 		System.out.println("4.SuperMarket");
-		String GoodsName[] = {"DotA ", "WarCraft", "Call of Duty", "Crysis", "Red Alert", "FIFA", "2K  ", "Halo", "ArmA", "GTA ", "CS:GO"};
-		String Producers[] = {"Valve", "Blizzard", "Activision", "Crytek Studios", "EA", "EA", "2K Sports", "Microsoft", "Bohemia", "RockstarGames", "Valve"};
-		double Price[] = {0, 90, 286, 70, 99, 360, 285, 249, 319, 113, 48};
-		int Count[] = {100000, 100000, 50000, 50000, 30000, 30000, 20000, 50000, 10000, 70000, 60000};
-		SuperMarket superMarket  = new SuperMarket(GoodsName, Count, Price, Producers);
-		superMarket.Check();
-        System.out.println(superMarket.Query(360));
-        System.out.println(superMarket.Query("EA",true));
+        String GoodsName[] = {"DotA ", "WarCraft", "Call of Duty", "Crysis", "Red Alert", "FIFA", "2K  ", "Halo", "ArmA", "GTA ", "CS:GO", "CS:GO"};
+        String Producers[] = {"Valve", "Blizzard", "Activision", "Crytek Studios", "EA", "EA", "2K Sports", "Microsoft", "Bohemia", "RockstarGames", "Valve","EA"};
+        double Price[] = {0, 90, 286, 70, 99, 360, 285, 249, 319, 113, 48, 15};
+        int Count[] = {100000, 100000, 50000, 50000, 30000, 30000, 20000, 50000, 10000, 70000, 60000, 30000};
+        SuperMarket superMarket  = new SuperMarket(GoodsName, Count, Price, Producers);
+
+        superMarket.Check();
+
         System.out.println(superMarket.Query("Crysis"));
+        System.out.println(superMarket.Query("EA",true));
+        System.out.println(superMarket.Query("CS:GO","Valve"));
+        superMarket.Query("CS:GO","Valve").add(300);
+        superMarket.Query("Call of Duty").sale(466);
     }
 }
