@@ -3,6 +3,9 @@
 using namespace std;
 
 int main() {
-    cout << "Hello, World!" << endl;
+    char *data = "HelloWorld";
+    Node node( data, true );
+    node.Insert( 'a', 5 );
+    node.Print();
     return 0;
 }

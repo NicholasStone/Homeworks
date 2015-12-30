@@ -353,3 +353,6 @@ hs_err_pid*
 
 # Debug files
 *.dSYM/
+
+#CmakeLists
+CMakeLists.txt
