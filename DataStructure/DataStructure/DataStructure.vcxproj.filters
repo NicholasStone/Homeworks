@@ -13,14 +13,4 @@
       <UniqueIdentifier>{5a228d4c-73b2-4721-90b0-39c428f9835f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Chapter-7\7.22.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Chapter-7\7.22.h">
-      <Filter>源文件</Filter>
-    </ClInclude>
-  </ItemGroup>
 </Project>

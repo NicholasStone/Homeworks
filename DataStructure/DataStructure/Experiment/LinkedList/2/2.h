@@ -6,22 +6,24 @@
 #define EXPERIMENT_2_H
 
 #include <iostream>
+#include <cmath>
 using std::cin;
 using std::cout;
 using std::endl;
 
 typedef struct PUnit{
-    int    power;
-    double coefficient;
-	struct PUnit* next;
+    int    power = 0;
+    double coefficient = 0;
+	struct PUnit* next = NULL;
 }PUnit, *ListPUnit;
 typedef struct polynomial {	//单链表节点结构
-    ListPUnit units;
-    int length;
+	ListPUnit units = NULL;
+    int length = 0;
 }Polynomial;
 
-void nodeInit(LinkList &L, int initLength);
+void polynomialInit(Polynomial &P, int initLength);
 
-double nodeAdd(LinkList &L1, LinkList &L2, double x);
+double polynomialAdd(Polynomial &L1, Polynomial &L2, double x);
 
+void polynomialPrint(Polynomial &p);
 #endif //EXPERIMENT_2_H
