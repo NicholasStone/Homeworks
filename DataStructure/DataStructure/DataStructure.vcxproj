@@ -18,12 +18,6 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Chapter-7\7.22.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Chapter-7\7.22.h" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{CB126B88-C84B-45B8-9D6C-D8A75A5A6A6C}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
