@@ -28,7 +28,7 @@
             margin-left: 30%;
         }
 
-        .buttons > button{
+        .buttons > button {
             margin-left: 8%;
         }
 
@@ -37,11 +37,6 @@
             font-size: 2em;
             margin-bottom: 1em;
             left: 38%;
-        }
-
-        .form-group > label {
-            width: 20%;
-            text-align: right;
         }
 
         .form-group {
@@ -55,6 +50,11 @@
         .form-group * {
             vertical-align: middle;
             display: inline-block;
+        }
+
+        .form-group > label {
+            width: 20%;
+            text-align: right;
         }
 
         .form-group > input,
@@ -93,57 +93,59 @@
 <body>
 <form>
     <h1 class="title">请留下个人资料</h1>
-    <div class="form-group">
-        <label for="name">姓名：</label>
-        <input type="text" id="name">
-    </div>
-    <div class="form-group">
-        <label for="email">E-mail：</label>
-        <input type="email" id="email" style="width: 70%">
-    </div>
-    <div class="form-group">
-        <label for="tel">电话：</label>
-        <input type="tel" id="tel" style="width: 35%">
-    </div>
-    <div class="form-group">
-        <label>性别：</label>
-        <div class="radios">
-            <label>
-                <input type="radio" name="gender" checked id="gender-female">女
-            </label>
-            <label>
-                <input type="radio" name="gender" id="gender-male">男
-            </label>
+    <div>
+        <div class="form-group">
+            <label for="name">姓名：</label>
+            <input type="text" id="name">
         </div>
-    </div>
-    <div class="form-group">
-        <label for="age">年龄：</label>
-        <select name="age" id="age">
-            <option>60以上</option>
-            <option>41~60</option>
-            <option>21～40</option>
-            <option selected>20以下</option>
-        </select>
-    </div>
-    <div class="form-group">
-        <label for="comment">留言板：</label>
-        <textarea name="comment" id="comment" cols="47" rows="5" draggable="false"></textarea>
-    </div>
-    <div class="form-group">
-        <label>您的爱好：</label>
-        <div class="checkboxes">
-            <label>
-                <input type="checkbox">运动
-            </label>
-            <label>
-                <input type="checkbox">阅读
-            </label>
-            <label>
-                <input type="checkbox">听音乐
-            </label>
-            <label>
-                <input type="checkbox">旅游
-            </label>
+        <div class="form-group">
+            <label for="email">E-mail：</label>
+            <input type="email" id="email" style="width: 70%">
+        </div>
+        <div class="form-group">
+            <label for="tel">电话：</label>
+            <input type="tel" id="tel" style="width: 35%">
+        </div>
+        <div class="form-group">
+            <label>性别：</label>
+            <div class="radios">
+                <label>
+                    <input type="radio" name="gender" checked id="gender-female">女
+                </label>
+                <label>
+                    <input type="radio" name="gender" id="gender-male">男
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="age">年龄：</label>
+            <select name="age" id="age">
+                <option>60以上</option>
+                <option>41~60</option>
+                <option>21～40</option>
+                <option selected>20以下</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="comment">留言板：</label>
+            <textarea name="comment" id="comment" cols="47" rows="5" draggable="false"></textarea>
+        </div>
+        <div class="form-group">
+            <label>您的爱好：</label>
+            <div class="checkboxes">
+                <label>
+                    <input type="checkbox">运动
+                </label>
+                <label>
+                    <input type="checkbox">阅读
+                </label>
+                <label>
+                    <input type="checkbox">听音乐
+                </label>
+                <label>
+                    <input type="checkbox">旅游
+                </label>
+            </div>
         </div>
     </div>
     <div class="buttons">
