@@ -11,24 +11,20 @@
     <input type="text" name="username" id="username">
     <br>
     <label for="password">请输入密码：</label>
-    <input type="text" name="password" id="password">
+    <input type="password" name="password" id="password">
     <br>
     <button type="submit">提交</button>
     <button type="reset">重置</button>
 </form>
 <script>
-    var form = document.getElementById('form');
-    var username = document.getElementById('username');
-    var password = document.getElementById('password');
-
-    var validate = function (e) {
+    document.getElementById('form').addEventListener('submit', function (e) {
         var validate = true;
         var message = '';
-        if (!username.value) {
+        if (!document.getElementById('username').value) {
             validate = false;
             message += '用户名不能为空，请输入用户名';
         }
-        if (!password.value) {
+        if (!document.getElementById('password').value) {
             validate = false;
             if (message != '') {
                 message += '\n';
@@ -40,9 +36,7 @@
             e.preventDefault();
             alert(message);
         }
-    };
-
-    form.addEventListener('submit', validate, false);
+    }, false);
 </script>
 </body>
 </html>

@@ -13,12 +13,7 @@
     var input = document.getElementById('input');
     function func() {
         var date = new Date();
-        input.value = date.getFullYear() + "/"
-                + date.getMonth() + "/"
-                + date.getDay() + " "
-                + date.getHours() + ":"
-                + date.getMinutes() + ":"
-                + date.getSeconds();
+        input.value = date.toLocaleString();
         date = null;
         setTimeout("func()", 1000);
     }
