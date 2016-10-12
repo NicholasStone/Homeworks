@@ -5,21 +5,24 @@
     <title>2-1</title>
 </head>
 <body>
-<form action="#">
-    <label for="displayBox" hidden>DisplayBox</label>
-    <input type="text" name="displayBox" id="displayBox" value="0" size="4">
+<form>
+    <label for="input" hidden>Time</label>
+    <input type="text" id="input">
 </form>
 <script>
-    var x = 0;
-    var countSecond = function () {
-        if (x < 6) {
-            x = x + 1;
-            var box = document.getElementById('displayBox');
-            box.value = x;
-            setTimeout(countSecond, 1000);
-        }
-    };
-    countSecond();
+    var input = document.getElementById('input');
+    function func() {
+        var date = new Date();
+        input.value = date.getFullYear() + "/"
+                + date.getMonth() + "/"
+                + date.getDay() + " "
+                + date.getHours() + ":"
+                + date.getMinutes() + ":"
+                + date.getSeconds();
+        date = null;
+        setTimeout("func()", 1000);
+    }
+    func();
 </script>
 </body>
 </html>
