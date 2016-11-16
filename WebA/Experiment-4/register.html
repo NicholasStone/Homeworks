@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <style>
+        .notice {
+            display: none;
+        }
+
+        .active {
+            color: red;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<form action="register.jsp" id="form" method="post">
+    <label for="username">User Name</label>
+    <input type="text" name="username" id="username">
+    <p class="notice"></p>
+    <br>
+    <label for="password">Password:</label><input type="password" name="password" id="password">
+    <p class="notice"></p>
+    <br>
+    <label for="password-conform">Conform Password:</label><input type="password" id="password-conform">
+    <p class="notice"></p>
+    <br>
+    <button id="submit" type="submit">Submit</button>
+</form>
+<script>
+    var
+            reg = /[a-zA-Z1-9_.\-]+/,
+            username = document.querySelector("#username"),
+            password = document.querySelector("#password"),
+            password_conform = document.querySelector("#password-conform");
+    document.querySelector("#form").addEventListener("submit", function (e) {
+        var failure = false;
+        if (!reg.test(username.value)) {
+            testFailure(username, "Invalid Username : Must contain letters, numbers and '-','.','_'");
+            failure = true;
+        } else {
+            testSuccess(username);
+        }
+        if (password.value == null || password.value == '') {
+            testFailure(password, "Password cannot be empty");
+            failure = true;
+        } else {
+            testSuccess(password);
+            if (password.value != password_conform.value) {
+                testFailure(password_conform, "Password and Password conform is not match");
+                failure = true;
+            } else {
+                testSuccess(password_conform);
+            }
+        }
+
+        if (failure) {
+            e.preventDefault();
+        }
+    });
+    function testFailure(el, info) {
+        var next = el.nextSibling.nextSibling;
+        next.innerHTML = info;
+        if (!next.className.match(/(?:^|\s)active(?!\S)/)) {
+            next.className += " active";
+        }
+    }
+    function testSuccess(el) {
+        var next = el.nextSibling.nextSibling;
+        if (next.className.match(/(?:^|\s)active(?!\S)/)) {
+            next.className = next.className.replace(/(?:^|\s)active(?!\S)/, '');
+        }
+    }
+</script>
+</body>
+</html>
